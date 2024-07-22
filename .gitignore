@@ -1,0 +1,8 @@
+# Python
+__env__
+*.pyc
+
+# My local files
+__dev__
+/*.db
+/run.sh

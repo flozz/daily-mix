@@ -71,6 +71,52 @@ CREATE TABLE IF NOT EXISTS "tracks" (
 
 """
 
+_SQL_FRESHNESS_SCORE = """
+(
+    (1+(LOG(366) - LOG(1+JULIANDAY('now') - MAX(JULIANDAY(tracks.created), 365))) / LOG(365))  -- recently added score
+    + (1+LOG(6)-LOG(1+MIN(STRFTIME("%Y", DATE('now'))-tracks.year, 5)))  -- recently released score
+    + 1+LOG(11)-LOG(1+MIN(tracks.playCount,10))  -- low play count score
+)
+"""
+
+_SQL_INTEREST_SCORE = """
+(
+    (LOG(tracks.rating)*(1+1.2*tracks.starred))  -- rating score
+    + 1+LOG(11)-LOG(1+MIN(tracks.playCount,10))  -- low play count score
+)
+"""
+
+_SQL_SELECT_RANDOM_TRACKS = """
+SELECT tracks.id,
+       tracks.artistId,
+       tracks.albumArtistId,
+       artists.name AS albumArtistName,
+       albums.name AS albumName,
+       tracks.name AS trackName,
+       tracks.duration,
+       tracks.year,
+       tracks.rating,
+       tracks.starred,
+       tracks.playCount,
+       %s AS fzz_interestScore,
+       %s AS fzz_freshnessScore,
+       ABS(RANDOM()) AS rand
+FROM tracks
+LEFT JOIN artists ON artists.id = tracks.albumArtistId
+LEFT JOIN albums ON albums.id = tracks.albumId
+WHERE tracks.rating > 1
+      AND tracks.duration > :min_duration
+      AND tracks.duration < :max_duration
+      -- TODO filter genres
+-- ORDER BY :critera * rand DESC
+ORDER BY {{CRITERA}} DESC, rand DESC
+LIMIT :limit
+;
+""" % (
+    _SQL_INTEREST_SCORE,
+    _SQL_FRESHNESS_SCORE,
+)
+
 
 class Database:
 
@@ -96,7 +142,6 @@ class Database:
         params = {k.rstrip("_"): v for k, v in locals().items()}
         query = "INSERT INTO artists VALUES(:id, :name, :sortName, :starred, :rating)"
         self._cur.execute(query, params)
-        # self._con.commit()
 
     def insert_album(
         self,
@@ -117,7 +162,6 @@ class Database:
             ":name, :sortName, :year, :created, :starred, :rating)"
         )
         self._cur.execute(query, params)
-        # self._con.commit()
 
     def insert_track(
         self,
@@ -146,7 +190,65 @@ class Database:
             ":duration, :year, :created, :starred, :rating, :playCount, :lastPlayed)"
         )
         self._cur.execute(query, params)
-        # self._con.commit()
+
+    def _select_random_tracks_by_critera(
+        self,
+        critera,
+        limit=50,
+        genres=None,
+        min_duration=60,
+        max_duration=600,
+    ):
+        params = {
+            "min_duration": min_duration,
+            "max_duration": max_duration,
+            "limit": limit,
+        }
+        response = self._cur.execute(
+            _SQL_SELECT_RANDOM_TRACKS.replace("{{CRITERA}}", critera), params
+        )
+        for track in response.fetchall():
+            yield {
+                "role": "interest",
+                "trackId": track[0],
+                "artistId": track[1],
+                "albumArtistId": track[2],
+                "albumArtistName": track[3],
+                "albumName": track[4],
+                "trackName": track[5],
+                "duration": track[6],
+                "year": track[7],
+                "rating": track[8],
+                "starred": track[9],
+                "playCount": track[10],
+                "fzz_interestScore": track[11],
+                "fzz_freshnessScore": track[12],
+                "rand": track[13],
+            }
+
+    def select_random_tracks_by_interest(self, **kwargs):
+        for track in self._select_random_tracks_by_critera(
+            "fzz_interestScore",
+            **kwargs,
+        ):
+            track["role"] = "interest"
+            yield track
+
+    def select_random_tracks_by_freshness(self, **kwargs):
+        for track in self._select_random_tracks_by_critera(
+            "fzz_freshnessScore",
+            **kwargs,
+        ):
+            track["role"] = "freshness"
+            yield track
+
+    def select_random_tracks(self, **kwargs):
+        for track in self._select_random_tracks_by_critera(
+            "rand * tracks.rating",
+            **kwargs,
+        ):
+            track["role"] = "regular"
+            yield track
 
     def commit(self):
         self._con.commit()

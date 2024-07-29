@@ -6,7 +6,9 @@ import pathlib
 
 class SubsonicClient:
 
-    def __init__(self, api_base_url, username, password, client_name="FLOZz Subsonic Client/0"):
+    def __init__(
+        self, api_base_url, username, password, client_name="FLOZz Subsonic Client/0"
+    ):
         self._api_base_url = api_base_url
         self._username = username
         self._password = password

@@ -99,7 +99,7 @@ def print_playlist(playlist):
         % (
             "\x1B[1;7m",
             "R",
-            "Eval.",
+            "Ratng",
             "S",
             "Inter.",
             "Fresh.",

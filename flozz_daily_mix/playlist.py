@@ -57,7 +57,14 @@ class PlaylistGenerator:
             if track["trackId"] in self._tracks_freshness:
                 del self._tracks_freshness[track["trackId"]]
 
-            # TODO check for empty pick list
+            # Stop if one of the music list goes empty
+            if (
+                not self._tracks_regular
+                or not self._tracks_interest
+                or not self._tracks_freshness
+            ):
+                self._playlist = self._playlist[: i + 1]
+                break
 
     def get_playlist(self):
         return list(self._playlist)

@@ -6,3 +6,4 @@ __env__
 __dev__
 /*.db
 /run.sh
+/run-*.sh

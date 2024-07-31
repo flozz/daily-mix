@@ -58,8 +58,7 @@ class SubsonicClient:
         return response["artists"]["index"]
 
     def getAlbumList(self, type_="alphabeticalByName", offset=0, size=100, **kwargs):
-        query = {"type": type_, "offset": offset, "size": size}
-        query.update(kwargs)
+        query = {"type": type_, "offset": offset, "size": size, **kwargs}
         url = self._build_url("getAlbumList", **query)
         response = self._get_json(url)
         return response["albumList"]["album"]
@@ -67,8 +66,7 @@ class SubsonicClient:
     def getAlbum(self, id_=None, **kwargs):
         if not id_:
             raise ValueError()  # XXX
-        query = {"id": id_}
-        query.update(kwargs)
+        query = {"id": id_, **kwargs}
         url = self._build_url("getAlbum", **query)
         response = self._get_json(url)
         return response["album"]

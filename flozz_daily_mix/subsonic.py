@@ -70,3 +70,44 @@ class SubsonicClient:
         url = self._build_url("getAlbum", **query)
         response = self._get_json(url)
         return response["album"]
+
+    def getPlaylists(self, **kwargs):
+        query = kwargs
+        url = self._build_url("getPlaylists", **query)
+        response = self._get_json(url)
+        return response["playlists"]["playlist"]
+
+    def createPlaylist(self, name=None, songId=[], **kwargs):
+        if not name:
+            raise ValueError()  # XXX
+        query = {"name": name, "songId": songId, **kwargs}
+        url = self._build_url("createPlaylist", **query)
+        response = self._get_json(url)
+        return response["playlist"]
+
+    def updatePlaylist(
+        self,
+        playlistId=None,
+        name=None,
+        comment=None,
+        public=None,
+        songIdToAdd=[],
+        songIndexToRemove=[],
+        **kwargs
+    ):
+        if not playlistId:
+            raise ValueError()  # XXX
+        query = {
+            "playlistId": playlistId,
+            "songIdToAdd": songIdToAdd,
+            "songIndexToRemove": songIndexToRemove,
+            **kwargs,
+        }
+        if name is not None:
+            query["name"] = name
+        if comment is not None:
+            query["comment"] = comment
+        if public is not None:
+            query["public"] = public
+        url = self._build_url("updatePlaylist", **query)
+        self._get_json(url)

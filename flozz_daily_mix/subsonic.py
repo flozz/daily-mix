@@ -3,6 +3,8 @@ import urllib.parse
 import json
 import pathlib
 
+from .helpers import custom_urlencode
+
 
 class SubsonicClient:
 
@@ -23,6 +25,7 @@ class SubsonicClient:
         query["u"] = self._username
         query["p"] = self._password
         query["c"] = self._client_name
+        query["v"] = "1.8.0"
         query["f"] = "json"
         query.update(kwargs)
 
@@ -32,7 +35,7 @@ class SubsonicClient:
                 parsed_base_url.netloc,
                 path.as_posix(),
                 parsed_base_url.params,
-                urllib.parse.urlencode(query),
+                custom_urlencode(query),
                 parsed_base_url.fragment,
             )
         )

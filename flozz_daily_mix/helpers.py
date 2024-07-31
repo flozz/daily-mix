@@ -11,6 +11,8 @@ def custom_urlencode(params):
     'foo=bar&foo=baz&foo=pwet'
     >>> custom_urlencode({"foo": "bar", "fizz": "buzz"})
     'foo=bar&fizz=buzz'
+    >>> custom_urlencode({"foo": []})
+    ''
     """
     components = []
 

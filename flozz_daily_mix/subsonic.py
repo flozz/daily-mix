@@ -46,7 +46,7 @@ class SubsonicClient:
         json_string = http_response.read()
         parsed_json = json.loads(json_string)
         if "subsonic-response" not in parsed_json:
-            raise Exception()  # XXX
+            raise Exception("Invalid response from the Subsonic API")  # XXX
         if parsed_json["subsonic-response"]["status"] != "ok":
             raise Exception()  # XXX
         return parsed_json["subsonic-response"]

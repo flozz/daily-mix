@@ -9,7 +9,8 @@ from . import APPLICATION_NAME, VERSION
 SUBSONIC_API_BASE_URL = sys.argv[1]  # FIXME debug
 SUBSONIC_API_USERNAME = sys.argv[2]  # FIXME debug
 SUBSONIC_API_PASSWORD = sys.argv[3]
-DATABASE_FILE = "./music.db"  # FIXME debug
+# DATABASE_FILE = "./music.db"  # FIXME debug
+DATABASE_FILE = ":memory:"  # FIXME debug
 
 
 def get_artists(subsonic):
@@ -123,6 +124,46 @@ def print_playlist(playlist):
         )
 
 
+def create_or_update_playlsit(
+    subsonic,
+    fzz_id,
+    name="FLOZz Daily Mix",
+    comment="",
+    tracks_ids=[],
+    max_tracks=100,
+    genres=[],
+):
+    fzz_id_tag = "{FZz:%s}" % str(fzz_id)
+    playlist_id = None
+    playlist_track_count = 0
+
+    # Search if the playlist already exists
+    for playlist in subsonic.getPlaylists():
+        if fzz_id_tag in playlist["comment"]:
+            playlist_id = playlist["id"]
+            playlist_track_count = playlist["songCount"]
+
+    # Create the playlist if does not exists
+    if playlist_id is None:
+        playlist = subsonic.createPlaylist(name=name)
+        playlist_id = playlist["id"]
+
+    # Empty the playlist if required
+    if playlist_track_count > 0:
+        subsonic.updatePlaylist(
+            playlistId=playlist_id,
+            songIndexToRemove=list(range(playlist_track_count)),
+        )
+
+    # Update the playlist with the new tracks
+    subsonic.updatePlaylist(
+        playlistId=playlist_id,
+        name=name,
+        comment="\n\n".join([comment, fzz_id_tag]),
+        songIdToAdd=tracks_ids,
+    )
+
+
 def main(agrs=sys.argv[1:]):
     subsonic = SubsonicClient(
         SUBSONIC_API_BASE_URL,
@@ -131,14 +172,22 @@ def main(agrs=sys.argv[1:]):
         client_name="%s/%s" % (APPLICATION_NAME, VERSION),
     )
 
-    db = Database(DATABASE_FILE, skip_table_creation=True)  # FIXME debug
-    # db = Database(DATABASE_FILE, skip_table_creation=False)  # FIXME debug
-    # import_music_to_database(subsonic, db)  # FIXME debug
+    # db = Database(DATABASE_FILE, skip_table_creation=True)  # FIXME debug
+    db = Database(DATABASE_FILE, skip_table_creation=False)  # FIXME debug
+    import_music_to_database(subsonic, db)  # FIXME debug
 
     generator = PlaylistGenerator(db)
     generator.generate()
     playlist = generator.get_playlist()
     print_playlist(playlist)
+
+    create_or_update_playlsit(
+        subsonic,
+        "all",
+        name="FLOZz All Mix",
+        comment="FLOZz Daily Mix with all genres",
+        tracks_ids=[track["trackId"] for track in playlist],
+    )
 
 
 if __name__ == "__main__":

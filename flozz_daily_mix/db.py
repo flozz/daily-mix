@@ -108,8 +108,8 @@ WHERE tracks.rating > 1
       AND tracks.duration > :min_duration
       AND tracks.duration < :max_duration
       -- TODO filter genres
--- ORDER BY :critera * rand DESC
-ORDER BY {{CRITERA}} DESC, rand DESC
+ORDER BY {{CRITERA}} DESC,
+      rand DESC
 LIMIT :limit
 ;
 """ % (

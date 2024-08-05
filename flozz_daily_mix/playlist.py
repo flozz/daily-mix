@@ -103,6 +103,9 @@ class PlaylistGenerator:
     def get_playlist(self):
         return list(self._playlist)
 
+    def get_tracks_ids(self):
+        return [track["trackId"] for track in self._playlist]
+
     def _fetch_musics(self):
         # Interest
         tracks = self._db.select_random_tracks_by_interest(

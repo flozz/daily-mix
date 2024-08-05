@@ -143,16 +143,15 @@ def main(agrs=sys.argv[1:]):
 
     generator = PlaylistGenerator(db)
     generator.generate()
-    playlist = generator.get_playlist()
+    generator.print()
 
     create_or_update_playlsit(
         subsonic,
         "all",
         name="FLOZz All Mix",
         comment="FLOZz Daily Mix with all genres",
-        tracks_ids=[track["trackId"] for track in playlist],
+        tracks_ids=generator.get_tracks_ids(),
     )
-    generator.print()
 
 
 if __name__ == "__main__":

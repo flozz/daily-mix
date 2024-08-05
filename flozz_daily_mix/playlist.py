@@ -14,6 +14,40 @@ class PlaylistGenerator:
         self._tracks_regular = {}
         self._playlist = []
 
+    def print(self):
+        ROLES = {
+            "regular": {"symbol": "🎝", "color": "\x1B[37;44m"},
+            "interest": {"symbol": "✚", "color": "\x1B[37;43m"},
+            "freshness": {"symbol": "❊", "color": "\x1B[37;42m"},
+        }
+        print(
+            "%s %s %5s %s %6s %6s %-20s %-35s \x1B[0m"
+            % (
+                "\x1B[1;7m",
+                "R",
+                "Rate",
+                "S",
+                "Inter.",
+                "Fresh.",
+                "Artist Name (Album)",
+                "Track Name",
+            )
+        )
+        for track in self._playlist:
+            print(
+                "%s %s %5s %s %01.4f %01.4f %-20s %-35s \x1B[0m"
+                % (
+                    ROLES[track["role"]]["color"],
+                    ROLES[track["role"]]["symbol"],
+                    ("★" * track["rating"]) + (" " * (5 - track["rating"])),
+                    "♥" if track["starred"] else "♡",
+                    track["fzz_interestScore"],
+                    track["fzz_freshnessScore"],
+                    track["albumArtistName"][:20],
+                    track["trackName"][:35],
+                )
+            )
+
     def generate(self):
         self._tracks_interest = {}
         self._tracks_freshness = {}

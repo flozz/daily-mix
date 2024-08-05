@@ -95,8 +95,6 @@ def create_or_update_playlsit(
     name="FLOZz Daily Mix",
     comment="",
     tracks_ids=[],
-    max_tracks=100,
-    genres=[],
 ):
     fzz_id_tag = "{FZz:%s}" % str(fzz_id)
     playlist_id = None

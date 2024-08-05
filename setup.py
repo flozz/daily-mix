@@ -23,7 +23,7 @@ setup(
         "Changelog": "https://github.com/flozz/daily-mix?tab=readme-ov-file#changelog",
         "Issues": "https://github.com/flozz/daily-mix/issues",
         "Chat": "https://discord.gg/P77sWhuSs4",
-        # "Donate": "",
+        "Donate": "https://github.com/flozz/daily-mix?tab=readme-ov-file#support-this-project",
     },
     license="AGPLv3",
     long_description=long_description,

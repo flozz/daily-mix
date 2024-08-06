@@ -29,8 +29,9 @@ class PlaylistGenerator:
             TrackRole.FRESHNESS.value: {"symbol": "❊", "color": "\x1B[37;42m"},
             # fmt: on
         }
+        total_duration = 0
         print(
-            "%s %s %5s %s %6s %6s %-20s %-35s \x1B[0m"
+            "%s %s %-5s %s %6s %6s %-20s %-35s \x1B[0m"
             % (
                 "\x1B[1;7m",
                 "R",
@@ -43,6 +44,7 @@ class PlaylistGenerator:
             )
         )
         for track in self._playlist:
+            total_duration += track["duration"]
             print(
                 "%s %s %5s %s %01.4f %01.4f %-20s %-35s \x1B[0m"
                 % (
@@ -56,6 +58,14 @@ class PlaylistGenerator:
                     track["trackName"][:35],
                 )
             )
+        print(
+            "\x1B[1;7m Total duration:\x1B[0;7m %i hr %i min %s sec \x1B\0m"
+            % (
+                total_duration // 3600,
+                total_duration % 3600 // 60,
+                total_duration % 60,
+            )
+        )
 
     def generate(self):
         self._tracks_interest = {}

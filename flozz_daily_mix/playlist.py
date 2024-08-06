@@ -1,4 +1,11 @@
 import random
+from enum import Enum
+
+
+class TrackRole(Enum):
+    REGULAR = "regular"
+    INTEREST = "interest"
+    FRESHNESS = "freshness"
 
 
 class PlaylistGenerator:
@@ -16,9 +23,11 @@ class PlaylistGenerator:
 
     def print(self):
         ROLES = {
-            "regular": {"symbol": "🎝", "color": "\x1B[37;44m"},
-            "interest": {"symbol": "✚", "color": "\x1B[37;43m"},
-            "freshness": {"symbol": "❊", "color": "\x1B[37;42m"},
+            # fmt: off
+            TrackRole.REGULAR.value:   {"symbol": "🎝", "color": "\x1B[37;44m"},
+            TrackRole.INTEREST.value:  {"symbol": "✚", "color": "\x1B[37;43m"},
+            TrackRole.FRESHNESS.value: {"symbol": "❊", "color": "\x1B[37;42m"},
+            # fmt: on
         }
         print(
             "%s %s %5s %s %6s %6s %-20s %-35s \x1B[0m"
@@ -64,13 +73,13 @@ class PlaylistGenerator:
 
             # Pick a track
             while retry_count:
-                if self._playlist[i]["role"] == "regular":
+                if self._playlist[i]["role"] == TrackRole.REGULAR:
                     track_id = random.choice(list(self._tracks_regular.keys()))
                     track = self._tracks_regular[track_id]
-                elif self._playlist[i]["role"] == "interest":
+                elif self._playlist[i]["role"] == TrackRole.INTEREST:
                     track_id = random.choice(list(self._tracks_interest.keys()))
                     track = self._tracks_interest[track_id]
-                elif self._playlist[i]["role"] == "freshness":
+                elif self._playlist[i]["role"] == TrackRole.FRESHNESS:
                     track_id = random.choice(list(self._tracks_freshness.keys()))
                     track = self._tracks_freshness[track_id]
 
@@ -143,14 +152,14 @@ class PlaylistGenerator:
         freshness_spacing = 2
         max_freshness_spacing = 10
         for i in range(self._length):
-            role = "regular"
+            role = TrackRole.REGULAR
             if i == next_interest:
-                role = "interest"
+                role = TrackRole.INTEREST
                 next_interest = int(next_interest + interest_spacing)
                 interest_spacing = min(interest_spacing * 1.5, max_interest_spacing)
             if i == next_freshness:
-                if role == "regular":
-                    role = "freshness"
+                if role == TrackRole.REGULAR:
+                    role = TrackRole.FRESHNESS
                     next_freshness = int(next_freshness + freshness_spacing)
                     freshness_spacing = min(
                         freshness_spacing * 1.3, max_freshness_spacing

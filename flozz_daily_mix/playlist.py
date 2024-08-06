@@ -10,7 +10,7 @@ class TrackRole(Enum):
 
 class PlaylistGenerator:
 
-    def __init__(self, db, length=100, min_duration=60, max_duration=600, genres=None):
+    def __init__(self, db, length=50, min_duration=60, max_duration=600, genres=None):
         self._db = db
         self._length = length
         self._min_duration = min_duration

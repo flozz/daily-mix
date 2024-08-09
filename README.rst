@@ -5,7 +5,7 @@ FLOZz Daily Mix generates thematic playlist like Spotify's Daily Mix from a Subs
 
 This is currently a work in progress and it has only been tested against ownCloud / Nextcloud Music servers.
 
-This generator does not make completely random playlist but tries to build interesting one. It tries to add "interesting" tracks regularly in the playlist (more at the beginning of the list and a more spaced then). It also tries to put new/fresh tracks in at strategic places.
+This generator does not make completely random playlists but tries to build interesting ones. It adds "interesting" tracks regularly in the playlist (more at the beginning of the list and a more spaced then). It also tries to put new/fresh tracks in at strategic places.
 
 Here is an example of a generated playlist:
 
@@ -14,7 +14,7 @@ Here is an example of a generated playlist:
    :alt: Screenshot: Generated playlist
 
 * **Yellow:** "interesting" tracks (criteria: high rating, liked,...)
-* **Green:** "fresh" tracks (criteria: newly added, newly added, low play count,...)
+* **Green:** "fresh" tracks (criteria: newly added, recently released, low play count,...)
 * **Blue:** "regular" tracks (random tracks with note weighting)
 
 

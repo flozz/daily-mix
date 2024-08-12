@@ -1,16 +1,11 @@
+import os
 import sys
 
 from .subsonic import SubsonicClient
 from .db import Database
 from .playlist import PlaylistGenerator
+from .cli import generate_cli
 from . import APPLICATION_NAME, VERSION
-
-
-SUBSONIC_API_BASE_URL = sys.argv[1]  # FIXME debug
-SUBSONIC_API_USERNAME = sys.argv[2]  # FIXME debug
-SUBSONIC_API_PASSWORD = sys.argv[3]
-# DATABASE_FILE = "./music.db"  # FIXME debug
-DATABASE_FILE = ":memory:"  # FIXME debug
 
 
 def get_artists(subsonic):
@@ -127,29 +122,121 @@ def create_or_update_playlsit(
     )
 
 
-def main(agrs=sys.argv[1:]):
-    subsonic = SubsonicClient(
-        SUBSONIC_API_BASE_URL,
-        SUBSONIC_API_USERNAME,
-        SUBSONIC_API_PASSWORD,
-        client_name="%s/%s" % (APPLICATION_NAME, VERSION),
-    )
+def dumpdata(subsonic, db_file):
+    # Remove the database file if it already exists. We cannot update it, we
+    # can only dump all data again.
+    if os.path.isfile(db_file):
+        os.unlink(db_file)
 
-    # db = Database(DATABASE_FILE, skip_table_creation=True)  # FIXME debug
-    db = Database(DATABASE_FILE, skip_table_creation=False)  # FIXME debug
-    import_music_to_database(subsonic, db)  # FIXME debug
+    # Create the database
+    db = Database(db_file)
 
-    generator = PlaylistGenerator(db)
-    generator.generate()
-    generator.print()
+    # Fetch data from the music cloud
+    import_music_to_database(subsonic, db)
 
-    create_or_update_playlsit(
-        subsonic,
-        "all",
-        name="FLOZz All Mix",
-        comment="FLOZz Daily Mix with all genres",
-        tracks_ids=generator.get_tracks_ids(),
-    )
+
+def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=False):
+    if db_file:
+        db = Database(db_file, skip_table_creation=True)
+    else:
+        db = Database(":memory:")
+
+    # Fetch data from the music cloud if no input database provided
+    if not db_file:
+        import_music_to_database(subsonic, db)
+
+    # Generate playlists from configs
+    for playlist_config in playlists_configs:
+        # TODO Print config name
+
+        generator = PlaylistGenerator(db)
+        generator.generate()
+
+        if print_pl:
+            generator.print()
+
+        if not dry_run:
+            pass  # TODO
+            # create_or_update_playlsit(
+            #     subsonic,
+            #     "all",
+            #     name="FLOZz Mix 1",
+            #     comment="FLOZz Daily Mix with all genres",
+            #     tracks_ids=generator.get_tracks_ids(),
+            # )
+
+
+def main(args=sys.argv[1:]):
+    parser = generate_cli()
+    parsed_args = parser.parse_args(args if args else ["--help"])
+
+    if not parsed_args.subcommand:
+        print(
+            "E: you must provide a subcommand. Use the --help option to get help."
+        )  # XXX
+        sys.exit(1)
+
+    print(parsed_args)  # FIXME DEBUG
+
+    # Subsonic API configuration and credentials
+    subsonic_api_url = parsed_args.subsonic_api_url
+    subsonic_api_username = parsed_args.subsonic_api_username
+    subsonic_api_password = parsed_args.subsonic_api_password
+    subsonic_api_legacy_authentication = parsed_args.subsonic_api_legacy_authentication
+
+    # In some cases there will be no access to the Subsonic API, so there will
+    # be no need for a Subsonic instance nor to check if we have credentials set
+    skip_subsonic = False
+    if (
+        parsed_args.subcommand == "generate"
+        and parsed_args.source_db
+        and parsed_args.dry_run
+    ):
+        skip_subsonic = True
+
+    # TODO parse config & update credentials from config
+
+    # Check we have the config and the credentials for the Subsonic API
+    if not skip_subsonic:
+        if not subsonic_api_url:
+            print("E: No Subsonic API URL configured.")  # XXX
+            sys.exit(1)
+
+        if not subsonic_api_username:
+            print("E: No username provided for the Subsonic API authentication.")  # XXX
+            sys.exit(1)
+
+        if not subsonic_api_password:
+            print("E: No password provided for the Subsonic API authentication.")  # XXX
+            sys.exit(1)
+
+        # FIXME
+        # The '--subsonic-api-legacy-authentication' option is mandatory to be
+        # futur-proof (no API change when the newer method will be implemented).
+        # Curently we only support Nextcloud Music and its legacy plain-text
+        # password auth.
+        if not subsonic_api_legacy_authentication:
+            print(
+                "E: New Subsonic API authentication method is not supported yet. "
+                "Please use the '--subsonic-api-legacy-authentication' option."
+            )  # XXX
+            sys.exit(1)
+
+    # Initialize Subsonic client
+    subsonic = None
+    if not skip_subsonic:
+        subsonic = SubsonicClient(
+            subsonic_api_url,
+            subsonic_api_username,
+            subsonic_api_password,
+            client_name="%s/%s" % (APPLICATION_NAME, VERSION),
+        )
+
+    # Run the requested task
+    if parsed_args.subcommand == "generate":
+        raise NotImplementedError()  # TODO
+    elif parsed_args.subcommand == "dumpdata":
+        dumpdata(subsonic, parsed_args.db_file)
 
 
 if __name__ == "__main__":

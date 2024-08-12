@@ -5,6 +5,13 @@ from . import APPLICATION_NAME, VERSION
 
 def generate_dumpdata_subcli(parser):
     parser.add_argument(
+        "-c",
+        "--config-file",
+        help="a config file to read Subsonic API URL and credential from (if not provided using the CLI)",
+        default=None,
+    )
+
+    parser.add_argument(
         "db_file",
         help="output SQLite database file",
     )

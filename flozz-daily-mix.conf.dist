@@ -20,7 +20,7 @@ api_legacy_authentication = false
 name = FLOZz Mix 1
 ; An optional description for the playlist (default: "FLOZz Daily Mix")
 description = FLOzz Daily Mix
-; Maximum number of tracks in the playlist (default: 50).
+; Maximum number of tracks in the playlist (default: 60).
 max_tracks = 60
 ; Minimal duration of tracks included in the playlist in seconds (default: 60)
 min_track_duration = 60

@@ -128,7 +128,7 @@ class PlaylistGenerator:
     def _fetch_musics(self):
         # Interest
         tracks = self._db.select_random_tracks_by_interest(
-            limit=self._length // 3,
+            limit=self._length // 2,
             min_duration=self._min_duration,
             max_duration=self._max_duration,
         )
@@ -137,7 +137,7 @@ class PlaylistGenerator:
 
         # Freshness
         tracks = self._db.select_random_tracks_by_freshness(
-            limit=self._length // 3,
+            limit=self._length // 2,
             min_duration=self._min_duration,
             max_duration=self._max_duration,
         )

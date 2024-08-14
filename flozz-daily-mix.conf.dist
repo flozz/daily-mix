@@ -1,0 +1,37 @@
+[subsonic]
+; URL of the Subsonic API.
+; Can also be provieded using the --subsonic-api-url CLI option.
+api_url = https://nextcloud.example.org/apps/music/subsonic
+; Name of the Subsonic API user.
+; Can also be provieded using the --subsonic-api-username CLI option.
+api_username = foobar
+; Password of the Subsonic API user.
+; Can also be provieded using the --subsonic-api-password CLI option.
+api_password = s3cr3tp4ssw0rd
+; Use the Subsonic legacy (plaintext password) authentication method
+; (default: false). By default this is turned off, but the legacy
+; authentication is currently the only one supported so you must set it to
+; "true".
+api_legacy_authentication = false
+
+; [playlist:<PLAYLIST_UNIQUE_ID>]
+[playlist:mix1]
+; Name of the playlist. Will be displayed by music clients (default: "Unnamed Mix")
+name = FLOZz Mix 1
+; An optional description for the playlist (default: "FLOZz Daily Mix")
+description = FLOzz Daily Mix
+; Maximum number of tracks in the playlist (default: 50).
+max_tracks = 60
+; Minimal duration of tracks included in the playlist in seconds (default: 60)
+min_track_duration = 60
+; Maximal duration of tracks included in the playlist in seconds (default: 600)
+max_track_duration = 600
+
+[playlist:mix2]
+name = FLOZz Mix 2
+description = FLOzz Daily Mix
+max_tracks = 60
+min_track_duration = 60
+max_track_duration = 600
+
+; vim:ft=dosini

@@ -194,7 +194,30 @@ def main(args=sys.argv[1:]):
     ):
         skip_subsonic = True
 
-    # TODO parse config & update credentials from config
+    # Parse config & update credentials from config
+    config_files = parsed_args.config_file
+    if not config_files:
+        config_files = []
+    elif type(config_files) is str:
+        config_files = [config_files]
+    config = read_config(config_files)
+
+    if subsonic_api_url is None and config["subsonic/api_url"] is not None:
+        subsonic_api_url = config["subsonic/api_url"]
+
+    if subsonic_api_username is None and config["subsonic/api_username"] is not None:
+        subsonic_api_username = config["subsonic/api_username"]
+
+    if subsonic_api_password is None and config["subsonic/api_password"] is not None:
+        subsonic_api_password = config["subsonic/api_password"]
+
+    if (
+        subsonic_api_legacy_authentication is False
+        and config["subsonic/api_legacy_authentication"] is not None
+    ):
+        subsonic_api_legacy_authentication = config[
+            "subsonic/api_legacy_authentication"
+        ]
 
     # Check we have the config and the credentials for the Subsonic API
     if not skip_subsonic:

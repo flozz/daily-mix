@@ -12,7 +12,7 @@ _DEFAULT_PLAYLIST_CONFIG = {
     "_id": None,
     "name": "Unnamed Mix",
     "description": "FLOZz Daily Mix",
-    "max_track": 60,
+    "max_tracks": 60,
     "min_track_duration": 60,
     "max_track_duration": 600,
     # TODO future options to add:

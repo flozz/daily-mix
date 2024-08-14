@@ -5,6 +5,7 @@ from .subsonic import SubsonicClient
 from .db import Database
 from .playlist import PlaylistGenerator
 from .cli import generate_cli
+from .config import read_config
 from . import APPLICATION_NAME, VERSION
 
 
@@ -149,21 +150,26 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
     for playlist_config in playlists_configs:
         # TODO Print config name
 
-        generator = PlaylistGenerator(db)
+        generator = PlaylistGenerator(
+            db,
+            length=playlist_config["max_tracks"],
+            min_duration=playlist_config["min_track_duration"],
+            max_duration=playlist_config["max_track_duration"],
+            genres=None,  # TODO
+        )
         generator.generate()
 
         if print_pl:
             generator.print()
 
         if not dry_run:
-            pass  # TODO
-            # create_or_update_playlsit(
-            #     subsonic,
-            #     "all",
-            #     name="FLOZz Mix 1",
-            #     comment="FLOZz Daily Mix with all genres",
-            #     tracks_ids=generator.get_tracks_ids(),
-            # )
+            create_or_update_playlsit(
+                subsonic,
+                playlist_config["_id"],
+                name=playlist_config["name"],
+                comment=playlist_config["description"],
+                tracks_ids=generator.get_tracks_ids(),
+            )
 
 
 def main(args=sys.argv[1:]):
@@ -257,7 +263,13 @@ def main(args=sys.argv[1:]):
 
     # Run the requested task
     if parsed_args.subcommand == "generate":
-        raise NotImplementedError()  # TODO
+        generate(
+            subsonic,
+            config["playlists"],
+            db_file=parsed_args.source_db,
+            dry_run=parsed_args.dry_run,
+            print_pl=parsed_args.print_playlist,
+        )
     elif parsed_args.subcommand == "dumpdata":
         dumpdata(subsonic, parsed_args.db_file)
 

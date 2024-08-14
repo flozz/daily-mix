@@ -59,7 +59,7 @@ class PlaylistGenerator:
                 )
             )
         print(
-            "\x1B[1;7m Total duration:\x1B[0;7m %i hr %i min %s sec \x1B\0m"
+            "\x1B[1;7m Total duration:\x1B[0;7m %i hr %i min %s sec \x1B[0m"
             % (
                 total_duration // 3600,
                 total_duration % 3600 // 60,

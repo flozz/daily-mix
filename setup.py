@@ -19,7 +19,7 @@ setup(
     url="https://github.com/flozz/daily-mix",
     project_urls={
         "Source Code": "https://github.com/flozz/daily-mix",
-        # "Documentation": "",
+        "Documentation": "https://github.com/flozz/daily-mix/blob/master/README.rst",
         "Changelog": "https://github.com/flozz/daily-mix?tab=readme-ov-file#changelog",
         "Issues": "https://github.com/flozz/daily-mix/issues",
         "Chat": "https://discord.gg/P77sWhuSs4",

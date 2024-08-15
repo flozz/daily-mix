@@ -1,5 +1,7 @@
 FLOZz Daily Mix
----------------
+===============
+
+|GitHub| |License| |Discord| |Github Actions| |Black|
 
 FLOZz Daily Mix generates playlists similar to Spotify's Daily Mix from a Subsonic API.
 
@@ -27,7 +29,7 @@ This software only requires **Python >= 3.8**. There is no extra dependency.
 Install
 -------
 
-Linux: From PyPI With venv
+Linux: from PyPI with venv
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To install FLOZz Daily Mix on Linux, the simplest way is to use the package from PyPI.
@@ -224,3 +226,19 @@ Changelog
   * feat: Implemented configuration file (@flozz)
   * feat: Implemented basic debug features (data dump, print playlist, dry-run) (@flozz)
   * docs: Initial basic documentation in the README (@flozz)
+
+
+.. |GitHub| image:: https://img.shields.io/github/stars/flozz/daily-mix?label=GitHub&logo=github
+   :target: https://github.com/flozz/daily-mix
+
+.. |License| image:: https://img.shields.io/github/license/flozz/daily-mix
+   :target: https://github.com/flozz/daily-mix/blob/master/COPYING
+
+.. |Discord| image:: https://img.shields.io/badge/chat-Discord-8c9eff?logo=discord&logoColor=ffffff
+   :target: https://discord.gg/P77sWhuSs4
+
+.. |Github Actions| image:: https://github.com/flozz/daily-mix/actions/workflows/python-ci.yml/badge.svg
+   :target: https://github.com/flozz/daily-mix/actions
+
+.. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://black.readthedocs.io/en/stable

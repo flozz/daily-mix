@@ -109,7 +109,7 @@ If your API credentials are configured in the file, you can generate your playli
 
     flozz-daily-mix generate flozz-daily-mix.conf
 
-If you do not write API configuration in the file, then the command will be a bit longer::
+If you do not wrote API configuration in the file, then the command will be a bit longer::
 
     flozz-daily-mix \
         --subsonic-api-url=https://nextcloud.example.org/apps/music/subsonic \
@@ -118,9 +118,9 @@ If you do not write API configuration in the file, then the command will be a bi
         --subsonic-api-legacy-authentication \
         generate flozz-daily-mix.conf
 
-**NOTE:** You can pass more than one configuration file, if you prefer writing one file by playlist.
+**NOTE:** You can pass more than one configuration file, if you prefer writing one file per playlist.
 
-You can also just generate and display playlists without writing them to the cloud with the following command::
+You can also just generate and display playlists without writing them to the cloud::
 
     flozz-daily-mix generate --dry-run --print-playlist flozz-daily-mix.conf
 

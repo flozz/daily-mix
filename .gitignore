@@ -1,6 +1,9 @@
 # Python
 __env__
 *.pyc
+build/
+dist/
+*.egg-info*
 
 # My local files
 __dev__

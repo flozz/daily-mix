@@ -27,6 +27,7 @@ min_track_duration = 60
 ; Maximal duration of tracks included in the playlist in seconds (default: 600)
 max_track_duration = 600
 
+; An other playlist
 [playlist:mix2]
 name = FLOZz Mix 2
 description = FLOzz Daily Mix

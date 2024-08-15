@@ -7,7 +7,7 @@ FLOZz Daily Mix generates playlists similar to Spotify's Daily Mix from a Subson
 
 This is currently a **work in progress** and it has only been tested against ownCloud / Nextcloud Music servers. Please note that only the legacy plain text password authentication is currently supported; that's why it will probably not work with most Subsonic servers.
 
-This generator does not make completely random playlists but tries to build interesting ones. It adds "interesting" tracks regularly in the playlist (more at the beginning of the list and a more spaced then). It also tries to put new/fresh tracks in at strategic places.
+This generator does not make completely random playlists but tries to build interesting ones. It adds "interesting" tracks regularly in the playlist (more at the beginning of the list and more spaced then). It also tries to put new/fresh tracks in at strategic places.
 
 Here is an example of a generated playlist:
 
@@ -17,7 +17,7 @@ Here is an example of a generated playlist:
 
 * **Yellow:** "interesting" tracks (criteria: high rating, liked,...)
 * **Green:** "fresh" tracks (criteria: newly added, recently released, low play count,...)
-* **Blue:** "regular" tracks (random tracks with note weighting)
+* **Blue:** "regular" tracks (random tracks with rate weighting)
 
 
 Requirements

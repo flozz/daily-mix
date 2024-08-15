@@ -221,6 +221,10 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
+  * Nothing yet ;)
+
+* **v0.1.0:**
+
   * feat: Get available musics from a Subsonic API, generate the playlists and write it to the API (@flozz)
   * feat: Implemented command line interface (@flozz)
   * feat: Implemented configuration file (@flozz)

@@ -221,7 +221,7 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
-  * Nothing yet ;)
+  * feat: Improved logging and added ``--quiet`` and ``--verbose`` CLI options (@flozz)
 
 * **v0.1.0:**
 

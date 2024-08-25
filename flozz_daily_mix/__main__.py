@@ -1,5 +1,6 @@
 import os
 import sys
+import logging
 
 from .subsonic import SubsonicClient
 from .db import Database
@@ -172,17 +173,36 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
             )
 
 
+def setup_logging(level):
+    if level <= logging.DEBUG:
+        logging.basicConfig(
+            format="[%(asctime)s] %(levelname)s: %(message)s",
+            level=level,
+        )
+    else:
+        logging.basicConfig(
+            format="%(levelname)s: %(message)s",
+            level=level,
+        )
+
+
 def main(args=sys.argv[1:]):
     parser = generate_cli()
     parsed_args = parser.parse_args(args if args else ["--help"])
 
-    if not parsed_args.subcommand:
-        print(
-            "E: you must provide a subcommand. Use the --help option to get help."
-        )  # XXX
-        sys.exit(1)
+    # Setup logging
+    log_level = logging.INFO
+    if parsed_args.quiet:
+        log_level = logging.ERROR
+    elif parsed_args.verbose:
+        log_level = logging.DEBUG
+    setup_logging(log_level)
+    logging.debug("Log level is set to %s" % logging.getLevelName(log_level))
 
-    print(parsed_args)  # FIXME DEBUG
+    # Check we have a subcomand
+    if not parsed_args.subcommand:
+        logging.error("No subcomand provided. Use the --help option to get help.")
+        sys.exit(1)
 
     # Subsonic API configuration and credentials
     subsonic_api_url = parsed_args.subsonic_api_url
@@ -200,7 +220,7 @@ def main(args=sys.argv[1:]):
     ):
         skip_subsonic = True
 
-    # Parse config & update credentials from config
+    # Parse config
     config_files = parsed_args.config_file
     if not config_files:
         config_files = []
@@ -208,6 +228,7 @@ def main(args=sys.argv[1:]):
         config_files = [config_files]
     config = read_config(config_files)
 
+    # Update credentials from config
     if subsonic_api_url is None and config["subsonic/api_url"] is not None:
         subsonic_api_url = config["subsonic/api_url"]
 
@@ -228,15 +249,15 @@ def main(args=sys.argv[1:]):
     # Check we have the config and the credentials for the Subsonic API
     if not skip_subsonic:
         if not subsonic_api_url:
-            print("E: No Subsonic API URL configured.")  # XXX
+            logging.error("No Subsonic API URL configured.")
             sys.exit(1)
 
         if not subsonic_api_username:
-            print("E: No username provided for the Subsonic API authentication.")  # XXX
+            logging.error("No username provided for the Subsonic API authentication.")
             sys.exit(1)
 
         if not subsonic_api_password:
-            print("E: No password provided for the Subsonic API authentication.")  # XXX
+            logging.error("No password provided for the Subsonic API authentication.")
             sys.exit(1)
 
         # FIXME
@@ -245,10 +266,10 @@ def main(args=sys.argv[1:]):
         # Curently we only support Nextcloud Music and its legacy plain-text
         # password auth.
         if not subsonic_api_legacy_authentication:
-            print(
-                "E: New Subsonic API authentication method is not supported yet. "
+            logging.error(
+                "New Subsonic API authentication method is not supported yet. "
                 "Please use the '--subsonic-api-legacy-authentication' option."
-            )  # XXX
+            )
             sys.exit(1)
 
     # Initialize Subsonic client

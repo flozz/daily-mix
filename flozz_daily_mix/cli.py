@@ -92,6 +92,22 @@ def generate_cli():
         default=False,
     )
 
+    parser.add_argument(
+        "-q",
+        "--quiet",
+        help="only output errors to the terminal",
+        action="store_true",
+        default=False,
+    )
+
+    parser.add_argument(
+        "-V",
+        "--verbose",
+        help="output debug information to the terminal",
+        action="store_true",
+        default=False,
+    )
+
     subparsers = parser.add_subparsers(dest="subcommand")
 
     dumpdata_parser = subparsers.add_parser(

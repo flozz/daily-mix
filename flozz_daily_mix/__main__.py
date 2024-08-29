@@ -34,8 +34,12 @@ def get_tracks(subsonic):
 
 
 def import_music_to_database(subsonic, db):
+    logging.info("Importing data from Subsonic API")
     # Get Artists
+    logging.debug("  * Importing artists...")
+    count = 0
     for artist in get_artists(subsonic):
+        count += 1
         db.insert_artist(
             id_=artist["id"],
             name=artist["name"],
@@ -43,9 +47,13 @@ def import_music_to_database(subsonic, db):
             starred=True if "starred" in artist and artist["starred"] else False,
             rating=artist.get("rating", 3),
         )
+    logging.debug("    Imported %i artist(s)." % count)
 
     # Get Albums
+    logging.debug("  * Importing Albums...")
+    count = 0
     for album in get_albums(subsonic):
+        count += 1
         db.insert_album(
             id_=album["id"],
             artistId=album["parent"],
@@ -58,9 +66,13 @@ def import_music_to_database(subsonic, db):
             starred=True if "starred" in album and album["starred"] else False,
             rating=album.get("rating", 3),  # FIXME check key name
         )
+    logging.debug("    Imported %i album(s)." % count)
 
     # Get Tracks
+    logging.debug("  * Importing Tracks...")
+    count = 0
     for track in get_tracks(subsonic):
+        count += 1
         db.insert_track(
             id_=track["id"],
             albumArtistId=track["_albumArtistId"],
@@ -82,6 +94,7 @@ def import_music_to_database(subsonic, db):
                 track["played"] if "played" in track and track["played"] else None
             ),
         )
+    logging.debug("    Imported %i track(s)." % count)
 
     db.commit()
 
@@ -89,7 +102,7 @@ def import_music_to_database(subsonic, db):
 def create_or_update_playlsit(
     subsonic,
     fzz_id,
-    name="FLOZz Daily Mix",
+    name="Unnamed Mix",
     comment="",
     tracks_ids=[],
 ):
@@ -105,11 +118,13 @@ def create_or_update_playlsit(
 
     # Create the playlist if does not exists
     if playlist_id is None:
+        logging.debug("Creating the '%s' playlist via Subsonic API..." % name)
         playlist = subsonic.createPlaylist(name=name)
         playlist_id = playlist["id"]
 
     # Empty the playlist if required
     if playlist_track_count > 0:
+        logging.debug("Updating the '%s' playlist via Subsonic API..." % name)
         subsonic.updatePlaylist(
             playlistId=playlist_id,
             songIndexToRemove=list(range(playlist_track_count)),
@@ -125,12 +140,15 @@ def create_or_update_playlsit(
 
 
 def dumpdata(subsonic, db_file):
+    logging.info("Dumping data from Subsonic API to '%s'..." % db_file)
     # Remove the database file if it already exists. We cannot update it, we
     # can only dump all data again.
     if os.path.isfile(db_file):
+        logging.debug("Removing existing database...")
         os.unlink(db_file)
 
     # Create the database
+    logging.debug("Creating new database...")
     db = Database(db_file)
 
     # Fetch data from the music cloud
@@ -149,7 +167,11 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
 
     # Generate playlists from configs
     for playlist_config in playlists_configs:
-        # TODO Print config name
+        logging.info("Generating '%s' playlist..." % playlist_config["name"])
+
+        logging.debug("Playlist config:")
+        for k, v in playlist_config.items():
+            logging.debug("  * %s: %s" % (k, str(playlist_config[k])))
 
         generator = PlaylistGenerator(
             db,
@@ -171,12 +193,17 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
                 comment=playlist_config["description"],
                 tracks_ids=generator.get_tracks_ids(),
             )
+        else:
+            logging.debug(
+                "Playlist '%s' not saved to the Subsonic API (dry-run)"
+                % playlist_config["name"]
+            )
 
 
 def setup_logging(level):
     if level <= logging.DEBUG:
         logging.basicConfig(
-            format="[%(asctime)s] %(levelname)s: %(message)s",
+            format="[%(asctime)s] %(levelname)7s: %(message)s",
             level=level,
         )
     else:
@@ -245,6 +272,34 @@ def main(args=sys.argv[1:]):
         subsonic_api_legacy_authentication = config[
             "subsonic/api_legacy_authentication"
         ]
+
+    # Print configs
+    logging.debug("Subcommand: %s" % parsed_args.subcommand)
+    logging.debug("Subsonic API:")
+    logging.debug("  * URL: %s" % subsonic_api_url)
+    logging.debug("  * Username: %s" % subsonic_api_username)
+    logging.debug("  * Password: %s" % ("*" * len(subsonic_api_password)))
+    logging.debug(
+        "  * Use legacy authentication: %s"
+        % ("True" if subsonic_api_legacy_authentication else "False")
+    )
+    logging.debug("General Options:")
+    logging.debug("  * quiet: %s" % ("True" if parsed_args.quiet else "False"))
+    logging.debug("  * verbose: %s" % ("True" if parsed_args.verbose else "False"))
+    if parsed_args.subcommand == "generate":
+        logging.debug("Generate Options:")
+        logging.debug("  * dry_run: %s" % ("True" if parsed_args.dry_run else "False"))
+        logging.debug(
+            "  * print_playlist: %s"
+            % ("True" if parsed_args.print_playlist else "False")
+        )
+        logging.debug("  * source_db: %s" % str(parsed_args.source_db))
+        logging.debug("  * skip_subsonic: %s" % ("True" if skip_subsonic else "False"))
+        logging.debug("  * config_files: %s" % ", ".join(parsed_args.config_file))
+    if parsed_args.subcommand == "dumpdata":
+        logging.debug("Dumpdata Options:")
+        logging.debug("  * config_files: %s" % str(parsed_args.config_file))
+        logging.debug("  * db_file: %s" % str(parsed_args.db_file))
 
     # Check we have the config and the credentials for the Subsonic API
     if not skip_subsonic:

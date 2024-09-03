@@ -38,13 +38,14 @@ def read_config(config_files):
                 if option_name in _DEFAULT_CONFIG:
                     config[option_name] = parser[section][key]
                 else:
-                    pass  # TODO Write warning
+                    logging.warn("Ignored unknown setting: '[%s]%s'" % (section, key))
         elif section.startswith("playlist:"):
             playlist = dict(_DEFAULT_PLAYLIST_CONFIG)
             playlist["_id"] = section.split(":")[1].strip()
             for key in parser[section]:
                 # Invaild key
                 if key not in _DEFAULT_PLAYLIST_CONFIG:
+                    logging.warn("Ignored unknown setting: '[%s]%s'" % (section, key))
                     continue  # TODO Write warning
                 # Check regexp
                 if key == "ignore_tracks_matching" and parser[section][key]:
@@ -52,7 +53,7 @@ def read_config(config_files):
                         re.compile(parser[section][key])
                     except re.error as error:
                         logging.error(
-                            "Invalid regexp '%s' for '%s/%s' setting: %s"
+                            "Invalid regexp '%s' for '[%s]%s' setting: %s"
                             % (parser[section][key], section, key, str(error))
                         )
                         sys.exit(1)
@@ -60,6 +61,10 @@ def read_config(config_files):
                     parser[section][key]
                 )
             config["playlists"].append(playlist)
+        elif section == "DEFAULT":
+            pass  # Ignore the default section we not use...
+        else:
+            logging.warn("Ignored unknown configuration section: '[%s]'" % section)
 
     if config["subsonic/api_legacy_authentication"] is not None:
         config["subsonic/api_legacy_authentication"] = config[

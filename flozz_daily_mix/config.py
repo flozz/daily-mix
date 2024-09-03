@@ -1,4 +1,7 @@
+import re
+import sys
 import configparser
+import logging
 
 _DEFAULT_CONFIG = {
     "subsonic/api_url": None,
@@ -15,10 +18,10 @@ _DEFAULT_PLAYLIST_CONFIG = {
     "max_tracks": 60,
     "min_track_duration": 60,
     "max_track_duration": 600,
+    "ignore_tracks_matching": "",
     # TODO future options to add:
     # "genres": ["all"],
     # "minimal_tracks_rating": 2,
-    # "ignore_tracks_matching": "^.*(introduction|instrumental|acoustic).*$",
 }
 
 
@@ -40,8 +43,19 @@ def read_config(config_files):
             playlist = dict(_DEFAULT_PLAYLIST_CONFIG)
             playlist["_id"] = section.split(":")[1].strip()
             for key in parser[section]:
+                # Invaild key
                 if key not in _DEFAULT_PLAYLIST_CONFIG:
                     continue  # TODO Write warning
+                # Check regexp
+                if key == "ignore_tracks_matching" and parser[section][key]:
+                    try:
+                        re.compile(parser[section][key])
+                    except re.error as error:
+                        logging.error(
+                            "Invalid regexp '%s' for '%s/%s' setting: %s"
+                            % (parser[section][key], section, key, str(error))
+                        )
+                        sys.exit(1)
                 playlist[key] = type(_DEFAULT_PLAYLIST_CONFIG[key])(
                     parser[section][key]
                 )

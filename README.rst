@@ -88,6 +88,10 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     min_track_duration = 60
     ; Maximal duration of tracks included in the playlist in seconds (default: 600)
     max_track_duration = 600
+    ; Ignore tracks whose name matches the given regexp. The regexp are processed
+    ; by Python `re` module and are case insensitive.
+    ; Default: empty string (disables the filter)
+    ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
 
     ; An other playlist
     [playlist:mix2]
@@ -96,6 +100,7 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     max_tracks = 60
     min_track_duration = 60
     max_track_duration = 600
+    ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
 
 
 Usage
@@ -222,6 +227,7 @@ Changelog
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
   * feat: Improved logging and added ``--quiet`` and ``--verbose`` CLI options (@flozz)
+  * feat: Added an ``ignore_tracks_matching`` option to filter tracks whose name matches the given pattern (@flozz)
   * fix: Add missing math functions when SQLite is not compiled with ``SQLITE_ENABLE_MATH_FUNCTIONS`` (@flozz)
 
 

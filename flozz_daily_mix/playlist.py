@@ -10,11 +10,20 @@ class TrackRole(Enum):
 
 class PlaylistGenerator:
 
-    def __init__(self, db, length=50, min_duration=60, max_duration=600, genres=None):
+    def __init__(
+        self,
+        db,
+        length=50,
+        min_duration=60,
+        max_duration=600,
+        genres=None,
+        track_ignore_pattern=None,
+    ):
         self._db = db
         self._length = length
         self._min_duration = min_duration
         self._max_duration = max_duration
+        self._track_ignore_pattern = track_ignore_pattern
         self._genres = genres
         self._tracks_interest = {}
         self._tracks_freshness = {}
@@ -131,6 +140,7 @@ class PlaylistGenerator:
             limit=self._length // 2,
             min_duration=self._min_duration,
             max_duration=self._max_duration,
+            track_ignore_pattern=self._track_ignore_pattern,
         )
         for track in tracks:
             self._tracks_interest[track["trackId"]] = track
@@ -140,6 +150,7 @@ class PlaylistGenerator:
             limit=self._length // 2,
             min_duration=self._min_duration,
             max_duration=self._max_duration,
+            track_ignore_pattern=self._track_ignore_pattern,
         )
         for track in tracks:
             self._tracks_freshness[track["trackId"]] = track
@@ -149,6 +160,7 @@ class PlaylistGenerator:
             limit=self._length * 2,
             min_duration=self._min_duration,
             max_duration=self._max_duration,
+            track_ignore_pattern=self._track_ignore_pattern,
         )
         for track in tracks:
             self._tracks_regular[track["trackId"]] = track

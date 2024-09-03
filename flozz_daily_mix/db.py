@@ -1,6 +1,7 @@
-import sqlite3
+import re
 import math
 import logging
+import sqlite3
 
 
 _SQL_CREATE_TABLES = """
@@ -110,6 +111,7 @@ WHERE tracks.rating > 1
       AND tracks.duration > :min_duration
       AND tracks.duration < :max_duration
       -- TODO filter genres
+      AND NOT REGEXP_MATCH(:track_ignore_pattern, tracks.name)
 ORDER BY {{CRITERA}} DESC,
       rand DESC
 LIMIT :limit
@@ -157,6 +159,10 @@ class Database:
         if not sqlite_function_exists(self._cur, "log"):
             logging.debug("Adding missing math functions to SQLite...")
             self._con.create_function("log", 1, math.log10)
+        # Add regexp filtering function
+        self._con.create_function(
+            "regexp_match", 2, lambda r, v: bool(re.match(r, v, re.I))
+        )
 
     def _create_tables(self):
         for statement in _SQL_CREATE_TABLES.split("--"):
@@ -229,11 +235,15 @@ class Database:
         genres=None,
         min_duration=60,
         max_duration=600,
+        track_ignore_pattern=None,
     ):
         params = {
             "min_duration": min_duration,
             "max_duration": max_duration,
             "limit": limit,
+            "track_ignore_pattern": (
+                track_ignore_pattern if track_ignore_pattern else "^$"
+            ),
         }
         response = self._cur.execute(
             _SQL_SELECT_RANDOM_TRACKS.replace("{{CRITERA}}", critera), params

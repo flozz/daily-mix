@@ -26,6 +26,10 @@ max_tracks = 60
 min_track_duration = 60
 ; Maximal duration of tracks included in the playlist in seconds (default: 600)
 max_track_duration = 600
+; Ignore tracks whose name matches the given regexp. The regexp are processed
+; by Python `re` module and are case insensitive.
+; Default: empty string (disables the filter)
+ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
 
 ; An other playlist
 [playlist:mix2]
@@ -34,5 +38,6 @@ description = FLOzz Daily Mix
 max_tracks = 60
 min_track_duration = 60
 max_track_duration = 600
+ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
 
 ; vim:ft=dosini

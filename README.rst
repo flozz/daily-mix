@@ -222,6 +222,8 @@ Changelog
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
   * feat: Improved logging and added ``--quiet`` and ``--verbose`` CLI options (@flozz)
+  * fix: Add missing math functions when SQLite is not compiled with ``SQLITE_ENABLE_MATH_FUNCTIONS`` (@flozz)
+
 
 * **v0.1.0:**
 

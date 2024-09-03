@@ -1,4 +1,6 @@
 import sqlite3
+import math
+import logging
 
 
 _SQL_CREATE_TABLES = """
@@ -118,6 +120,30 @@ LIMIT :limit
 )
 
 
+def sqlite_function_exists(cursor, name):
+    """Checks if the given function is available in SQLite.
+
+    :param cursor: SQLite cursor.
+    :param str name: The function name.
+
+    :rtype: bool
+
+    >>> conn = sqlite3.connect(":memory:")
+    >>> cur = conn.cursor()
+    >>> sqlite_function_exists(cur, "foobar")
+    False
+    >>> sqlite_function_exists(cur, "date")
+    True
+    """
+    response = cursor.execute(
+        "SELECT 1 FROM pragma_function_list WHERE name=:name",
+        {
+            "name": name,
+        },
+    )
+    return bool(response.fetchone())
+
+
 class Database:
 
     def __init__(self, db_path=":memory:", skip_table_creation=False):
@@ -126,6 +152,11 @@ class Database:
         self._cur = self._con.cursor()
         if not skip_table_creation:
             self._create_tables()
+        # Add missing math functions (if SQLite was not compiled with
+        # 'SQLITE_ENABLE_MATH_FUNCTIONS')
+        if not sqlite_function_exists(self._cur, "log"):
+            logging.debug("Adding missing math functions to SQLite...")
+            self._con.create_function("log", 1, math.log10)
 
     def _create_tables(self):
         for statement in _SQL_CREATE_TABLES.split("--"):

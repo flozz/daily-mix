@@ -18,12 +18,14 @@ class PlaylistGenerator:
         max_duration=600,
         genres=None,
         track_ignore_pattern=None,
+        min_rate=2,
     ):
         self._db = db
         self._length = length
         self._min_duration = min_duration
         self._max_duration = max_duration
         self._track_ignore_pattern = track_ignore_pattern
+        self._min_rate = min_rate
         self._genres = genres
         self._tracks_interest = {}
         self._tracks_freshness = {}
@@ -141,6 +143,7 @@ class PlaylistGenerator:
             min_duration=self._min_duration,
             max_duration=self._max_duration,
             track_ignore_pattern=self._track_ignore_pattern,
+            min_rate=self._min_rate,
         )
         for track in tracks:
             self._tracks_interest[track["trackId"]] = track
@@ -151,6 +154,7 @@ class PlaylistGenerator:
             min_duration=self._min_duration,
             max_duration=self._max_duration,
             track_ignore_pattern=self._track_ignore_pattern,
+            min_rate=self._min_rate,
         )
         for track in tracks:
             self._tracks_freshness[track["trackId"]] = track
@@ -161,6 +165,7 @@ class PlaylistGenerator:
             min_duration=self._min_duration,
             max_duration=self._max_duration,
             track_ignore_pattern=self._track_ignore_pattern,
+            min_rate=self._min_rate,
         )
         for track in tracks:
             self._tracks_regular[track["trackId"]] = track

@@ -30,6 +30,8 @@ max_track_duration = 600
 ; by Python `re` module and are case insensitive.
 ; Default: empty string (disables the filter)
 ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
+; Minimal rating for a track to be included in the playlist (from 1 to 5, default: 2)
+minimal_track_rating = 2
 
 ; An other playlist
 [playlist:mix2]
@@ -39,5 +41,6 @@ max_tracks = 60
 min_track_duration = 60
 max_track_duration = 600
 ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
+minimal_track_rating = 2
 
 ; vim:ft=dosini

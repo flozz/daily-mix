@@ -179,6 +179,7 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
             min_duration=playlist_config["min_track_duration"],
             max_duration=playlist_config["max_track_duration"],
             track_ignore_pattern=playlist_config["ignore_tracks_matching"],
+            min_rate=playlist_config["minimal_track_rating"],
             genres=None,  # TODO
         )
         generator.generate()

@@ -92,6 +92,8 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     ; by Python `re` module and are case insensitive.
     ; Default: empty string (disables the filter)
     ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
+    ; Minimal rating for a track to be included in the playlist (from 1 to 5, default: 2)
+    minimal_tracks_rating = 2
 
     ; An other playlist
     [playlist:mix2]
@@ -101,6 +103,7 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     min_track_duration = 60
     max_track_duration = 600
     ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
+    minimal_tracks_rating = 2
 
 
 Usage
@@ -229,6 +232,7 @@ Changelog
   * feat: Improved logging and added ``--quiet`` and ``--verbose`` CLI options (@flozz)
   * feat: Added an ``ignore_tracks_matching`` option to filter tracks whose name matches the given pattern (@flozz)
   * feat: Output warning for wrong settings instead of ignoring them silently (@flozz)
+  * feat: Added a ``minimal_track_rating`` filter option (@flozz)
   * fix: Add missing math functions when SQLite is not compiled with ``SQLITE_ENABLE_MATH_FUNCTIONS`` (@flozz)
 
 

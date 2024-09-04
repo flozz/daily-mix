@@ -19,9 +19,9 @@ _DEFAULT_PLAYLIST_CONFIG = {
     "min_track_duration": 60,
     "max_track_duration": 600,
     "ignore_tracks_matching": "",
+    "minimal_track_rating": 2,
     # TODO future options to add:
     # "genres": ["all"],
-    # "minimal_tracks_rating": 2,
 }
 
 

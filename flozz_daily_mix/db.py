@@ -107,7 +107,7 @@ SELECT tracks.id,
 FROM tracks
 LEFT JOIN artists ON artists.id = tracks.albumArtistId
 LEFT JOIN albums ON albums.id = tracks.albumId
-WHERE tracks.rating > 1
+WHERE tracks.rating >= :min_rate
       AND tracks.duration > :min_duration
       AND tracks.duration < :max_duration
       -- TODO filter genres
@@ -236,6 +236,7 @@ class Database:
         min_duration=60,
         max_duration=600,
         track_ignore_pattern=None,
+        min_rate=2,
     ):
         params = {
             "min_duration": min_duration,
@@ -244,6 +245,7 @@ class Database:
             "track_ignore_pattern": (
                 track_ignore_pattern if track_ignore_pattern else "^$"
             ),
+            "min_rate": min_rate,
         }
         response = self._cur.execute(
             _SQL_SELECT_RANDOM_TRACKS.replace("{{CRITERA}}", critera), params

@@ -14,7 +14,7 @@ except Exception as error:
 
 setup(
     name="flozz-daily-mix",
-    version="0.1.0",
+    version="0.2.0",
     description="Generates thematic playlists like Spotify's Daily Mix from a Subsonic API",
     url="https://github.com/flozz/daily-mix",
     project_urls={

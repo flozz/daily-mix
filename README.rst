@@ -229,6 +229,10 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
+  * Nothing yet ;)
+
+* **v0.2.0:**
+
   * feat: Improved logging and added ``--quiet`` and ``--verbose`` CLI options (@flozz)
   * feat: Added an ``ignore_tracks_matching`` option to filter tracks whose name matches the given pattern (@flozz)
   * feat: Output warning for wrong settings instead of ignoring them silently (@flozz)

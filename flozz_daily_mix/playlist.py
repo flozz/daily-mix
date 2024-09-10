@@ -1,4 +1,5 @@
 import random
+import logging
 from enum import Enum
 
 
@@ -9,6 +10,48 @@ class TrackRole(Enum):
 
 
 class PlaylistGenerator:
+
+    _SQL_SELECT_FIELDS = [
+        # (Alias, Field)
+        ("trackId", "tracks.id"),
+        ("artistId", "tracks.artistId"),
+        ("albumArtistId", "tracks.albumArtistId"),
+        ("albumArtistName", "artists.name"),
+        ("albumName", "albums.name"),
+        ("trackName", "tracks.name"),
+        ("duration", "tracks.duration"),
+        ("year", "tracks.year"),
+        ("rating", "tracks.rating"),
+        ("starred", "tracks.starred"),
+        ("playCount", "tracks.playCount"),
+        ("fzzInterestScore", "%s AS fzzInterestScore"),
+        ("fzzFreshnessScore", "%s AS fzzFreshnessScore"),
+        ("rand", "ABS(RANDOM()) AS RAND"),
+    ]
+
+    _SQL_FROM_JOINTS = """
+    FROM tracks
+    LEFT JOIN artists ON artists.id = tracks.albumArtistId
+    LEFT JOIN albums ON albums.id = tracks.albumId
+    """
+
+    _SQL_WHERE_CLAUSES = [
+        "tracks.rating >= :min_rate",
+        "tracks.duration > :min_duration",
+        "tracks.duration < :max_duration",
+        "NOT REGEXP_MATCH(:track_ignore_pattern, tracks.name)",
+    ]
+
+    _SQL_FRESHNESS_SCORE = """(
+            (1+(LOG(366) - LOG(1+JULIANDAY('now') - MAX(JULIANDAY(tracks.created), 365))) / LOG(365))  -- recently added score
+            + (1+LOG(6)-LOG(1+MIN(STRFTIME("%Y", DATE('now'))-tracks.year, 5)))  -- recently released score
+            + 1+LOG(11)-LOG(1+MIN(tracks.playCount,10))  -- low play count score
+           )"""
+
+    _SQL_INTEREST_SCORE = """(
+            (LOG(tracks.rating)*(1+1.2*tracks.starred))  -- rating score
+            + 1+LOG(11)-LOG(1+MIN(tracks.playCount,10))  -- low play count score
+           )"""
 
     def __init__(
         self,
@@ -35,9 +78,9 @@ class PlaylistGenerator:
     def print(self):
         ROLES = {
             # fmt: off
-            TrackRole.REGULAR.value:   {"symbol": "🎝", "color": "\x1B[37;44m"},
-            TrackRole.INTEREST.value:  {"symbol": "✚", "color": "\x1B[37;43m"},
-            TrackRole.FRESHNESS.value: {"symbol": "❊", "color": "\x1B[37;42m"},
+            TrackRole.REGULAR:   {"symbol": "🎝", "color": "\x1B[37;44m"},
+            TrackRole.INTEREST:  {"symbol": "✚", "color": "\x1B[37;43m"},
+            TrackRole.FRESHNESS: {"symbol": "❊", "color": "\x1B[37;42m"},
             # fmt: on
         }
         total_duration = 0
@@ -63,8 +106,8 @@ class PlaylistGenerator:
                     ROLES[track["role"]]["symbol"],
                     ("★" * track["rating"]) + (" " * (5 - track["rating"])),
                     "♥" if track["starred"] else "♡",
-                    track["fzz_interestScore"],
-                    track["fzz_freshnessScore"],
+                    track["fzzInterestScore"],
+                    track["fzzFreshnessScore"],
                     track["albumArtistName"][:20],
                     track["trackName"][:35],
                 )
@@ -136,38 +179,86 @@ class PlaylistGenerator:
     def get_tracks_ids(self):
         return [track["trackId"] for track in self._playlist]
 
-    def _fetch_musics(self):
-        # Interest
-        tracks = self._db.select_random_tracks_by_interest(
-            limit=self._length // 2,
-            min_duration=self._min_duration,
-            max_duration=self._max_duration,
-            track_ignore_pattern=self._track_ignore_pattern,
-            min_rate=self._min_rate,
+    def _generate_sql_query(
+        self,
+        where=[],
+        order_by=[],
+        limit=None,
+    ):
+        logging.debug("Generating SQL query...")
+        sql = "    SELECT "
+        sql += ",\n           ".join([f for a, f in self._SQL_SELECT_FIELDS])
+
+        sql += "\n"
+        sql += self._SQL_FROM_JOINTS.rstrip()
+        sql = sql % (
+            self._SQL_INTEREST_SCORE,
+            self._SQL_FRESHNESS_SCORE,
         )
+
+        if where:
+            sql += "\n\n"
+            sql += "    WHERE "
+            sql += "\n      AND ".join(where)
+
+        if order_by:
+            sql += "\n\n"
+            sql += "    ORDER BY "
+            sql += ",\n             ".join(order_by)
+
+        if limit:
+            sql += "\n\n    LIMIT %i" % limit
+
+        sql += ";"
+
+        return sql
+
+    def _execute_sql_query(self, query, params={}):
+        logging.debug("Executing query: \n%s" % query)
+        logging.debug("... with params: \n%s" % str(params))
+        response = self._db.execute_query(query, params)
+        for row in response.fetchall():
+            yield {f[0]: v for f, v in zip(self._SQL_SELECT_FIELDS, row)}
+
+    def _fetch_musics(self):
+        params = {
+            "min_rate": self._min_rate,
+            "min_duration": self._min_duration,
+            "max_duration": self._max_duration,
+            "track_ignore_pattern": self._track_ignore_pattern,
+        }
+
+        # Interest
+        query = self._generate_sql_query(
+            where=self._SQL_WHERE_CLAUSES,
+            order_by=["fzzInterestScore DESC", "rand DESC"],
+            limit=self._length // 2,
+        )
+        tracks = self._execute_sql_query(query, params)
         for track in tracks:
+            track["role"] = TrackRole.INTEREST
             self._tracks_interest[track["trackId"]] = track
 
         # Freshness
-        tracks = self._db.select_random_tracks_by_freshness(
+        query = self._generate_sql_query(
+            where=self._SQL_WHERE_CLAUSES,
+            order_by=["fzzFreshnessScore DESC", "rand DESC"],
             limit=self._length // 2,
-            min_duration=self._min_duration,
-            max_duration=self._max_duration,
-            track_ignore_pattern=self._track_ignore_pattern,
-            min_rate=self._min_rate,
         )
+        tracks = self._execute_sql_query(query, params)
         for track in tracks:
+            track["role"] = TrackRole.FRESHNESS
             self._tracks_freshness[track["trackId"]] = track
 
         # Regular
-        tracks = self._db.select_random_tracks(
+        query = self._generate_sql_query(
+            where=self._SQL_WHERE_CLAUSES,
+            order_by=["rand * tracks.rating DESC"],
             limit=self._length * 2,
-            min_duration=self._min_duration,
-            max_duration=self._max_duration,
-            track_ignore_pattern=self._track_ignore_pattern,
-            min_rate=self._min_rate,
         )
+        tracks = self._execute_sql_query(query, params)
         for track in tracks:
+            track["role"] = TrackRole.REGULAR
             self._tracks_regular[track["trackId"]] = track
 
     def _generate_skeleton(self):

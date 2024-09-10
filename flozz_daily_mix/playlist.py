@@ -7,6 +7,7 @@ class TrackRole(Enum):
     REGULAR = "regular"
     INTEREST = "interest"
     FRESHNESS = "freshness"
+    BACKCATALOG = "backcatalog"
 
 
 class PlaylistGenerator:
@@ -24,6 +25,7 @@ class PlaylistGenerator:
         ("rating", "tracks.rating"),
         ("starred", "tracks.starred"),
         ("playCount", "tracks.playCount"),
+        ("lastPlayed", "tracks.lastPlayed"),
         ("fzzInterestScore", "%s AS fzzInterestScore"),
         ("fzzFreshnessScore", "%s AS fzzFreshnessScore"),
         ("rand", "ABS(RANDOM()) AS RAND"),
@@ -72,15 +74,17 @@ class PlaylistGenerator:
         self._genres = genres
         self._tracks_interest = {}
         self._tracks_freshness = {}
+        self._tracks_backcatalog = {}
         self._tracks_regular = {}
         self._playlist = []
 
     def print(self):
         ROLES = {
             # fmt: off
-            TrackRole.REGULAR:   {"symbol": "🎝", "color": "\x1B[37;44m"},
-            TrackRole.INTEREST:  {"symbol": "✚", "color": "\x1B[37;43m"},
-            TrackRole.FRESHNESS: {"symbol": "❊", "color": "\x1B[37;42m"},
+            TrackRole.REGULAR:     {"symbol": "🎝", "color": "\x1B[37;44m"},
+            TrackRole.INTEREST:    {"symbol": "✚", "color": "\x1B[37;43m"},
+            TrackRole.FRESHNESS:   {"symbol": "❊", "color": "\x1B[37;42m"},
+            TrackRole.BACKCATALOG: {"symbol": "⮜", "color": "\x1B[37;45m"},
             # fmt: on
         }
         total_duration = 0
@@ -146,6 +150,9 @@ class PlaylistGenerator:
                 elif self._playlist[i]["role"] == TrackRole.FRESHNESS:
                     track_id = random.choice(list(self._tracks_freshness.keys()))
                     track = self._tracks_freshness[track_id]
+                elif self._playlist[i]["role"] == TrackRole.BACKCATALOG:
+                    track_id = random.choice(list(self._tracks_backcatalog.keys()))
+                    track = self._tracks_backcatalog[track_id]
 
                 if track["artistId"] == prev_artist_id:
                     retry_count -= 1
@@ -163,12 +170,15 @@ class PlaylistGenerator:
                 del self._tracks_interest[track["trackId"]]
             if track["trackId"] in self._tracks_freshness:
                 del self._tracks_freshness[track["trackId"]]
+            if track["trackId"] in self._tracks_backcatalog:
+                del self._tracks_backcatalog[track["trackId"]]
 
             # Stop if one of the music list goes empty
             if (
                 not self._tracks_regular
                 or not self._tracks_interest
                 or not self._tracks_freshness
+                or not self._tracks_backcatalog
             ):
                 self._playlist = self._playlist[: i + 1]
                 break
@@ -250,6 +260,17 @@ class PlaylistGenerator:
             track["role"] = TrackRole.FRESHNESS
             self._tracks_freshness[track["trackId"]] = track
 
+        # Back Catalog
+        query = self._generate_sql_query(
+            where=self._SQL_WHERE_CLAUSES + ["tracks.lastPlayed NOT NULL"],
+            order_by=["tracks.lastPlayed", "rand DESC"],
+            limit=self._length // 4,
+        )
+        tracks = self._execute_sql_query(query, params)
+        for track in tracks:
+            track["role"] = TrackRole.BACKCATALOG
+            self._tracks_backcatalog[track["trackId"]] = track
+
         # Regular
         query = self._generate_sql_query(
             where=self._SQL_WHERE_CLAUSES,
@@ -269,6 +290,8 @@ class PlaylistGenerator:
         next_freshness = 1
         freshness_spacing = 2
         max_freshness_spacing = 10
+        next_backcatalog = 14
+        backcatalog_spacing = 14
         for i in range(self._length):
             role = TrackRole.REGULAR
             if i == next_interest:
@@ -284,6 +307,12 @@ class PlaylistGenerator:
                     )
                 else:
                     next_freshness += 1
+            if i == next_backcatalog:
+                if role == TrackRole.REGULAR:
+                    role = TrackRole.BACKCATALOG
+                    next_backcatalog += backcatalog_spacing
+                else:
+                    next_backcatalog += 1
             self._playlist.append(
                 {
                     "role": role,

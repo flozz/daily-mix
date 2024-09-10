@@ -237,6 +237,7 @@ Changelog
   * feat: Added an ``ignore_tracks_matching`` option to filter tracks whose name matches the given pattern (@flozz)
   * feat: Output warning for wrong settings instead of ignoring them silently (@flozz)
   * feat: Added a ``minimal_track_rating`` filter option (@flozz)
+  * feat: Added "back catalog" slots to generated playlists (@flozz)
   * fix: Add missing math functions when SQLite is not compiled with ``SQLITE_ENABLE_MATH_FUNCTIONS`` (@flozz)
 
 

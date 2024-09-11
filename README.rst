@@ -17,6 +17,7 @@ Here is an example of a generated playlist:
 
 * **Yellow:** "interesting" tracks (criteria: high rating, liked,...)
 * **Green:** "fresh" tracks (criteria: newly added, recently released, low play count,...)
+* **Purple:** "back catalog" tracks (hasn't been played for a long time)
 * **Blue:** "regular" tracks (random tracks with rate weighting)
 
 

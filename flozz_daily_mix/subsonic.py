@@ -48,7 +48,7 @@ class SubsonicClient:
         if "subsonic-response" not in parsed_json:
             raise Exception("Invalid response from the Subsonic API")  # XXX
         if parsed_json["subsonic-response"]["status"] != "ok":
-            raise Exception()  # XXX
+            raise Exception(parsed_json["subsonic-response"]["error"]["message"])  # XXX
         return parsed_json["subsonic-response"]
 
     def getArtists(self, **kwargs):
@@ -61,7 +61,11 @@ class SubsonicClient:
         query = {"type": type_, "offset": offset, "size": size, **kwargs}
         url = self._build_url("getAlbumList", **query)
         response = self._get_json(url)
-        return response["albumList"]["album"]
+        try:
+            return response["albumList"]["album"]
+        # Sometime get empty json response
+        except KeyError:
+            return None
 
     def getAlbum(self, id_=None, **kwargs):
         if not id_:

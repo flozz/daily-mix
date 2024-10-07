@@ -73,27 +73,31 @@ def import_music_to_database(subsonic, db):
     count = 0
     for track in get_tracks(subsonic):
         count += 1
-        db.insert_track(
-            id_=track["id"],
-            albumArtistId=track["_albumArtistId"],
-            artistId=track["artistId"],
-            albumId=track["albumId"],
-            coverArtId=track.get("coverArt", None),
-            genreId=None,  # XXX
-            diskNumber=track.get("discNumber", 1),
-            trackNumber=track.get("track", 1),
-            name=track["title"],
-            sortName=track.get("sortName", track["title"]),
-            duration=track["duration"],
-            year=track.get("year", 0),
-            created=track["created"],
-            starred=True if "starred" in track and track["starred"] else False,
-            rating=track.get("userRating", track["_albumRating"]),
-            playCount=track.get("playCount", 0),
-            lastPlayed=(
-                track["played"] if "played" in track and track["played"] else None
-            ),
-        )
+        try:
+            db.insert_track(
+                id_=track["id"],
+                albumArtistId=track["_albumArtistId"],
+                artistId=track["artistId"],
+                albumId=track["albumId"],
+                coverArtId=track.get("coverArt", None),
+                genreId=None,  # XXX
+                diskNumber=track.get("discNumber", 1),
+                trackNumber=track.get("track", 1),
+                name=track["title"],
+                sortName=track.get("sortName", track["title"]),
+                duration=track["duration"],
+                year=track.get("year", 0),
+                created=track["created"],
+                starred=True if "starred" in track and track["starred"] else False,
+                rating=track.get("userRating", track["_albumRating"]),
+                playCount=track.get("playCount", 0),
+                lastPlayed=(
+                    track["played"] if "played" in track and track["played"] else None
+                ),
+            )
+        # Sometime get track with empty title and some key missing, ignore this track
+        except KeyError:
+            count += -1
     logging.debug("    Imported %i track(s)." % count)
 
     db.commit()

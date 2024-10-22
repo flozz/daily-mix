@@ -215,6 +215,16 @@ You can also fix coding style errors automatically with::
     nox -s black_fix
 
 
+Update genres from MusicBrainz
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To update genre files (``flozz_daily_mix/data/musicbrainz_db/*``), run::
+
+    ./scripts/update-genres.py
+
+WARNING: It will take tens of minutes to download the archive and to exract the files.
+
+
 Support this project
 --------------------
 

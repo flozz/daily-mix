@@ -2,6 +2,7 @@ import nox
 
 PYTHON_FILES = [
     "flozz_daily_mix",
+    "scripts",
     "noxfile.py",
     "setup.py",
 ]

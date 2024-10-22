@@ -1,0 +1,3 @@
+include README.rst
+include COPYING
+recursive-include flozz_daily_mix/data/musicbrainz_db/ *

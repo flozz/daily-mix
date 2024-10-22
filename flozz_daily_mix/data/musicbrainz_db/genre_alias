@@ -1,0 +1,912 @@
+1	28	avant-pop	en	0	2022-06-29 17:11:03.432655+00	1	avant-pop	\N	\N	\N	\N	\N	\N	f	f
+2	27	avant-metal	en	0	2022-06-29 17:11:57.064054+00	1	avant-metal	\N	\N	\N	\N	\N	\N	f	f
+3	26	avant-jazz	en	0	2022-06-29 17:14:56.75658+00	1	avant-jazz	\N	\N	\N	\N	\N	\N	f	f
+4	816	avant-garde folk	en	0	2022-06-29 17:17:33.402806+00	1	avant-garde folk	\N	\N	\N	\N	\N	\N	f	f
+5	23	atmo-black	en	0	2022-06-29 17:18:21.825953+00	1	atmo-black	\N	\N	\N	\N	\N	\N	f	f
+6	22	art-rock	en	0	2022-06-29 17:18:55.349217+00	1	art-rock	\N	\N	\N	\N	\N	\N	f	f
+7	492	art-punk	en	0	2022-06-29 17:20:22.223963+00	1	art-punk	\N	\N	\N	\N	\N	\N	f	f
+8	457	artpop	en	0	2022-06-29 17:21:00.644972+00	1	artpop	\N	\N	\N	\N	\N	\N	f	f
+9	457	art-pop	en	0	2022-06-29 17:21:08.901208+00	1	art-pop	\N	\N	\N	\N	\N	\N	f	f
+11	14	alt rock	en	0	2022-06-29 17:25:53.423832+00	1	alt rock	\N	\N	\N	\N	\N	\N	f	f
+10	14	alt-rock	en	0	2022-06-29 17:25:59.696959+00	1	alt-rock	\N	\N	\N	\N	\N	\N	f	f
+12	20	adult oriented rock	en	0	2022-06-29 17:28:27.030893+00	1	adult oriented rock	\N	\N	\N	\N	\N	\N	f	f
+13	20	adult-oriented rock	en	0	2022-06-29 17:28:38.519734+00	1	adult-oriented rock	\N	\N	\N	\N	\N	\N	f	f
+14	673	andalusi classical	en	0	2022-06-29 17:29:48.634801+00	1	andalusi classical	\N	\N	\N	\N	\N	\N	f	f
+15	673	música andalusí	es	0	2022-06-29 17:30:07.937241+00	1	música andalusí	\N	\N	\N	\N	\N	\N	t	f
+16	662	anadolu rock	tr	0	2022-06-29 17:30:46.324062+00	1	anadolu rock	\N	\N	\N	\N	\N	\N	t	f
+17	574	american primitivism	en	0	2022-06-29 17:34:43.521772+00	1	american primitivism	\N	\N	\N	\N	\N	\N	f	f
+18	12	alt pop	en	0	2022-06-29 17:37:31.090728+00	1	alt pop	\N	\N	\N	\N	\N	\N	f	f
+19	12	alt-pop	en	0	2022-06-29 17:37:40.279834+00	1	alt-pop	\N	\N	\N	\N	\N	\N	f	f
+20	11	alt-metal	en	0	2022-06-29 17:38:32.488694+00	1	alt-metal	\N	\N	\N	\N	\N	\N	f	f
+21	11	alt metal	en	0	2022-06-29 17:38:40.686432+00	1	alt metal	\N	\N	\N	\N	\N	\N	f	f
+22	10	alternative rap	en	0	2022-06-29 17:40:21.603226+00	1	alternative rap	\N	\N	\N	\N	\N	\N	f	f
+23	10	alternative hip-hop	en	0	2022-06-29 17:41:00.56703+00	1	alternative hip-hop	\N	\N	\N	\N	\N	\N	f	f
+24	10	alternative hiphop	en	0	2022-06-29 17:41:07.468703+00	1	alternative hiphop	\N	\N	\N	\N	\N	\N	f	f
+25	9	alt folk	en	0	2022-06-29 17:41:51.24896+00	1	alt folk	\N	\N	\N	\N	\N	\N	f	f
+26	9	alt-folk	en	0	2022-06-29 17:41:57.673085+00	1	alt-folk	\N	\N	\N	\N	\N	\N	f	f
+27	7	alt-country	en	0	2022-06-29 17:43:41.850575+00	1	alt-country	\N	\N	\N	\N	\N	\N	f	f
+28	7	alt country	en	0	2022-06-29 17:43:46.082868+00	1	alt country	\N	\N	\N	\N	\N	\N	f	f
+30	577	terror ebm	en	0	2022-06-29 17:45:15.89445+00	1	terror ebm	\N	\N	\N	\N	\N	\N	f	f
+31	577	harsh ebm	en	0	2022-06-29 17:45:18.572286+00	1	harsh ebm	\N	\N	\N	\N	\N	\N	f	f
+29	577	hellektro	\N	0	2022-06-29 17:45:24.065755+00	1	hellektro	\N	\N	\N	\N	\N	\N	f	f
+32	5	rock acoustique	fr	0	2022-06-29 17:49:22.930159+00	1	rock acoustique	\N	\N	\N	\N	\N	\N	t	f
+33	2	club jazz	en	0	2022-06-29 17:53:11.768085+00	1	club jazz	\N	\N	\N	\N	\N	\N	f	f
+34	851	acid breakbeat	en	0	2022-06-29 17:55:04.486134+00	1	acid breakbeat	\N	\N	\N	\N	\N	\N	f	f
+35	572	2-step garage	en	0	2022-06-29 17:55:58.465785+00	1	2-step garage	\N	\N	\N	\N	\N	\N	f	f
+36	572	2 step garage	en	0	2022-06-29 17:56:05.284323+00	1	2 step garage	\N	\N	\N	\N	\N	\N	f	f
+37	572	two step garage	en	0	2022-06-29 17:56:15.202189+00	1	two step garage	\N	\N	\N	\N	\N	\N	f	f
+38	572	2 step	en	0	2022-06-29 17:56:20.338249+00	1	2 step	\N	\N	\N	\N	\N	\N	f	f
+39	572	two step	en	0	2022-06-29 17:56:29.799007+00	1	two step	\N	\N	\N	\N	\N	\N	f	f
+40	589	two tone	en	0	2022-06-29 17:57:08.174646+00	1	two tone	\N	\N	\N	\N	\N	\N	f	f
+41	589	2-tone	\N	0	2022-06-29 17:57:23.549933+00	2	2-tone	\N	\N	\N	\N	\N	\N	f	f
+42	589	two-tone	en	0	2022-06-29 17:57:33.680909+00	1	two-tone	\N	\N	\N	\N	\N	\N	f	f
+43	571	bassline house	en	0	2022-06-30 07:55:08.473958+00	1	bassline house	\N	\N	\N	\N	\N	\N	f	f
+44	32	baroque music	en	0	2022-06-30 07:58:47.136354+00	1	baroque music	\N	\N	\N	\N	\N	\N	f	f
+45	531	tavernwave	en	0	2022-06-30 08:00:05.946725+00	1	tavernwave	\N	\N	\N	\N	\N	\N	f	f
+46	31	barbershop music	en	0	2022-06-30 08:02:43.503391+00	1	barbershop music	\N	\N	\N	\N	\N	\N	f	f
+47	675	bmore club	en	0	2022-06-30 08:04:27.901274+00	1	bmore club	\N	\N	\N	\N	\N	\N	f	f
+48	675	bmore house	en	0	2022-06-30 08:04:33.119241+00	1	bmore house	\N	\N	\N	\N	\N	\N	f	f
+49	675	bmore	en	0	2022-06-30 08:04:39.804897+00	1	bmore	\N	\N	\N	\N	\N	\N	f	f
+50	663	balearic house	en	0	2022-06-30 08:10:55.986918+00	1	balearic house	\N	\N	\N	\N	\N	\N	f	f
+51	663	ibiza house	en	0	2022-06-30 08:10:57.850605+00	1	ibiza house	\N	\N	\N	\N	\N	\N	f	f
+52	664	gospel bluegrass	en	0	2022-06-30 08:20:31.845324+00	1	gospel bluegrass	\N	\N	\N	\N	\N	\N	f	f
+53	41	bluegrass music	en	0	2022-06-30 08:24:39.311152+00	1	bluegrass music	\N	\N	\N	\N	\N	\N	f	f
+54	40	blue eyed soul	en	0	2022-06-30 08:26:06.022782+00	1	blue eyed soul	\N	\N	\N	\N	\N	\N	f	f
+55	40	white soul	en	0	2022-06-30 08:26:38.717876+00	1	white soul	\N	\N	\N	\N	\N	\N	f	f
+56	533	bleep and bass	en	0	2022-06-30 08:31:01.415474+00	1	bleep and bass	\N	\N	\N	\N	\N	\N	f	f
+57	835	festival house	en	0	2022-06-30 08:52:18.997301+00	1	festival house	\N	\N	\N	\N	\N	\N	f	f
+58	835	big room	en	0	2022-06-30 08:52:28.980909+00	1	big room	\N	\N	\N	\N	\N	\N	f	f
+59	835	bigroom	\N	0	2022-06-30 08:52:45.677984+00	2	bigroom	\N	\N	\N	\N	\N	\N	f	f
+60	835	bigroom house	\N	0	2022-06-30 08:53:00.322806+00	2	bigroom house	\N	\N	\N	\N	\N	\N	f	f
+61	35	big band music	en	0	2022-06-30 08:55:59.291482+00	1	big band music	\N	\N	\N	\N	\N	\N	f	f
+62	34	ਭੰਗੜਾ	pa_Guru	0	2022-06-30 08:59:11.419363+00	1	ਭੰਗੜਾ	\N	\N	\N	\N	\N	\N	t	f
+63	855	peking opera	en	0	2022-06-30 09:05:07.631285+00	1	peking opera	\N	\N	\N	\N	\N	\N	f	f
+64	855	京劇	zh_Hant	0	2022-06-30 09:06:14.356713+00	1	京劇	\N	\N	\N	\N	\N	\N	f	f
+65	855	京剧	zh_Hans	0	2022-06-30 09:06:25.449145+00	1	京剧	\N	\N	\N	\N	\N	\N	f	f
+66	33	bop	en	0	2022-06-30 09:07:45.743422+00	1	bop	\N	\N	\N	\N	\N	\N	f	f
+67	33	be bop	\N	0	2022-06-30 09:07:49.776937+00	2	be bop	\N	\N	\N	\N	\N	\N	f	f
+68	485	british beat	en	0	2022-06-30 09:08:49.83405+00	1	british beat	\N	\N	\N	\N	\N	\N	f	f
+69	485	merseybeat	en	0	2022-06-30 09:08:55.062716+00	1	merseybeat	\N	\N	\N	\N	\N	\N	f	f
+70	54	bubblegum	en	0	2022-06-30 09:11:13.490957+00	1	bubblegum	\N	\N	\N	\N	\N	\N	f	f
+71	709	pc music	en	0	2022-06-30 09:12:32.778601+00	1	pc music	\N	\N	\N	\N	\N	\N	f	f
+72	53	brutal death	en	0	2022-06-30 09:14:18.852698+00	1	brutal death	\N	\N	\N	\N	\N	\N	f	f
+73	52	bruk	en	0	2022-06-30 09:15:55.401848+00	1	bruk	\N	\N	\N	\N	\N	\N	f	f
+74	710	britfunk	en	0	2022-06-30 09:20:47.499611+00	1	britfunk	\N	\N	\N	\N	\N	\N	f	f
+75	710	brit-funk	en	0	2022-06-30 09:20:50.162962+00	1	brit-funk	\N	\N	\N	\N	\N	\N	f	f
+76	678	brill building pop	en	0	2022-06-30 09:21:45.372359+00	1	brill building pop	\N	\N	\N	\N	\N	\N	f	f
+77	610	brega funky	pt	0	2022-06-30 09:24:01.624758+00	1	brega funky	\N	\N	\N	\N	\N	\N	f	f
+78	610	bregafunk	\N	0	2022-06-30 09:24:14.10841+00	2	bregafunk	\N	\N	\N	\N	\N	\N	f	f
+79	433	bounce music	en	0	2022-06-30 09:30:11.687419+00	1	bounce music	\N	\N	\N	\N	\N	\N	f	f
+80	433	new orleans bounce	en	0	2022-06-30 09:30:39.149458+00	1	new orleans bounce	\N	\N	\N	\N	\N	\N	f	f
+81	47	bossa-nova	\N	0	2022-06-30 09:32:27.826732+00	2	bossa-nova	\N	\N	\N	\N	\N	\N	f	f
+82	47	bossanova	\N	0	2022-06-30 09:32:33.759098+00	2	bossanova	\N	\N	\N	\N	\N	\N	f	f
+83	46	boom-bap	en	0	2022-06-30 09:33:43.652954+00	1	boom-bap	\N	\N	\N	\N	\N	\N	f	f
+84	428	boogie woogie	en	0	2022-06-30 09:35:42.028317+00	1	boogie woogie	\N	\N	\N	\N	\N	\N	f	f
+85	482	bongoflava	\N	0	2022-06-30 09:36:58.055521+00	2	bongoflava	\N	\N	\N	\N	\N	\N	f	f
+86	55	musique cadienne	fr	0	2022-06-30 11:45:19.550587+00	1	musique cadienne	\N	\N	\N	\N	\N	\N	t	f
+87	55	cajun music	en	0	2022-06-30 11:45:25.689186+00	1	cajun music	\N	\N	\N	\N	\N	\N	f	f
+88	56	calypso music	en	0	2022-06-30 11:46:32.097468+00	1	calypso music	\N	\N	\N	\N	\N	\N	f	f
+89	820	校園民歌	zh	0	2022-06-30 11:51:10.336332+00	1	校園民歌	\N	\N	\N	\N	\N	\N	t	f
+90	57	hk-pop	\N	0	2022-06-30 11:55:45.861049+00	1	hk-pop	\N	\N	\N	\N	\N	\N	f	f
+91	614	canzone napoletana	it	0	2022-06-30 11:57:16.537932+00	1	canzone napoletana	\N	\N	\N	\N	\N	\N	t	f
+92	614	neapolitan song	en	0	2022-06-30 11:57:27.183049+00	1	neapolitan song	\N	\N	\N	\N	\N	\N	t	f
+93	614	canzona napulitana	\N	0	2022-06-30 11:57:56.87569+00	1	canzona napulitana	\N	\N	\N	\N	\N	\N	f	f
+94	615	carimbo	\N	0	2022-06-30 12:00:53.497445+00	2	carimbo	\N	\N	\N	\N	\N	\N	f	f
+95	495	carnatic classical music	en	0	2022-06-30 12:08:26.562298+00	1	carnatic classical music	\N	\N	\N	\N	\N	\N	f	f
+96	59	celtic music	en	0	2022-06-30 12:11:48.176684+00	1	celtic music	\N	\N	\N	\N	\N	\N	f	f
+97	493	chachacha	\N	0	2022-06-30 12:17:19.380013+00	2	chachacha	\N	\N	\N	\N	\N	\N	f	f
+98	493	cha-cha-chá	es	0	2022-06-30 12:17:25.993535+00	1	cha-cha-chá	\N	\N	\N	\N	\N	\N	f	f
+99	493	cha-cha-cha	\N	0	2022-06-30 12:17:36.445221+00	2	cha-cha-cha	\N	\N	\N	\N	\N	\N	f	f
+100	617	чалга	bg	0	2022-06-30 12:19:01.61462+00	1	чалга	\N	\N	\N	\N	\N	\N	t	f
+101	617	попфолк	bg	0	2022-06-30 12:19:14.267905+00	1	попфолк	\N	\N	\N	\N	\N	\N	f	f
+102	619	chamame	\N	0	2022-06-30 12:21:34.419604+00	2	chamame	\N	\N	\N	\N	\N	\N	f	f
+103	61	ork-pop	en	0	2022-06-30 12:24:00.166189+00	1	ork-pop	\N	\N	\N	\N	\N	\N	f	f
+104	474	changui	\N	0	2022-06-30 12:26:43.00583+00	2	changui	\N	\N	\N	\N	\N	\N	f	f
+105	65	chill out	en	0	2022-06-30 12:34:59.752571+00	1	chill out	\N	\N	\N	\N	\N	\N	f	f
+106	65	chill-out	en	0	2022-06-30 12:35:04.741629+00	1	chill-out	\N	\N	\N	\N	\N	\N	f	f
+107	856	样板戏	zh_Hans	0	2022-06-30 12:39:41.313711+00	1	样板戏	\N	\N	\N	\N	\N	\N	t	f
+108	501	screwed and chopped	en	0	2022-06-30 12:41:23.738885+00	1	screwed and chopped	\N	\N	\N	\N	\N	\N	f	f
+109	790	white metal	en	0	2022-06-30 12:43:29.031744+00	1	white metal	\N	\N	\N	\N	\N	\N	f	f
+110	790	jesus metal	en	0	2022-06-30 12:43:30.992843+00	1	jesus metal	\N	\N	\N	\N	\N	\N	f	f
+111	790	heavenly metal	en	0	2022-06-30 12:43:32.468667+00	1	heavenly metal	\N	\N	\N	\N	\N	\N	f	f
+112	68	jõulumuusika	et	0	2022-06-30 12:44:36.71342+00	1	jõulumuusika	\N	\N	\N	\N	\N	\N	t	f
+113	68	weihnachtsmusik	de	0	2022-06-30 12:45:09.150353+00	1	weihnachtsmusik	\N	\N	\N	\N	\N	\N	t	f
+114	69	シティ・ポップ	ja	0	2022-06-30 12:46:58.529158+00	1	シティ・ポップ	\N	\N	\N	\N	\N	\N	t	f
+115	74	western classical	en	0	2022-06-30 12:51:49.024304+00	1	western classical	\N	\N	\N	\N	\N	\N	f	f
+116	74	western classical music	en	0	2022-06-30 12:51:58.532196+00	1	western classical music	\N	\N	\N	\N	\N	\N	f	f
+877	1841	belgian hardcore techno	en	0	2023-03-20 09:04:22.133287+00	1	belgian hardcore techno	\N	\N	\N	\N	\N	\N	f	f
+118	75	club music	en	0	2022-06-30 12:56:48.523696+00	1	club music	\N	\N	\N	\N	\N	\N	f	f
+119	579	cold wave	en	0	2022-06-30 12:59:46.582558+00	1	cold wave	\N	\N	\N	\N	\N	\N	f	f
+120	801	comedy hiphop	en	0	2022-06-30 13:01:26.711462+00	1	comedy hiphop	\N	\N	\N	\N	\N	\N	f	f
+121	801	comedy hip-hop	en	0	2022-06-30 13:01:35.135617+00	1	comedy hip-hop	\N	\N	\N	\N	\N	\N	f	f
+122	801	comedy rap	en	0	2022-06-30 13:01:39.977068+00	1	comedy rap	\N	\N	\N	\N	\N	\N	f	f
+123	440	konpa	\N	0	2022-06-30 13:05:16.372557+00	1	konpa	\N	\N	\N	\N	\N	\N	f	f
+124	440	konpa dirèk	\N	0	2022-06-30 13:05:46.719484+00	1	konpa dirèk	\N	\N	\N	\N	\N	\N	f	f
+125	440	compas direct	fr	0	2022-06-30 13:05:59.459765+00	1	compas direct	\N	\N	\N	\N	\N	\N	f	f
+126	77	rap conciencia	es	0	2022-06-30 13:08:09.880738+00	1	rap conciencia	\N	\N	\N	\N	\N	\N	t	f
+127	77	conscious hiphop	en	0	2022-06-30 13:08:17.348915+00	1	conscious hiphop	\N	\N	\N	\N	\N	\N	f	f
+128	77	conscious hip-hop	en	0	2022-06-30 13:08:23.988367+00	1	conscious hip-hop	\N	\N	\N	\N	\N	\N	f	f
+129	77	conscious rap	en	0	2022-06-30 13:08:26.505804+00	1	conscious rap	\N	\N	\N	\N	\N	\N	f	f
+130	78	contemporary christian music	en	0	2022-06-30 13:09:40.414698+00	1	contemporary christian music	\N	\N	\N	\N	\N	\N	f	f
+131	78	ccm	en	0	2022-06-30 13:10:06.06894+00	1	ccm	\N	\N	\N	\N	\N	\N	f	f
+132	79	contemporary classical music	en	0	2022-06-30 13:10:58.610349+00	1	contemporary classical music	\N	\N	\N	\N	\N	\N	f	f
+133	83	contemporary rnb	en	0	2022-06-30 13:17:51.915+00	1	contemporary rnb	\N	\N	\N	\N	\N	\N	f	f
+134	83	contemporary rhythm and blues	en	0	2022-06-30 13:17:59.222569+00	1	contemporary rhythm and blues	\N	\N	\N	\N	\N	\N	f	f
+135	84	contra dance	en	0	2022-06-30 13:19:54.656839+00	1	contra dance	\N	\N	\N	\N	\N	\N	f	f
+136	86	country music	en	0	2022-06-30 13:25:16.38738+00	1	country music	\N	\N	\N	\N	\N	\N	f	f
+137	89	pop country	en	0	2022-06-30 13:31:04.473817+00	1	pop country	\N	\N	\N	\N	\N	\N	f	f
+138	785	hick-hop	en	0	2022-06-30 13:33:52.171536+00	1	hick-hop	\N	\N	\N	\N	\N	\N	f	f
+139	785	hick hop	en	0	2022-06-30 13:33:58.866379+00	1	hick hop	\N	\N	\N	\N	\N	\N	f	f
+140	785	country hip hop	en	0	2022-06-30 13:34:11.14962+00	1	country hip hop	\N	\N	\N	\N	\N	\N	f	f
+141	785	country hip-hop	en	0	2022-06-30 13:34:14.955572+00	1	country hip-hop	\N	\N	\N	\N	\N	\N	f	f
+142	785	country hiphop	en	0	2022-06-30 13:34:19.201992+00	1	country hiphop	\N	\N	\N	\N	\N	\N	f	f
+143	464	coupe-decale	\N	0	2022-06-30 13:41:44.263601+00	2	coupe-decale	\N	\N	\N	\N	\N	\N	f	f
+144	471	country punk	en	0	2022-06-30 13:43:18.657055+00	1	country punk	\N	\N	\N	\N	\N	\N	f	f
+145	92	crust	en	0	2022-06-30 13:51:06.105784+00	1	crust	\N	\N	\N	\N	\N	\N	f	f
+146	613	cuple	\N	0	2022-06-30 13:59:34.119133+00	2	cuple	\N	\N	\N	\N	\N	\N	f	f
+147	783	cyber-metal	en	0	2022-06-30 14:03:27.84841+00	1	cyber-metal	\N	\N	\N	\N	\N	\N	f	f
+148	122	dark dungeon music	en	0	2022-07-01 06:02:10.035041+00	1	dark dungeon music	\N	\N	\N	\N	\N	\N	f	f
+149	119	dub music	en	0	2022-07-01 06:05:51.317331+00	1	dub music	\N	\N	\N	\N	\N	\N	f	f
+150	119	dub reggae	en	0	2022-07-01 06:06:48.683458+00	1	dub reggae	\N	\N	\N	\N	\N	\N	f	f
+151	853	dnbstep	en	0	2022-07-01 06:10:36.87311+00	1	dnbstep	\N	\N	\N	\N	\N	\N	f	f
+152	853	ドラムステップ	ja	0	2022-07-01 06:10:50.771596+00	1	ドラムステップ	\N	\N	\N	\N	\N	\N	t	f
+153	118	dnb	en	0	2022-07-01 06:11:19.37636+00	1	dnb	\N	\N	\N	\N	\N	\N	f	f
+154	118	d&b	en	0	2022-07-01 06:11:27.401036+00	1	d&b	\N	\N	\N	\N	\N	\N	f	f
+155	118	drum & bass	en	0	2022-07-01 06:11:38.225895+00	1	drum & bass	\N	\N	\N	\N	\N	\N	f	f
+156	118	drum 'n' bass	en	0	2022-07-01 06:11:52.596754+00	1	drum 'n' bass	\N	\N	\N	\N	\N	\N	f	f
+157	118	d'n'b	en	0	2022-07-01 06:12:16.800873+00	1	d'n'b	\N	\N	\N	\N	\N	\N	f	f
+158	118	drum'n'bass	en	0	2022-07-01 06:12:37.569033+00	1	drum'n'bass	\N	\N	\N	\N	\N	\N	f	f
+159	118	drumandbass	\N	0	2022-07-01 06:12:44.78238+00	2	drumandbass	\N	\N	\N	\N	\N	\N	f	f
+160	117	drone music	en	0	2022-07-01 06:13:56.352684+00	1	drone music	\N	\N	\N	\N	\N	\N	f	f
+161	425	drill 'n' bass	en	0	2022-07-01 06:14:36.052079+00	1	drill 'n' bass	\N	\N	\N	\N	\N	\N	f	f
+162	425	drill & bass	en	0	2022-07-01 06:14:42.741719+00	1	drill & bass	\N	\N	\N	\N	\N	\N	f	f
+163	425	drill'n'bass	en	0	2022-07-01 06:14:48.265718+00	1	drill'n'bass	\N	\N	\N	\N	\N	\N	f	f
+164	423	dreampop	en	0	2022-07-01 06:17:01.087932+00	1	dreampop	\N	\N	\N	\N	\N	\N	f	f
+165	113	doo wop	en	0	2022-07-01 06:18:58.497095+00	1	doo wop	\N	\N	\N	\N	\N	\N	f	f
+166	113	doowop	en	0	2022-07-01 06:19:02.861869+00	1	doowop	\N	\N	\N	\N	\N	\N	f	f
+167	635	dixieland jazz	en	0	2022-07-01 06:20:09.819024+00	1	dixieland jazz	\N	\N	\N	\N	\N	\N	f	f
+168	633	muzyka chodnikowa	pl	0	2022-07-01 07:27:39.96597+00	1	muzyka chodnikowa	\N	\N	\N	\N	\N	\N	f	f
+169	633	muzyka podwórkowa	pl	0	2022-07-01 07:27:45.443848+00	1	muzyka podwórkowa	\N	\N	\N	\N	\N	\N	f	f
+170	632	tishoumaren	\N	0	2022-07-01 07:38:40.048329+00	1	tishoumaren	\N	\N	\N	\N	\N	\N	f	f
+171	630	post-club	en	0	2022-07-01 07:46:33.29356+00	1	post-club	\N	\N	\N	\N	\N	\N	f	f
+172	107	death rock	en	0	2022-07-01 07:48:31.460569+00	1	death rock	\N	\N	\N	\N	\N	\N	f	f
+173	104	death doom metal	en	0	2022-07-01 07:52:18.566322+00	1	death doom metal	\N	\N	\N	\N	\N	\N	f	f
+174	104	death doom	en	0	2022-07-01 07:52:47.10703+00	1	death doom	\N	\N	\N	\N	\N	\N	f	f
+175	104	death-doom	en	0	2022-07-01 07:52:50.954127+00	1	death-doom	\N	\N	\N	\N	\N	\N	f	f
+176	104	doom death	en	0	2022-07-01 07:53:08.934075+00	1	doom death	\N	\N	\N	\N	\N	\N	f	f
+177	104	doom death metal	en	0	2022-07-01 07:53:25.919552+00	1	doom death metal	\N	\N	\N	\N	\N	\N	f	f
+178	104	doom-death metal	en	0	2022-07-01 07:53:33.749958+00	1	doom-death metal	\N	\N	\N	\N	\N	\N	f	f
+179	104	doom-death	en	0	2022-07-01 07:53:47.552742+00	1	doom-death	\N	\N	\N	\N	\N	\N	f	f
+180	686	death'n'roll	en	0	2022-07-01 07:56:55.801947+00	1	death'n'roll	\N	\N	\N	\N	\N	\N	f	f
+181	686	death & roll	en	0	2022-07-01 07:57:02.187288+00	1	death & roll	\N	\N	\N	\N	\N	\N	f	f
+182	686	death and roll	en	0	2022-07-01 07:57:08.523476+00	1	death and roll	\N	\N	\N	\N	\N	\N	f	f
+183	800	dark synth	en	0	2022-07-01 07:58:17.529328+00	1	dark synth	\N	\N	\N	\N	\N	\N	f	f
+184	102	darkwave	en	0	2022-07-01 07:58:46.8268+00	1	darkwave	\N	\N	\N	\N	\N	\N	f	f
+185	592	darkpsy	en	0	2022-07-01 08:01:39.002477+00	1	darkpsy	\N	\N	\N	\N	\N	\N	f	f
+186	530	doom jazz	en	0	2022-07-01 08:04:20.900483+00	1	doom jazz	\N	\N	\N	\N	\N	\N	f	f
+187	530	noir jazz	en	0	2022-07-01 08:04:22.993286+00	1	noir jazz	\N	\N	\N	\N	\N	\N	f	f
+188	99	ambient industrial	en	0	2022-07-01 08:07:08.840267+00	1	ambient industrial	\N	\N	\N	\N	\N	\N	f	f
+189	629	danzon	\N	0	2022-07-01 08:09:40.433429+00	2	danzon	\N	\N	\N	\N	\N	\N	f	f
+190	502	dansbandsmusik	sv	0	2022-07-01 08:10:33.080398+00	1	dansbandsmusik	\N	\N	\N	\N	\N	\N	f	f
+191	97	disco-punk	en	0	2022-07-01 08:14:34.907618+00	1	disco-punk	\N	\N	\N	\N	\N	\N	f	f
+192	146	avant-rock	en	0	2022-07-01 09:30:42.198338+00	1	avant-rock	\N	\N	\N	\N	\N	\N	f	f
+193	594	experimental hip-hop	en	0	2022-07-01 09:32:28.253376+00	1	experimental hip-hop	\N	\N	\N	\N	\N	\N	f	f
+194	594	experimental hiphop	en	0	2022-07-01 09:32:32.501805+00	1	experimental hiphop	\N	\N	\N	\N	\N	\N	f	f
+195	145	experimental music	en	0	2022-07-01 09:35:18.054176+00	1	experimental music	\N	\N	\N	\N	\N	\N	f	f
+196	144	euro pop	en	0	2022-07-01 09:37:42.713362+00	1	euro pop	\N	\N	\N	\N	\N	\N	f	f
+197	143	euro-nrg	en	0	2022-07-01 09:39:19.157595+00	1	euro-nrg	\N	\N	\N	\N	\N	\N	f	f
+198	642	euro disco	en	0	2022-07-01 09:43:56.641015+00	1	euro disco	\N	\N	\N	\N	\N	\N	f	f
+199	642	eurodisco	en	0	2022-07-01 09:44:03.642867+00	1	eurodisco	\N	\N	\N	\N	\N	\N	f	f
+200	142	eurohouse	en	0	2022-07-01 09:48:15.307234+00	1	eurohouse	\N	\N	\N	\N	\N	\N	f	f
+201	142	euro-house	en	0	2022-07-01 09:48:23.86577+00	1	euro-house	\N	\N	\N	\N	\N	\N	f	f
+202	641	ethereal darkwave	en	0	2022-07-01 09:50:36.736762+00	1	ethereal darkwave	\N	\N	\N	\N	\N	\N	f	f
+203	641	ethereal goth	en	0	2022-07-01 09:50:40.789521+00	1	ethereal goth	\N	\N	\N	\N	\N	\N	f	f
+204	640	entekhno	\N	0	2022-07-01 09:51:43.484572+00	2	entekhno	\N	\N	\N	\N	\N	\N	f	f
+205	640	έντεχνο	el	0	2022-07-01 09:52:40.533659+00	1	έντεχνο	\N	\N	\N	\N	\N	\N	t	f
+206	140	演歌	ja	0	2022-07-01 09:54:16.152053+00	1	演歌	\N	\N	\N	\N	\N	\N	t	f
+207	139	emotional hardcore	en	0	2022-07-01 09:56:25.634304+00	1	emotional hardcore	\N	\N	\N	\N	\N	\N	f	f
+208	532	emo hip hop	en	0	2022-07-01 09:59:18.408438+00	1	emo hip hop	\N	\N	\N	\N	\N	\N	f	f
+209	532	emo hiphop	en	0	2022-07-01 09:59:24.271061+00	1	emo hiphop	\N	\N	\N	\N	\N	\N	f	f
+210	532	emo hip-hop	en	0	2022-07-01 09:59:30.467461+00	1	emo hip-hop	\N	\N	\N	\N	\N	\N	f	f
+211	509	emo pop punk	en	0	2022-07-01 10:00:40.292509+00	1	emo pop punk	\N	\N	\N	\N	\N	\N	f	f
+212	509	pop-emo	en	0	2022-07-01 10:00:45.007759+00	1	pop-emo	\N	\N	\N	\N	\N	\N	f	f
+213	639	tango electrónico	es	0	2022-07-01 10:05:05.834967+00	1	tango electrónico	\N	\N	\N	\N	\N	\N	f	f
+214	137	synth-punk	en	0	2022-07-01 10:08:16.659774+00	1	synth-punk	\N	\N	\N	\N	\N	\N	f	f
+215	137	electro punk	en	0	2022-07-01 10:08:25.575861+00	1	electro punk	\N	\N	\N	\N	\N	\N	f	f
+216	137	electro-punk	en	0	2022-07-01 10:08:34.662181+00	1	electro-punk	\N	\N	\N	\N	\N	\N	f	f
+217	137	synth punk	en	0	2022-07-01 10:08:42.308993+00	1	synth punk	\N	\N	\N	\N	\N	\N	f	f
+218	137	synthpunk	en	0	2022-07-01 10:09:00.530983+00	1	synthpunk	\N	\N	\N	\N	\N	\N	f	f
+219	136	electro-pop	en	0	2022-07-01 10:10:21.682852+00	1	electro-pop	\N	\N	\N	\N	\N	\N	f	f
+220	135	synthcore	en	0	2022-07-01 10:12:45.238444+00	1	synthcore	\N	\N	\N	\N	\N	\N	f	f
+221	135	trancecore	en	0	2022-07-01 10:12:50.576348+00	1	trancecore	\N	\N	\N	\N	\N	\N	f	f
+222	132	electronic music	en	0	2022-07-01 10:17:03.71285+00	1	electronic music	\N	\N	\N	\N	\N	\N	f	f
+223	130	electro industrial	en	0	2022-07-01 10:21:09.060953+00	1	electro industrial	\N	\N	\N	\N	\N	\N	f	f
+224	130	electroindustrial	en	0	2022-07-01 10:21:13.968553+00	1	electroindustrial	\N	\N	\N	\N	\N	\N	f	f
+225	127	electro-house	en	0	2022-07-01 10:25:14.942002+00	1	electro-house	\N	\N	\N	\N	\N	\N	f	f
+226	481	electronic dance music	en	0	2022-07-01 10:30:27.918391+00	1	electronic dance music	\N	\N	\N	\N	\N	\N	f	f
+227	124	electronic body music	en	0	2022-07-01 10:32:15.084882+00	1	electronic body music	\N	\N	\N	\N	\N	\N	f	f
+228	123	east coast hip-hop	en	0	2022-07-01 10:35:36.817094+00	1	east coast hip-hop	\N	\N	\N	\N	\N	\N	f	f
+229	123	east coast hiphop	en	0	2022-07-01 10:35:40.320836+00	1	east coast hiphop	\N	\N	\N	\N	\N	\N	f	f
+230	123	east coast rap	en	0	2022-07-01 10:35:44.902072+00	1	east coast rap	\N	\N	\N	\N	\N	\N	f	f
+231	653	vaporboogie	en	0	2022-07-01 10:51:47.742196+00	1	vaporboogie	\N	\N	\N	\N	\N	\N	f	f
+878	118	drum n bass	\N	0	2023-03-20 11:36:39.740714+00	2	drum n bass	\N	\N	\N	\N	\N	\N	f	f
+233	159	favela funk	\N	0	2022-07-01 11:10:16.663665+00	1	favela funk	\N	\N	\N	\N	\N	\N	f	f
+234	159	baile funk	\N	0	2022-07-01 11:10:21.837977+00	1	baile funk	\N	\N	\N	\N	\N	\N	f	f
+235	575	funeral doom	en	0	2022-07-01 11:12:28.9279+00	1	funeral doom	\N	\N	\N	\N	\N	\N	f	f
+236	652	funana	\N	0	2022-07-01 11:12:58.735348+00	2	funana	\N	\N	\N	\N	\N	\N	f	f
+237	807	freetekno	en	0	2022-07-01 11:18:20.409458+00	1	freetekno	\N	\N	\N	\N	\N	\N	f	f
+238	646	forro	\N	0	2022-07-01 11:22:52.006237+00	2	forro	\N	\N	\N	\N	\N	\N	f	f
+239	153	folk-rock	en	0	2022-07-01 11:25:27.16589+00	1	folk-rock	\N	\N	\N	\N	\N	\N	f	f
+240	152	folk-punk	en	0	2022-07-01 11:27:55.844545+00	1	folk-punk	\N	\N	\N	\N	\N	\N	f	f
+241	154	folk-pop	en	0	2022-07-01 11:28:42.130593+00	1	folk-pop	\N	\N	\N	\N	\N	\N	f	f
+242	151	folk-metal	en	0	2022-07-01 11:29:22.592714+00	1	folk-metal	\N	\N	\N	\N	\N	\N	f	f
+243	644	jazz flamenco	es	0	2022-07-01 11:31:49.334357+00	1	jazz flamenco	\N	\N	\N	\N	\N	\N	t	f
+244	643	suomalainen tango	fi	0	2022-07-01 11:33:42.170053+00	1	suomalainen tango	\N	\N	\N	\N	\N	\N	t	f
+245	580	jazz manouche	\N	0	2022-07-01 11:48:15.876939+00	1	jazz manouche	\N	\N	\N	\N	\N	\N	f	f
+246	472	guaguanco	\N	0	2022-07-01 11:56:44.518013+00	2	guaguanco	\N	\N	\N	\N	\N	\N	f	f
+247	468	グループ・サウンズ	ja	0	2022-07-01 11:58:45.401624+00	1	グループ・サウンズ	\N	\N	\N	\N	\N	\N	t	f
+248	183	goth rock	en	0	2022-07-01 12:05:10.577726+00	1	goth rock	\N	\N	\N	\N	\N	\N	f	f
+249	182	goth metal	en	0	2022-07-01 12:05:40.71479+00	1	goth metal	\N	\N	\N	\N	\N	\N	f	f
+250	688	gogo	en	0	2022-07-01 12:08:55.519467+00	1	gogo	\N	\N	\N	\N	\N	\N	f	f
+251	175	hair metal	en	0	2022-07-01 12:11:03.283362+00	1	hair metal	\N	\N	\N	\N	\N	\N	f	f
+252	169	gangster rap	en	0	2022-07-01 12:14:37.043403+00	1	gangster rap	\N	\N	\N	\N	\N	\N	f	f
+253	523	雅楽	ja	0	2022-07-01 12:15:47.981818+00	1	雅楽	\N	\N	\N	\N	\N	\N	t	f
+254	167	gangsta funk	en	0	2022-07-01 12:17:32.175332+00	1	gangsta funk	\N	\N	\N	\N	\N	\N	f	f
+255	167	gangster funk	en	0	2022-07-01 12:17:44.501633+00	1	gangster funk	\N	\N	\N	\N	\N	\N	f	f
+256	928	waynu	qu_PE	0	2022-07-02 04:42:13.291318+00	1	waynu	\N	\N	\N	\N	\N	\N	t	f
+257	928	wayñu	qu_BO	0	2022-07-02 04:42:35.635935+00	1	wayñu	\N	\N	\N	\N	\N	\N	t	f
+258	928	huaino	es	0	2022-07-02 04:42:46.697826+00	1	huaino	\N	\N	\N	\N	\N	\N	f	f
+259	928	huayño	es	0	2022-07-02 04:43:03.797646+00	1	huayño	\N	\N	\N	\N	\N	\N	f	f
+260	928	huaiño	es	0	2022-07-02 04:43:17.204653+00	1	huaiño	\N	\N	\N	\N	\N	\N	f	f
+261	201	horror rap	en	0	2022-07-02 04:47:03.928598+00	1	horror rap	\N	\N	\N	\N	\N	\N	f	f
+262	201	horror hip hop	en	0	2022-07-02 04:47:08.42249+00	1	horror hip hop	\N	\N	\N	\N	\N	\N	f	f
+263	201	horror hiphop	en	0	2022-07-02 04:47:13.673511+00	1	horror hiphop	\N	\N	\N	\N	\N	\N	f	f
+264	201	horror hip-hop	en	0	2022-07-02 04:47:18.02589+00	1	horror hip-hop	\N	\N	\N	\N	\N	\N	f	f
+265	200	honky-tonk	en	0	2022-07-02 04:49:19.575823+00	1	honky-tonk	\N	\N	\N	\N	\N	\N	f	f
+266	436	hip-house	en	0	2022-07-02 04:51:24.54211+00	1	hip-house	\N	\N	\N	\N	\N	\N	f	f
+267	436	house rap	en	0	2022-07-02 04:51:26.592132+00	1	house rap	\N	\N	\N	\N	\N	\N	f	f
+268	436	rap house	en	0	2022-07-02 04:51:28.173769+00	1	rap house	\N	\N	\N	\N	\N	\N	f	f
+269	199	hip-hop	en	0	2022-07-02 04:54:32.41634+00	1	hip-hop	\N	\N	\N	\N	\N	\N	f	f
+270	199	hiphop	en	0	2022-07-02 04:54:37.216184+00	1	hiphop	\N	\N	\N	\N	\N	\N	f	f
+271	199	rap	en	0	2022-07-02 04:54:43.218106+00	1	rap	\N	\N	\N	\N	\N	\N	f	f
+272	496	hindustani classical music	en	0	2022-07-02 04:56:12.874128+00	1	hindustani classical music	\N	\N	\N	\N	\N	\N	f	f
+273	690	hardvapor	en	0	2022-07-02 05:07:17.246715+00	1	hardvapor	\N	\N	\N	\N	\N	\N	f	f
+274	442	hardcore hiphop	en	0	2022-07-02 05:11:36.170284+00	1	hardcore hiphop	\N	\N	\N	\N	\N	\N	f	f
+275	442	hardcore hip-hop	en	0	2022-07-02 05:11:44.085401+00	1	hardcore hip-hop	\N	\N	\N	\N	\N	\N	f	f
+276	442	hardcore rap	en	0	2022-07-02 05:11:45.471545+00	1	hardcore rap	\N	\N	\N	\N	\N	\N	f	f
+277	551	хардбасс	ru	0	2022-07-02 05:13:50.283795+00	1	хардбасс	\N	\N	\N	\N	\N	\N	f	f
+278	551	хардбас	ru	0	2022-07-02 05:13:50.283795+00	1	хардбас	\N	\N	\N	\N	\N	\N	t	f
+279	551	hard bass	en	0	2022-07-02 05:14:02.792299+00	1	hard bass	\N	\N	\N	\N	\N	\N	f	f
+280	219	italodisco	en	0	2022-07-02 08:44:05.333893+00	1	italodisco	\N	\N	\N	\N	\N	\N	f	f
+281	219	italo disco	en	0	2022-07-02 08:44:06.783743+00	1	italo disco	\N	\N	\N	\N	\N	\N	f	f
+282	591	italo-dance	en	0	2022-07-02 08:47:51.58989+00	1	italo-dance	\N	\N	\N	\N	\N	\N	f	f
+283	591	italodance	en	0	2022-07-02 08:47:58.813238+00	1	italodance	\N	\N	\N	\N	\N	\N	f	f
+284	218	irish traditional	en	0	2022-07-02 09:05:53.526033+00	1	irish traditional	\N	\N	\N	\N	\N	\N	f	f
+285	831	instrumental hip-hop	en	0	2022-07-02 09:07:35.134435+00	1	instrumental hip-hop	\N	\N	\N	\N	\N	\N	f	f
+286	831	instrumental hiphop	en	0	2022-07-02 09:07:39.939083+00	1	instrumental hiphop	\N	\N	\N	\N	\N	\N	f	f
+287	537	industrial hip-hop	en	0	2022-07-02 09:24:53.5886+00	1	industrial hip-hop	\N	\N	\N	\N	\N	\N	f	f
+288	537	industrial hiphop	en	0	2022-07-02 09:24:57.833551+00	1	industrial hiphop	\N	\N	\N	\N	\N	\N	f	f
+289	537	industrial rap	en	0	2022-07-02 09:25:04.586261+00	1	industrial rap	\N	\N	\N	\N	\N	\N	f	f
+290	212	industrial music	en	0	2022-07-02 09:28:01.659985+00	1	industrial music	\N	\N	\N	\N	\N	\N	f	f
+291	208	indiepop	en	0	2022-07-02 11:13:34.740436+00	1	indiepop	\N	\N	\N	\N	\N	\N	f	f
+292	208	indie-pop	en	0	2022-07-02 11:13:38.618359+00	1	indie-pop	\N	\N	\N	\N	\N	\N	f	f
+293	799	indi-pop	en	0	2022-07-02 11:17:23.410658+00	1	indi-pop	\N	\N	\N	\N	\N	\N	f	f
+294	811	idol kayo	\N	0	2022-07-02 11:21:04.878749+00	2	idol kayo	\N	\N	\N	\N	\N	\N	f	f
+295	204	intelligent dance music	en	0	2022-07-02 11:24:37.706888+00	1	intelligent dance music	\N	\N	\N	\N	\N	\N	f	f
+296	204	braindance	en	0	2022-07-02 11:24:47.129938+00	1	braindance	\N	\N	\N	\N	\N	\N	f	f
+297	558	jump-up	en	0	2022-07-03 05:29:14.745221+00	1	jump-up	\N	\N	\N	\N	\N	\N	f	f
+298	694	juju	\N	0	2022-07-03 05:32:31.933721+00	2	juju	\N	\N	\N	\N	\N	\N	f	f
+299	227	jazz funk	en	0	2022-07-03 05:34:41.884024+00	1	jazz funk	\N	\N	\N	\N	\N	\N	f	f
+300	226	jazz-rock	en	0	2022-07-03 05:36:14.072776+00	1	jazz-rock	\N	\N	\N	\N	\N	\N	f	f
+301	225	jazz hip hop	en	0	2022-07-03 05:37:35.677516+00	1	jazz hip hop	\N	\N	\N	\N	\N	\N	f	f
+302	225	jazz hiphop	en	0	2022-07-03 05:37:38.733494+00	1	jazz hiphop	\N	\N	\N	\N	\N	\N	f	f
+303	225	jazz hip-hop	en	0	2022-07-03 05:37:45.183922+00	1	jazz hip-hop	\N	\N	\N	\N	\N	\N	f	f
+304	225	jazzy hip-hop	en	0	2022-07-03 05:38:02.319871+00	1	jazzy hip-hop	\N	\N	\N	\N	\N	\N	f	f
+305	225	jazzy hiphop	en	0	2022-07-03 05:38:05.318523+00	1	jazzy hiphop	\N	\N	\N	\N	\N	\N	f	f
+306	225	jazzy hip hop	en	0	2022-07-03 05:38:13.267406+00	1	jazzy hip hop	\N	\N	\N	\N	\N	\N	f	f
+307	225	jazz-rap	en	0	2022-07-03 05:38:22.394644+00	1	jazz-rap	\N	\N	\N	\N	\N	\N	f	f
+308	225	jazz hop	en	0	2022-07-03 05:38:32.742477+00	1	jazz hop	\N	\N	\N	\N	\N	\N	f	f
+309	225	jazz-hop	en	0	2022-07-03 05:38:46.123679+00	1	jazz-hop	\N	\N	\N	\N	\N	\N	f	f
+310	223	blues jazz	en	0	2022-07-03 05:39:42.359365+00	1	blues jazz	\N	\N	\N	\N	\N	\N	f	f
+311	221	japanese rock	en	0	2022-07-03 05:44:52.551586+00	1	japanese rock	\N	\N	\N	\N	\N	\N	f	f
+312	221	jrock	en	0	2022-07-03 05:45:06.837191+00	1	jrock	\N	\N	\N	\N	\N	\N	f	f
+313	700	kuduru	\N	0	2022-07-04 17:17:30.14061+00	1	kuduru	\N	\N	\N	\N	\N	\N	f	f
+314	233	kosmische musik	de	0	2022-07-04 17:21:10.972158+00	1	kosmische musik	\N	\N	\N	\N	\N	\N	f	f
+315	233	kraut rock	\N	0	2022-07-04 17:21:44.089562+00	2	kraut rock	\N	\N	\N	\N	\N	\N	f	f
+316	698	keroncong	id	0	2022-07-04 17:35:20.505936+00	1	keroncong	\N	\N	\N	\N	\N	\N	t	f
+317	698	kroncong	en	0	2022-07-04 17:35:22.503759+00	1	kroncong	\N	\N	\N	\N	\N	\N	t	f
+318	698	krontjong	nl	0	2022-07-04 17:35:37.623108+00	1	krontjong	\N	\N	\N	\N	\N	\N	t	f
+319	230	kayokyoku	\N	0	2022-07-04 17:36:34.522362+00	2	kayokyoku	\N	\N	\N	\N	\N	\N	f	f
+320	506	chillhop	en	0	2022-07-04 17:50:34.488794+00	1	chillhop	\N	\N	\N	\N	\N	\N	f	f
+321	506	chill-hop	en	0	2022-07-04 17:50:41.533897+00	1	chill-hop	\N	\N	\N	\N	\N	\N	f	f
+322	506	chill hop	en	0	2022-07-04 17:50:49.407963+00	1	chill hop	\N	\N	\N	\N	\N	\N	f	f
+323	506	lo-fi hip-hop	en	0	2022-07-04 17:51:03.446041+00	1	lo-fi hip-hop	\N	\N	\N	\N	\N	\N	f	f
+324	506	lo-fi hiphop	en	0	2022-07-04 17:51:07.23271+00	1	lo-fi hiphop	\N	\N	\N	\N	\N	\N	f	f
+325	506	lofi hiphop	en	0	2022-07-04 17:51:23.229139+00	1	lofi hiphop	\N	\N	\N	\N	\N	\N	f	f
+326	506	lofi hip hop	en	0	2022-07-04 17:51:35.124445+00	1	lofi hip hop	\N	\N	\N	\N	\N	\N	f	f
+327	560	liquid drum & bass	en	0	2022-07-04 17:52:41.329789+00	1	liquid drum & bass	\N	\N	\N	\N	\N	\N	f	f
+328	560	liquid drum 'n' bass	en	0	2022-07-04 17:52:49.82651+00	1	liquid drum 'n' bass	\N	\N	\N	\N	\N	\N	f	f
+329	560	liquid drum'n'bass	en	0	2022-07-04 17:53:02.584805+00	1	liquid drum'n'bass	\N	\N	\N	\N	\N	\N	f	f
+330	560	liquid drum and bass	en	0	2022-07-04 17:53:15.236382+00	1	liquid drum and bass	\N	\N	\N	\N	\N	\N	f	f
+331	560	liquid dnb	en	0	2022-07-04 17:53:30.325602+00	1	liquid dnb	\N	\N	\N	\N	\N	\N	f	f
+332	234	latin music	en	0	2022-07-04 17:59:32.320658+00	1	latin music	\N	\N	\N	\N	\N	\N	f	f
+333	270	musical theatre	en	0	2022-07-04 18:08:23.933895+00	1	musical theatre	\N	\N	\N	\N	\N	\N	f	f
+334	269	música popular brasileira	pt	0	2022-07-04 18:09:27.483659+00	1	música popular brasileira	\N	\N	\N	\N	\N	\N	f	f
+335	268	motown sound	en	0	2022-07-04 18:10:22.817834+00	1	motown sound	\N	\N	\N	\N	\N	\N	f	f
+336	728	molam	\N	0	2022-07-04 18:13:29.233327+00	1	molam	\N	\N	\N	\N	\N	\N	f	f
+337	794	mood kayo	\N	0	2022-07-04 18:16:11.8755+00	2	mood kayo	\N	\N	\N	\N	\N	\N	f	f
+338	562	minimal drum 'n' bass	en	0	2022-07-04 18:26:19.117315+00	1	minimal drum 'n' bass	\N	\N	\N	\N	\N	\N	f	f
+339	562	minimal drum & bass	en	0	2022-07-04 18:27:13.960376+00	1	minimal drum & bass	\N	\N	\N	\N	\N	\N	f	f
+340	562	minimal dnb	en	0	2022-07-04 18:27:37.751791+00	1	minimal dnb	\N	\N	\N	\N	\N	\N	f	f
+879	408	バジェナート	ja	0	2023-03-28 18:42:57.4555+00	1	Bajenāto	\N	\N	\N	\N	\N	\N	t	f
+880	1849	hispanic chant	en	0	2023-04-07 07:10:35.015011+00	1	hispanic chant	\N	\N	\N	\N	\N	\N	f	f
+343	262	minyo	\N	0	2022-07-04 18:29:54.963361+00	2	minyo	\N	\N	\N	\N	\N	\N	f	f
+344	250	medieval music	en	0	2022-07-04 18:54:57.005777+00	1	medieval music	\N	\N	\N	\N	\N	\N	f	f
+345	469	maskandi	\N	0	2022-07-04 19:16:58.364664+00	1	maskandi	\N	\N	\N	\N	\N	\N	f	f
+346	718	mangue bit	\N	0	2022-07-04 19:21:49.956078+00	1	mangue bit	\N	\N	\N	\N	\N	\N	f	f
+347	718	manguebeat	\N	0	2022-07-04 19:21:58.970604+00	1	manguebeat	\N	\N	\N	\N	\N	\N	f	f
+348	718	manguebit	\N	0	2022-07-04 19:22:03.662987+00	1	manguebit	\N	\N	\N	\N	\N	\N	f	f
+349	246	mandapop	en	0	2022-07-04 19:23:10.020437+00	1	mandapop	\N	\N	\N	\N	\N	\N	f	f
+350	243	baggy	en	0	2022-07-04 19:25:12.707354+00	1	baggy	\N	\N	\N	\N	\N	\N	f	f
+351	792	ニューミュージック	ja	0	2022-07-05 05:17:24.908818+00	1	ニューミュージック	\N	\N	\N	\N	\N	\N	t	f
+352	792	nyu myujikku	\N	0	2022-07-05 05:18:02.131995+00	2	nyu myujikku	\N	\N	\N	\N	\N	\N	f	f
+353	773	tango nuevo	es	0	2022-07-05 05:22:59.521921+00	1	tango nuevo	\N	\N	\N	\N	\N	\N	f	f
+354	645	new flamenco	en	0	2022-07-05 05:24:28.976902+00	1	new flamenco	\N	\N	\N	\N	\N	\N	f	f
+355	645	flamenco nuevo	es	0	2022-07-05 05:24:35.594743+00	1	flamenco nuevo	\N	\N	\N	\N	\N	\N	f	f
+356	459	nueva cancion	\N	0	2022-07-05 05:28:42.935337+00	2	nueva cancion	\N	\N	\N	\N	\N	\N	f	f
+357	565	nuskool breaks	\N	0	2022-07-05 05:31:02.296673+00	2	nuskool breaks	\N	\N	\N	\N	\N	\N	f	f
+358	565	nu-skool breaks	en	0	2022-07-05 05:31:09.921812+00	1	nu-skool breaks	\N	\N	\N	\N	\N	\N	f	f
+359	565	nu breaks	en	0	2022-07-05 05:31:18.968557+00	1	nu breaks	\N	\N	\N	\N	\N	\N	f	f
+360	288	nu-metal	en	0	2022-07-05 05:32:49.905822+00	1	nu-metal	\N	\N	\N	\N	\N	\N	f	f
+361	288	numetal	\N	0	2022-07-05 05:32:57.28541+00	2	numetal	\N	\N	\N	\N	\N	\N	f	f
+362	287	nu-jazz	en	0	2022-07-05 05:34:56.177449+00	1	nu-jazz	\N	\N	\N	\N	\N	\N	f	f
+363	287	nujazz	\N	0	2022-07-05 05:34:59.12258+00	2	nujazz	\N	\N	\N	\N	\N	\N	f	f
+364	500	nudisco	\N	0	2022-07-05 05:35:32.445092+00	2	nudisco	\N	\N	\N	\N	\N	\N	f	f
+365	500	nu-disco	en	0	2022-07-05 05:35:37.214744+00	1	nu-disco	\N	\N	\N	\N	\N	\N	f	f
+366	734	nova canco	\N	0	2022-07-05 05:36:55.443617+00	2	nova canco	\N	\N	\N	\N	\N	\N	f	f
+367	285	norteno	\N	0	2022-07-05 05:38:41.699665+00	2	norteno	\N	\N	\N	\N	\N	\N	f	f
+368	285	norteña	es	0	2022-07-05 05:38:42.116547+00	1	norteña	\N	\N	\N	\N	\N	\N	f	f
+369	285	nortena	\N	0	2022-07-05 05:38:49.352356+00	2	nortena	\N	\N	\N	\N	\N	\N	f	f
+370	446	noise-rock	en	0	2022-07-05 05:42:19.660086+00	1	noise-rock	\N	\N	\N	\N	\N	\N	f	f
+371	283	noise-pop	en	0	2022-07-05 05:43:00.239687+00	1	noise-pop	\N	\N	\N	\N	\N	\N	f	f
+372	280	nowave	en	0	2022-07-05 05:44:44.679519+00	1	nowave	\N	\N	\N	\N	\N	\N	f	f
+373	280	no-wave	en	0	2022-07-05 05:44:49.319783+00	1	no-wave	\N	\N	\N	\N	\N	\N	f	f
+374	279	newwave	\N	0	2022-07-05 05:47:59.722589+00	2	newwave	\N	\N	\N	\N	\N	\N	f	f
+375	279	new-wave	\N	0	2022-07-05 05:48:16.655737+00	2	new-wave	\N	\N	\N	\N	\N	\N	f	f
+376	279	nu wave	en	0	2022-07-05 05:48:37.600992+00	1	nu wave	\N	\N	\N	\N	\N	\N	f	f
+377	279	nu-wave	\N	0	2022-07-05 05:49:24.51126+00	2	nu-wave	\N	\N	\N	\N	\N	\N	f	f
+378	279	nuwave	\N	0	2022-07-05 05:49:28.960882+00	2	nuwave	\N	\N	\N	\N	\N	\N	f	f
+379	277	new jack	en	0	2022-07-05 05:52:25.343485+00	1	new jack	\N	\N	\N	\N	\N	\N	f	f
+380	277	swingbeat	en	0	2022-07-05 05:52:30.860756+00	1	swingbeat	\N	\N	\N	\N	\N	\N	f	f
+381	517	ndw	\N	0	2022-07-05 05:55:59.561797+00	1	ndw	\N	\N	\N	\N	\N	\N	f	f
+382	275	nerdcore hip hop	en	0	2022-07-05 05:57:39.847968+00	1	nerdcore hip hop	\N	\N	\N	\N	\N	\N	f	f
+383	275	nerdcore hiphop	en	0	2022-07-05 05:57:43.842636+00	1	nerdcore hiphop	\N	\N	\N	\N	\N	\N	f	f
+384	275	nerdcore hip-hop	en	0	2022-07-05 05:57:48.769696+00	1	nerdcore hip-hop	\N	\N	\N	\N	\N	\N	f	f
+385	274	apocalyptic folk	en	0	2022-07-05 06:00:44.380565+00	1	apocalyptic folk	\N	\N	\N	\N	\N	\N	f	f
+386	732	neoclassical	en	0	2022-07-05 06:01:42.776393+00	1	neoclassical	\N	\N	\N	\N	\N	\N	f	f
+387	711	neo-classical metal	en	0	2022-07-05 06:02:23.586079+00	1	neo-classical metal	\N	\N	\N	\N	\N	\N	f	f
+388	731	neoclassical darkwave	en	0	2022-07-05 06:04:07.034371+00	1	neoclassical darkwave	\N	\N	\N	\N	\N	\N	f	f
+389	731	neo-classical dark wave	en	0	2022-07-05 06:04:09.362076+00	1	neo-classical dark wave	\N	\N	\N	\N	\N	\N	f	f
+390	731	neo-classical darkwave	en	0	2022-07-05 06:04:14.857059+00	1	neo-classical darkwave	\N	\N	\N	\N	\N	\N	f	f
+391	470	neo-traditionalist country	en	0	2022-07-05 06:05:11.845065+00	1	neo-traditionalist country	\N	\N	\N	\N	\N	\N	f	f
+392	470	neotraditional country	en	0	2022-07-05 06:05:23.080887+00	1	neotraditional country	\N	\N	\N	\N	\N	\N	f	f
+393	470	neotraditionalist country	en	0	2022-07-05 06:05:29.720511+00	1	neotraditionalist country	\N	\N	\N	\N	\N	\N	f	f
+394	273	neorockabilly	en	0	2022-07-05 06:06:18.093836+00	1	neorockabilly	\N	\N	\N	\N	\N	\N	f	f
+395	539	neopsychedelia	en	0	2022-07-05 06:07:01.178391+00	1	neopsychedelia	\N	\N	\N	\N	\N	\N	f	f
+396	539	neo-psych	en	0	2022-07-05 06:07:09.408579+00	1	neo-psych	\N	\N	\N	\N	\N	\N	f	f
+397	272	neo-prog	en	0	2022-07-05 06:30:59.401742+00	1	neo-prog	\N	\N	\N	\N	\N	\N	f	f
+398	272	neoprogressive rock	en	0	2022-07-05 06:31:25.799712+00	1	neoprogressive rock	\N	\N	\N	\N	\N	\N	f	f
+399	272	neoprog	en	0	2022-07-05 06:31:29.346739+00	1	neoprog	\N	\N	\N	\N	\N	\N	f	f
+400	271	neosoul	en	0	2022-07-05 06:33:11.751125+00	1	neosoul	\N	\N	\N	\N	\N	\N	f	f
+401	271	neo-soul	en	0	2022-07-05 06:33:21.509526+00	1	neo-soul	\N	\N	\N	\N	\N	\N	f	f
+402	271	nu soul	en	0	2022-07-05 06:33:33.479134+00	1	nu soul	\N	\N	\N	\N	\N	\N	f	f
+403	271	nu-soul	en	0	2022-07-05 06:33:44.631484+00	1	nu-soul	\N	\N	\N	\N	\N	\N	f	f
+404	271	nusoul	en	0	2022-07-05 06:33:53.9575+00	1	nusoul	\N	\N	\N	\N	\N	\N	f	f
+405	556	nature recordings	en	0	2022-07-05 06:34:43.998231+00	1	nature recordings	\N	\N	\N	\N	\N	\N	f	f
+406	290	oi!	en	0	2022-07-05 06:38:34.981933+00	1	oi!	\N	\N	\N	\N	\N	\N	f	f
+407	291	old-time music	en	0	2022-07-05 06:40:33.232172+00	1	old-time music	\N	\N	\N	\N	\N	\N	f	f
+408	528	音響系	ja	0	2022-07-05 06:43:53.015879+00	1	音響系	\N	\N	\N	\N	\N	\N	f	f
+409	528	onkyokei	\N	0	2022-07-05 06:44:13.333279+00	1	onkyokei	\N	\N	\N	\N	\N	\N	f	f
+410	332	homocore	en	0	2022-07-05 06:47:40.262548+00	1	homocore	\N	\N	\N	\N	\N	\N	f	f
+411	331	punk-rock	en	0	2022-07-05 06:52:30.725347+00	1	punk-rock	\N	\N	\N	\N	\N	\N	f	f
+412	752	blues punk	en	0	2022-07-05 06:54:12.250709+00	1	blues punk	\N	\N	\N	\N	\N	\N	f	f
+413	329	psychedelic trance	en	0	2022-07-05 07:00:19.568548+00	1	psychedelic trance	\N	\N	\N	\N	\N	\N	f	f
+414	327	psych-rock	en	0	2022-07-05 07:06:26.385522+00	1	psych-rock	\N	\N	\N	\N	\N	\N	f	f
+415	327	psych rock	en	0	2022-07-05 07:06:33.184119+00	1	psych rock	\N	\N	\N	\N	\N	\N	f	f
+416	326	psych pop	en	0	2022-07-05 07:10:27.660503+00	1	psych pop	\N	\N	\N	\N	\N	\N	f	f
+417	326	psych-pop	en	0	2022-07-05 07:10:31.992214+00	1	psych-pop	\N	\N	\N	\N	\N	\N	f	f
+418	325	acid folk	en	0	2022-07-05 07:11:16.84789+00	1	acid folk	\N	\N	\N	\N	\N	\N	f	f
+419	325	psych-folk	en	0	2022-07-05 07:11:27.070822+00	1	psych-folk	\N	\N	\N	\N	\N	\N	f	f
+420	325	psych folk	en	0	2022-07-05 07:11:30.940972+00	1	psych folk	\N	\N	\N	\N	\N	\N	f	f
+421	324	psychedelia	en	0	2022-07-05 07:12:29.782486+00	1	psychedelia	\N	\N	\N	\N	\N	\N	f	f
+428	827	protopunk	en	0	2022-07-05 07:14:58.77714+00	1	protopunk	\N	\N	\N	\N	\N	\N	f	f
+881	1849	canto mozárabe	es	0	2023-04-07 07:10:55.468021+00	1	canto mozárabe	\N	\N	\N	\N	\N	\N	f	f
+884	1849	canto visigótico	es	0	2023-04-07 07:11:36.265314+00	1	canto visigótico	\N	\N	\N	\N	\N	\N	f	f
+886	1854	canto beneventano	it	0	2023-04-17 07:20:29.705555+00	1	canto beneventano	\N	\N	\N	\N	\N	\N	t	f
+888	1863	kievan chant	en	0	2023-04-24 13:19:49.839101+00	1	kievan chant	\N	\N	\N	\N	\N	\N	f	f
+890	1872	mersey beat	en	0	2023-05-16 16:06:32.912801+00	1	mersey beat	\N	\N	\N	\N	\N	\N	f	f
+892	1885	cumbiaton	\N	0	2023-05-29 07:46:26.293008+00	2	cumbiaton	\N	\N	\N	\N	\N	\N	f	f
+893	1889	neon pop-punk	en	0	2023-05-29 08:22:50.442666+00	1	neon pop-punk	\N	\N	\N	\N	\N	\N	f	f
+928	1926	uk jackin’	en	0	2023-06-22 11:52:17.225171+00	1	uk jackin’	\N	\N	\N	\N	\N	\N	f	f
+932	1165	3ball	\N	0	2023-06-27 10:00:36.406927+00	1	3ball	\N	\N	\N	\N	\N	\N	f	f
+935	1937	jackin’ house	en	0	2023-07-11 07:03:11.889466+00	1	jackin’ house	\N	\N	\N	\N	\N	\N	f	f
+938	1943	baroque zarzuela	en	0	2023-08-01 09:11:58.939087+00	1	baroque zarzuela	\N	\N	\N	\N	\N	\N	t	f
+942	1886	tearout filthstep	en	0	2023-10-10 18:11:33.894841+00	1	tearout filthstep	\N	\N	\N	\N	\N	\N	f	f
+944	1974	מוזיקה יהודית מקורית	he	0	2023-10-10 19:06:53.059507+00	1	מוזיקה יהודית מקורית	\N	\N	\N	\N	\N	\N	t	f
+946	1975	neo grime	en	0	2023-10-16 16:38:14.32807+00	1	neo grime	\N	\N	\N	\N	\N	\N	f	f
+949	1978	مألوف	ar	0	2023-10-23 08:40:00.2681+00	1	مألوف	\N	\N	\N	\N	\N	\N	t	f
+951	1980	cafurna	\N	0	2023-10-23 08:49:15.375166+00	1	cafurna	\N	\N	\N	\N	\N	\N	f	f
+985	804	slamming brutal death	en	0	2023-11-03 09:31:48.374679+00	1	slamming brutal death	\N	\N	\N	\N	\N	\N	f	f
+988	2021	الفجيري	ar	0	2023-11-06 09:00:48.601505+00	1	الفجيري	\N	\N	\N	\N	\N	\N	t	f
+992	1600	color bass	en	0	2024-02-06 09:25:15.80533+00	1	color bass	\N	\N	\N	\N	\N	\N	f	f
+993	2060	jazz créole	fr	0	2024-02-12 07:27:23.40255+00	1	jazz créole	\N	\N	\N	\N	\N	\N	t	f
+994	2067	children	\N	0	2024-03-04 08:03:48.011882+00	2	children	\N	\N	\N	\N	\N	\N	f	f
+996	2067	children's song	en	0	2024-03-04 08:04:10.321178+00	1	children's song	\N	\N	\N	\N	\N	\N	f	f
+998	2067	children’s music	\N	0	2024-03-04 08:04:30.727472+00	2	children’s music	\N	\N	\N	\N	\N	\N	f	f
+1000	2069	hoodtrap	en	0	2024-03-04 08:12:28.353142+00	1	hoodtrap	\N	\N	\N	\N	\N	\N	f	f
+1001	2080	kantrum	\N	0	2024-04-02 15:07:37.527678+00	1	kantrum	\N	\N	\N	\N	\N	\N	f	f
+1002	2082	metis fiddling	\N	0	2024-04-02 15:18:54.39651+00	2	metis fiddling	\N	\N	\N	\N	\N	\N	f	f
+1004	2082	metis fiddle	\N	0	2024-04-02 15:19:07.340698+00	2	metis fiddle	\N	\N	\N	\N	\N	\N	f	f
+1005	2085	uspm	\N	0	2024-04-15 09:30:58.29732+00	1	uspm	\N	\N	\N	\N	\N	\N	f	f
+1006	240	lofi	\N	0	2024-04-16 08:17:07.068202+00	1	lofi	\N	\N	\N	\N	\N	\N	f	f
+1008	2106	hudigääggeler	de	0	2024-06-28 09:06:59.365697+00	1	hudigääggeler	\N	\N	\N	\N	\N	\N	f	f
+1009	491	rare phonk	en	0	2024-07-10 14:36:06.177834+00	1	rare phonk	\N	\N	\N	\N	\N	\N	f	f
+1010	2148	prog-soul	en	0	2024-09-19 06:48:04.539494+00	1	prog-soul	\N	\N	\N	\N	\N	\N	f	f
+422	324	psychedelic music	en	0	2022-07-05 07:12:35.533055+00	1	psychedelic music	\N	\N	\N	\N	\N	\N	f	f
+423	670	psychedelic ambient	en	0	2022-07-05 07:13:36.767402+00	1	psychedelic ambient	\N	\N	\N	\N	\N	\N	f	f
+424	670	psychill	en	0	2022-07-05 07:13:48.455603+00	1	psychill	\N	\N	\N	\N	\N	\N	f	f
+425	670	psydub	en	0	2022-07-05 07:13:53.828774+00	1	psydub	\N	\N	\N	\N	\N	\N	f	f
+426	670	psych-ambient	en	0	2022-07-05 07:14:10.830385+00	1	psych-ambient	\N	\N	\N	\N	\N	\N	f	f
+427	670	psych ambient	en	0	2022-07-05 07:14:16.265966+00	1	psych ambient	\N	\N	\N	\N	\N	\N	f	f
+429	827	proto punk	en	0	2022-07-05 07:15:00.787066+00	1	proto punk	\N	\N	\N	\N	\N	\N	f	f
+430	321	prog-rock	en	0	2022-07-05 07:16:01.800803+00	1	prog-rock	\N	\N	\N	\N	\N	\N	f	f
+431	321	prog rock	en	0	2022-07-05 07:16:07.177298+00	1	prog rock	\N	\N	\N	\N	\N	\N	f	f
+432	321	progrock	\N	0	2022-07-05 07:16:10.874317+00	2	progrock	\N	\N	\N	\N	\N	\N	f	f
+433	750	prog-pop	en	0	2022-07-05 07:17:30.111064+00	1	prog-pop	\N	\N	\N	\N	\N	\N	f	f
+434	750	prog pop	en	0	2022-07-05 07:17:36.342125+00	1	prog pop	\N	\N	\N	\N	\N	\N	f	f
+435	320	prog metal	en	0	2022-07-05 07:18:34.225317+00	1	prog metal	\N	\N	\N	\N	\N	\N	f	f
+436	320	prog-metal	en	0	2022-07-05 07:18:40.705609+00	1	prog-metal	\N	\N	\N	\N	\N	\N	f	f
+437	319	prog-house	en	0	2022-07-05 07:19:34.843693+00	1	prog-house	\N	\N	\N	\N	\N	\N	f	f
+438	319	prog house	en	0	2022-07-05 07:19:37.432014+00	1	prog house	\N	\N	\N	\N	\N	\N	f	f
+439	318	prog-folk	en	0	2022-07-05 07:20:41.18845+00	1	prog-folk	\N	\N	\N	\N	\N	\N	f	f
+440	318	prog folk	en	0	2022-07-05 07:20:44.636946+00	1	prog folk	\N	\N	\N	\N	\N	\N	f	f
+441	748	newgrass	en	0	2022-07-05 07:26:54.502763+00	1	newgrass	\N	\N	\N	\N	\N	\N	f	f
+442	317	progressive music	en	0	2022-07-05 07:28:44.717752+00	1	progressive music	\N	\N	\N	\N	\N	\N	f	f
+443	316	stock music	en	0	2022-07-05 07:29:40.68401+00	1	stock music	\N	\N	\N	\N	\N	\N	f	f
+444	316	library music	en	0	2022-07-05 07:29:46.912955+00	1	library music	\N	\N	\N	\N	\N	\N	f	f
+445	312	power violence	en	0	2022-07-05 07:32:57.084508+00	1	power violence	\N	\N	\N	\N	\N	\N	f	f
+446	315	powerpop	en	0	2022-07-05 07:34:25.866682+00	1	powerpop	\N	\N	\N	\N	\N	\N	f	f
+447	534	rhythmic noise	en	0	2022-07-05 07:35:24.750155+00	1	rhythmic noise	\N	\N	\N	\N	\N	\N	f	f
+448	311	post rock	en	0	2022-07-05 07:37:35.575633+00	1	post rock	\N	\N	\N	\N	\N	\N	f	f
+449	311	postrock	en	0	2022-07-05 07:37:37.27039+00	1	postrock	\N	\N	\N	\N	\N	\N	f	f
+450	310	post punk	en	0	2022-07-05 07:38:56.806671+00	1	post punk	\N	\N	\N	\N	\N	\N	f	f
+451	310	postpunk	en	0	2022-07-05 07:39:00.898059+00	1	postpunk	\N	\N	\N	\N	\N	\N	f	f
+452	787	post minimalism	en	0	2022-07-05 07:39:49.968622+00	1	post minimalism	\N	\N	\N	\N	\N	\N	f	f
+453	787	postminimalism	en	0	2022-07-05 07:39:57.970995+00	1	postminimalism	\N	\N	\N	\N	\N	\N	f	f
+454	309	post metal	en	0	2022-07-05 07:40:51.748449+00	1	post metal	\N	\N	\N	\N	\N	\N	f	f
+455	309	postmetal	en	0	2022-07-05 07:40:55.80237+00	1	postmetal	\N	\N	\N	\N	\N	\N	f	f
+456	841	post industrial	en	0	2022-07-05 07:42:04.631471+00	1	post industrial	\N	\N	\N	\N	\N	\N	f	f
+457	841	postindustrial	en	0	2022-07-05 07:42:08.401459+00	1	postindustrial	\N	\N	\N	\N	\N	\N	f	f
+458	308	post hardcore	en	0	2022-07-05 07:43:24.243644+00	1	post hardcore	\N	\N	\N	\N	\N	\N	f	f
+459	308	posthardcore	en	0	2022-07-05 07:43:27.494214+00	1	posthardcore	\N	\N	\N	\N	\N	\N	f	f
+460	307	post grunge	en	0	2022-07-05 07:44:00.110307+00	1	post grunge	\N	\N	\N	\N	\N	\N	f	f
+461	307	postgrunge	en	0	2022-07-05 07:44:03.185449+00	1	postgrunge	\N	\N	\N	\N	\N	\N	f	f
+462	306	postclassical	en	0	2022-07-05 07:46:19.131813+00	1	postclassical	\N	\N	\N	\N	\N	\N	f	f
+463	306	post classical	en	0	2022-07-05 07:46:23.612677+00	1	post classical	\N	\N	\N	\N	\N	\N	f	f
+464	305	post bop	en	0	2022-07-05 07:46:31.270102+00	1	post bop	\N	\N	\N	\N	\N	\N	f	f
+465	305	postbop	en	0	2022-07-05 07:47:32.117274+00	1	postbop	\N	\N	\N	\N	\N	\N	f	f
+466	303	pop-soul	en	0	2022-07-05 07:51:35.369269+00	1	pop-soul	\N	\N	\N	\N	\N	\N	f	f
+467	302	pop-rock	en	0	2022-07-05 07:52:47.373529+00	1	pop-rock	\N	\N	\N	\N	\N	\N	f	f
+468	302	pop/rock	en	0	2022-07-05 07:53:28.724169+00	1	pop/rock	\N	\N	\N	\N	\N	\N	f	f
+469	301	pop hip-hop	en	0	2022-07-05 07:55:27.409681+00	1	pop hip-hop	\N	\N	\N	\N	\N	\N	f	f
+470	301	pop hiphop	en	0	2022-07-05 07:55:41.248519+00	1	pop hiphop	\N	\N	\N	\N	\N	\N	f	f
+471	301	pop hip hop	en	0	2022-07-05 07:55:45.004101+00	1	pop hip hop	\N	\N	\N	\N	\N	\N	f	f
+472	301	pop-rap	en	0	2022-07-05 07:56:14.530233+00	1	pop-rap	\N	\N	\N	\N	\N	\N	f	f
+473	300	pop-punk	en	0	2022-07-05 07:56:46.583559+00	1	pop-punk	\N	\N	\N	\N	\N	\N	f	f
+474	300	punk pop	en	0	2022-07-05 07:56:52.11776+00	1	punk pop	\N	\N	\N	\N	\N	\N	f	f
+475	300	punk-pop	en	0	2022-07-05 07:56:56.107081+00	1	punk-pop	\N	\N	\N	\N	\N	\N	f	f
+476	299	pop-metal	en	0	2022-07-05 07:58:24.500867+00	1	pop-metal	\N	\N	\N	\N	\N	\N	f	f
+477	298	pop music	en	0	2022-07-05 07:59:26.414764+00	1	pop music	\N	\N	\N	\N	\N	\N	f	f
+478	796	political hip-hop	en	0	2022-07-05 10:13:37.784408+00	1	political hip-hop	\N	\N	\N	\N	\N	\N	f	f
+479	796	political hiphop	en	0	2022-07-05 10:13:41.237364+00	1	political hiphop	\N	\N	\N	\N	\N	\N	f	f
+480	796	political rap	en	0	2022-07-05 10:13:45.771498+00	1	political rap	\N	\N	\N	\N	\N	\N	f	f
+481	821	plainsong	en	0	2022-07-05 10:15:59.336992+00	1	plainsong	\N	\N	\N	\N	\N	\N	f	f
+482	821	cantus planus	\N	0	2022-07-05 10:16:16.139168+00	1	cantus planus	\N	\N	\N	\N	\N	\N	f	f
+483	745	philadelphia soul	en	0	2022-07-05 10:20:09.50729+00	1	philadelphia soul	\N	\N	\N	\N	\N	\N	f	f
+484	888	peak-time techno	en	0	2022-07-05 10:22:22.088276+00	1	peak-time techno	\N	\N	\N	\N	\N	\N	f	f
+485	712	pagode romantico	\N	0	2022-07-05 10:31:27.324917+00	2	pagode romantico	\N	\N	\N	\N	\N	\N	f	f
+486	739	pagodao	\N	0	2022-07-05 10:33:54.457743+00	2	pagodao	\N	\N	\N	\N	\N	\N	f	f
+487	739	pagode baiano	pt	0	2022-07-05 10:34:02.568063+00	1	pagode baiano	\N	\N	\N	\N	\N	\N	f	f
+488	333	rhythm and blues	en	0	2022-07-05 11:57:23.34394+00	1	rhythm and blues	\N	\N	\N	\N	\N	\N	f	f
+489	333	rhythm & blues	en	0	2022-07-05 11:57:30.797574+00	1	rhythm & blues	\N	\N	\N	\N	\N	\N	f	f
+490	333	rnb	en	0	2022-07-05 11:58:16.412543+00	1	rnb	\N	\N	\N	\N	\N	\N	f	f
+491	333	rhythm 'n' blues	en	0	2022-07-05 11:58:52.986544+00	1	rhythm 'n' blues	\N	\N	\N	\N	\N	\N	f	f
+492	333	rhythm'n'blues	en	0	2022-07-05 11:58:59.154424+00	1	rhythm'n'blues	\N	\N	\N	\N	\N	\N	f	f
+493	333	r'n'b	en	0	2022-07-05 11:59:54.314646+00	1	r'n'b	\N	\N	\N	\N	\N	\N	f	f
+494	467	流行歌	ja	0	2022-07-05 12:03:20.793859+00	1	流行歌	\N	\N	\N	\N	\N	\N	t	f
+495	467	ryukoka	\N	0	2022-07-05 12:03:40.556968+00	2	ryukoka	\N	\N	\N	\N	\N	\N	f	f
+496	756	regilaul	et	0	2022-07-05 12:06:26.064418+00	1	regilaul	\N	\N	\N	\N	\N	\N	t	f
+498	931	cuban rumba	en	0	2022-07-05 12:14:09.792825+00	1	cuban rumba	\N	\N	\N	\N	\N	\N	t	f
+499	932	ballroom rumba	en	0	2022-07-05 12:16:23.392144+00	1	ballroom rumba	\N	\N	\N	\N	\N	\N	f	f
+500	934	catalan rumba	en	0	2022-07-05 12:20:02.426938+00	1	catalan rumba	\N	\N	\N	\N	\N	\N	f	f
+501	347	rock & roll	en	0	2022-07-05 12:25:38.264834+00	1	rock & roll	\N	\N	\N	\N	\N	\N	f	f
+502	347	rock 'n' roll	en	0	2022-07-05 12:25:44.889452+00	1	rock 'n' roll	\N	\N	\N	\N	\N	\N	f	f
+503	347	rock'n'roll	en	0	2022-07-05 12:25:56.166279+00	1	rock'n'roll	\N	\N	\N	\N	\N	\N	f	f
+504	347	rock 'n roll	en	0	2022-07-05 12:26:03.293203+00	1	rock 'n roll	\N	\N	\N	\N	\N	\N	f	f
+505	346	rock music	en	0	2022-07-05 12:26:41.803711+00	1	rock music	\N	\N	\N	\N	\N	\N	f	f
+506	927	riot girl	en	0	2022-07-05 12:27:43.619128+00	1	riot girl	\N	\N	\N	\N	\N	\N	f	f
+507	344	reggaetón	es	0	2022-07-05 12:29:11.968268+00	1	reggaetón	\N	\N	\N	\N	\N	\N	t	f
+508	833	reggae pop	en	0	2022-07-05 12:29:44.806317+00	1	reggae pop	\N	\N	\N	\N	\N	\N	f	f
+509	833	pop reggae	en	0	2022-07-05 12:29:51.051627+00	1	pop reggae	\N	\N	\N	\N	\N	\N	f	f
+882	1849	canto hispánico	es	0	2023-04-07 07:11:13.378502+00	1	canto hispánico	\N	\N	\N	\N	\N	\N	f	f
+885	1851	bosnian root music	en	0	2023-04-07 07:17:00.481668+00	1	bosnian root music	\N	\N	\N	\N	\N	\N	f	f
+887	1862	buleria	\N	0	2023-04-24 13:11:46.547353+00	2	buleria	\N	\N	\N	\N	\N	\N	f	f
+889	1864	bachaton	\N	0	2023-04-24 13:28:07.449052+00	2	bachaton	\N	\N	\N	\N	\N	\N	f	f
+891	1872	mersey sound	en	0	2023-05-16 16:06:37.8217+00	1	mersey sound	\N	\N	\N	\N	\N	\N	f	f
+894	1889	neon pop	en	0	2023-05-29 08:23:26.732772+00	1	neon pop	\N	\N	\N	\N	\N	\N	f	f
+926	1925	latin trap	en	0	2023-06-22 11:32:25.284247+00	1	latin trap	\N	\N	\N	\N	\N	\N	t	f
+927	1926	uk jackin'	en	0	2023-06-22 11:50:49.413081+00	1	uk jackin'	\N	\N	\N	\N	\N	\N	f	f
+929	1930	ethiopian chant	en	0	2023-06-22 12:24:13.793892+00	1	ethiopian chant	\N	\N	\N	\N	\N	\N	f	f
+930	1933	trapsoul	\N	0	2023-06-26 18:39:47.774155+00	1	trapsoul	\N	\N	\N	\N	\N	\N	f	f
+931	1165	trival	\N	0	2023-06-27 10:00:06.470748+00	1	trival	\N	\N	\N	\N	\N	\N	f	f
+933	1935	zarzuela grande	es	0	2023-07-03 06:28:22.345204+00	1	zarzuela grande	\N	\N	\N	\N	\N	\N	f	f
+934	1937	jackin' house	en	0	2023-07-11 07:03:02.90099+00	1	jackin' house	\N	\N	\N	\N	\N	\N	f	f
+936	1938	jazz huachaca	es	0	2023-07-11 07:08:54.209993+00	1	jazz huachaca	\N	\N	\N	\N	\N	\N	f	f
+937	1943	zarzuela barroca	es	0	2023-08-01 09:11:50.556076+00	1	zarzuela barroca	\N	\N	\N	\N	\N	\N	t	f
+939	1950	italian occult psychedelia	en	0	2023-08-14 17:07:09.111003+00	1	italian occult psychedelia	\N	\N	\N	\N	\N	\N	t	f
+940	1952	alte	\N	0	2023-08-20 08:24:29.721366+00	2	alte	\N	\N	\N	\N	\N	\N	f	f
+941	488	filthstep	en	0	2023-10-10 18:09:30.945549+00	1	filthstep	\N	\N	\N	\N	\N	\N	f	f
+943	1971	青春パンク	ja	0	2023-10-10 18:54:16.885197+00	1	青春パンク	\N	\N	\N	\N	\N	\N	t	f
+945	1975	neogrime	en	0	2023-10-16 16:38:08.95417+00	1	neogrime	\N	\N	\N	\N	\N	\N	f	f
+947	1977	lullabies	en	0	2023-10-20 11:18:11.384321+00	1	lullabies	\N	\N	\N	\N	\N	\N	f	f
+948	1978	ma'luf	ar	0	2023-10-23 08:40:00.2681+00	1	ma'luf	\N	\N	\N	\N	\N	\N	f	f
+950	1979	staifi	\N	0	2023-10-23 08:42:23.916848+00	2	staifi	\N	\N	\N	\N	\N	\N	f	f
+984	804	slamming death metal	en	0	2023-11-03 09:31:39.94224+00	1	slamming death metal	\N	\N	\N	\N	\N	\N	f	f
+986	804	slamming brutal death metal	en	0	2023-11-03 09:31:54.031474+00	1	slamming brutal death metal	\N	\N	\N	\N	\N	\N	f	f
+987	2021	fidjeri	\N	0	2023-11-06 09:00:09.974163+00	1	fidjeri	\N	\N	\N	\N	\N	\N	f	f
+989	2023	hyperflip	en	0	2023-11-20 14:13:36.218475+00	1	hyperflip	\N	\N	\N	\N	\N	\N	f	f
+990	2031	喊麦	zh	0	2023-12-11 19:12:03.444316+00	1	喊麦	\N	\N	\N	\N	\N	\N	t	f
+991	66	8-bit music	en	0	2024-01-16 15:32:47.831675+00	1	8-bit music	\N	\N	\N	\N	\N	\N	f	f
+995	2067	children's	\N	0	2024-03-04 08:03:56.644949+00	2	children's	\N	\N	\N	\N	\N	\N	f	f
+997	2067	childrens music	\N	0	2024-03-04 08:04:20.231922+00	2	childrens music	\N	\N	\N	\N	\N	\N	f	f
+999	2069	jerknb	en	0	2024-03-04 08:12:15.561078+00	1	jerknb	\N	\N	\N	\N	\N	\N	f	f
+1003	2082	métis fiddle	\N	0	2024-04-02 15:19:00.228854+00	1	métis fiddle	\N	\N	\N	\N	\N	\N	f	f
+1007	240	low-fi	\N	0	2024-04-16 08:17:10.8003+00	1	low-fi	\N	\N	\N	\N	\N	\N	f	f
+510	833	pop-reggae	en	0	2022-07-05 12:29:55.629867+00	1	pop-reggae	\N	\N	\N	\N	\N	\N	f	f
+511	342	rave music	en	0	2022-07-05 12:32:09.691406+00	1	rave music	\N	\N	\N	\N	\N	\N	f	f
+512	555	rebetika	\N	0	2022-07-05 12:33:06.237295+00	1	rebetika	\N	\N	\N	\N	\N	\N	f	f
+513	555	rembetiko	\N	0	2022-07-05 12:33:10.183897+00	1	rembetiko	\N	\N	\N	\N	\N	\N	f	f
+514	555	rembetika	\N	0	2022-07-05 12:33:21.41289+00	1	rembetika	\N	\N	\N	\N	\N	\N	f	f
+515	555	ρεμπέτικο	el	0	2022-07-05 12:33:35.259076+00	1	ρεμπέτικο	\N	\N	\N	\N	\N	\N	t	f
+516	334	raggamuffin	en	0	2022-07-05 12:35:41.144792+00	1	raggamuffin	\N	\N	\N	\N	\N	\N	f	f
+517	340	rap-rock	en	0	2022-07-05 12:39:44.928621+00	1	rap-rock	\N	\N	\N	\N	\N	\N	f	f
+518	529	rap-metal	en	0	2022-07-05 12:41:04.262696+00	1	rap-metal	\N	\N	\N	\N	\N	\N	f	f
+519	337	rai	\N	0	2022-07-05 12:42:55.482148+00	1	rai	\N	\N	\N	\N	\N	\N	f	f
+520	338	rag time	en	0	2022-07-05 12:45:08.999297+00	1	rag time	\N	\N	\N	\N	\N	\N	f	f
+521	338	rag-time	en	0	2022-07-05 12:45:25.457714+00	1	rag-time	\N	\N	\N	\N	\N	\N	f	f
+522	335	ragga hiphop	en	0	2022-07-05 12:46:34.839193+00	1	ragga hiphop	\N	\N	\N	\N	\N	\N	f	f
+523	335	ragga hip hop	en	0	2022-07-05 12:46:38.462484+00	1	ragga hip hop	\N	\N	\N	\N	\N	\N	f	f
+524	766	sertanejo universitario	\N	0	2022-07-05 13:38:29.136742+00	2	sertanejo universitario	\N	\N	\N	\N	\N	\N	f	f
+525	767	sertanejo romantico	\N	0	2022-07-05 13:39:41.465996+00	2	sertanejo romantico	\N	\N	\N	\N	\N	\N	f	f
+526	765	sertanejo de raiz	pt	0	2022-07-05 13:40:41.456212+00	1	sertanejo de raiz	\N	\N	\N	\N	\N	\N	f	f
+527	355	skramz	en	0	2022-07-05 13:45:47.372608+00	1	skramz	\N	\N	\N	\N	\N	\N	f	f
+528	761	samba rock	en	0	2022-07-05 13:48:34.216018+00	1	samba rock	\N	\N	\N	\N	\N	\N	f	f
+529	760	samba reggae	en	0	2022-07-05 13:50:27.388047+00	1	samba reggae	\N	\N	\N	\N	\N	\N	f	f
+530	759	samba-exaltacao	\N	0	2022-07-05 13:51:15.663742+00	2	samba-exaltacao	\N	\N	\N	\N	\N	\N	f	f
+531	757	samba-cancao	\N	0	2022-07-05 13:52:33.259101+00	2	samba-cancao	\N	\N	\N	\N	\N	\N	f	f
+532	363	sludge	en	0	2022-07-06 12:28:27.783915+00	1	sludge	\N	\N	\N	\N	\N	\N	f	f
+533	935	atmospheric sludge	en	0	2022-07-06 12:29:11.030436+00	1	atmospheric sludge	\N	\N	\N	\N	\N	\N	f	f
+534	356	渋谷系	ja	0	2022-07-06 12:34:29.220394+00	1	渋谷系	\N	\N	\N	\N	\N	\N	t	f
+535	716	sierreña	es	0	2022-07-06 12:40:03.897028+00	1	sierreña	\N	\N	\N	\N	\N	\N	f	f
+536	716	sierreno	\N	0	2022-07-06 12:40:07.944808+00	2	sierreno	\N	\N	\N	\N	\N	\N	f	f
+537	596	skatepunk	en	0	2022-07-06 12:43:30.016271+00	1	skatepunk	\N	\N	\N	\N	\N	\N	f	f
+538	389	synthpop	en	0	2022-07-06 13:01:36.633513+00	1	synthpop	\N	\N	\N	\N	\N	\N	f	f
+539	389	synth pop	en	0	2022-07-06 13:04:23.828831+00	1	synth pop	\N	\N	\N	\N	\N	\N	f	f
+540	584	synthfunk	en	0	2022-07-06 13:05:27.114264+00	1	synthfunk	\N	\N	\N	\N	\N	\N	f	f
+541	584	synth-funk	en	0	2022-07-06 13:05:33.622955+00	1	synth-funk	\N	\N	\N	\N	\N	\N	f	f
+542	385	symphonic progressive rock	en	0	2022-07-06 13:10:01.899001+00	1	symphonic progressive rock	\N	\N	\N	\N	\N	\N	f	f
+543	385	symphonic progressive	en	0	2022-07-06 13:10:07.576039+00	1	symphonic progressive	\N	\N	\N	\N	\N	\N	f	f
+544	380	streetpunk	en	0	2022-07-06 13:23:33.188636+00	1	streetpunk	\N	\N	\N	\N	\N	\N	f	f
+545	536	spectral music	en	0	2022-07-06 13:31:13.385816+00	1	spectral music	\N	\N	\N	\N	\N	\N	f	f
+546	840	津軽三味線	ja	0	2022-07-06 14:50:26.214872+00	1	津軽三味線	\N	\N	\N	\N	\N	\N	f	f
+547	554	tsapika	\N	0	2022-07-06 14:51:50.234625+00	1	tsapika	\N	\N	\N	\N	\N	\N	f	f
+548	708	tropicalia	\N	0	2022-07-06 14:53:50.557398+00	2	tropicalia	\N	\N	\N	\N	\N	\N	f	f
+549	708	tropicalismo	pt	0	2022-07-06 14:54:11.62435+00	1	tropicalismo	\N	\N	\N	\N	\N	\N	f	f
+550	403	trip-hop	en	0	2022-07-06 14:56:38.251284+00	1	trip-hop	\N	\N	\N	\N	\N	\N	f	f
+551	403	triphop	en	0	2022-07-06 14:56:45.471505+00	1	triphop	\N	\N	\N	\N	\N	\N	f	f
+552	455	ethno ambient	en	0	2022-07-06 14:59:56.02171+00	1	ethno ambient	\N	\N	\N	\N	\N	\N	f	f
+553	455	ethnic ambient	en	0	2022-07-06 15:00:02.586265+00	1	ethnic ambient	\N	\N	\N	\N	\N	\N	f	f
+554	395	fastcore	en	0	2022-07-06 15:55:44.136541+00	1	fastcore	\N	\N	\N	\N	\N	\N	f	f
+555	396	thrash	en	0	2022-07-06 15:58:26.546919+00	1	thrash	\N	\N	\N	\N	\N	\N	f	f
+556	611	tecno brega	\N	0	2022-07-06 16:05:33.469557+00	1	tecno brega	\N	\N	\N	\N	\N	\N	f	f
+582	964	laïkó	\N	0	2022-07-19 15:19:54.965055+00	\N	laïkó	\N	\N	\N	\N	\N	\N	f	f
+557	666	テクノ歌謡	ja	0	2022-07-06 16:06:46.759673+00	1	テクノ歌謡	\N	\N	\N	\N	\N	\N	t	f
+558	417	ye-ye	\N	0	2022-07-06 16:15:41.069811+00	2	ye-ye	\N	\N	\N	\N	\N	\N	f	f
+559	417	yéyé	es	0	2022-07-06 16:15:48.709203+00	1	yéyé	\N	\N	\N	\N	\N	\N	f	f
+560	415	west coast hip-hop	en	0	2022-07-06 16:20:29.718794+00	1	west coast hip-hop	\N	\N	\N	\N	\N	\N	f	f
+561	415	west coast hiphop	en	0	2022-07-06 16:20:30.861121+00	1	west coast hiphop	\N	\N	\N	\N	\N	\N	f	f
+562	415	west coast rap	en	0	2022-07-06 16:20:34.652571+00	1	west coast rap	\N	\N	\N	\N	\N	\N	f	f
+563	825	cowboy	en	0	2022-07-06 16:21:19.929508+00	1	cowboy	\N	\N	\N	\N	\N	\N	f	f
+564	825	western country	en	0	2022-07-06 16:21:22.992393+00	1	western country	\N	\N	\N	\N	\N	\N	f	f
+565	411	ヴィジュアル系	ja	0	2022-07-06 16:26:56.1144+00	1	ヴィジュアル系	\N	\N	\N	\N	\N	\N	t	f
+566	407	underground hip-hop	en	0	2022-07-06 16:30:01.22289+00	1	underground hip-hop	\N	\N	\N	\N	\N	\N	f	f
+567	407	underground hiphop	en	0	2022-07-06 16:30:05.068109+00	1	underground hiphop	\N	\N	\N	\N	\N	\N	f	f
+568	407	underground rap	en	0	2022-07-06 16:30:09.014506+00	1	underground rap	\N	\N	\N	\N	\N	\N	f	f
+569	406	ukg	en	0	2022-07-06 16:30:50.66569+00	1	ukg	\N	\N	\N	\N	\N	\N	f	f
+570	741	maringa	\N	0	2022-07-07 10:14:17.01542+00	1	maringa	\N	\N	\N	\N	\N	\N	f	f
+571	776	트로트	ko	0	2022-07-07 10:19:11.797751+00	1	트로트	\N	\N	\N	\N	\N	\N	t	f
+572	938	trop rock	en	0	2022-07-09 11:04:42.222481+00	1	trop rock	\N	\N	\N	\N	\N	\N	f	f
+573	939	koladera	\N	0	2022-07-09 11:30:05.442401+00	1	koladera	\N	\N	\N	\N	\N	\N	f	f
+574	944	serial music	en	0	2022-07-09 12:06:52.146047+00	1	serial music	\N	\N	\N	\N	\N	\N	f	f
+342	264	minimal music	en	0	2022-07-09 12:20:53.912042+00	1	minimal music	\N	\N	\N	\N	\N	\N	f	f
+341	264	minimalism	en	0	2022-07-09 12:20:53.912042+00	1	minimalism	\N	\N	\N	\N	\N	\N	t	f
+575	788	ᮏᮄᮕᮧᮍᮔ᮪	\N	0	2022-07-09 15:17:26.893041+00	1	jaipongan (sundanese)	\N	\N	\N	\N	\N	\N	f	f
+576	948	mákina	es	0	2022-07-17 06:33:28.893944+00	1	mákina	\N	\N	\N	\N	\N	\N	f	f
+577	950	freeform	en	0	2022-07-17 06:48:13.536245+00	1	freeform	\N	\N	\N	\N	\N	\N	f	f
+578	953	electroacoustic improvisation	en	0	2022-07-17 07:20:45.541426+00	1	electroacoustic improvisation	\N	\N	\N	\N	\N	\N	f	f
+579	964	laïki	\N	0	2022-07-19 15:19:52.685433+00	\N	laïki	\N	\N	\N	\N	\N	\N	f	f
+580	964	laiki	\N	0	2022-07-19 15:19:53.625119+00	\N	laiki	\N	\N	\N	\N	\N	\N	f	f
+581	964	laïka	\N	0	2022-07-19 15:19:54.301901+00	\N	laïka	\N	\N	\N	\N	\N	\N	f	f
+583	964	laïko	\N	0	2022-07-19 15:19:55.700389+00	\N	laïko	\N	\N	\N	\N	\N	\N	f	f
+584	964	laika	\N	0	2022-07-19 15:19:56.495016+00	\N	laika	\N	\N	\N	\N	\N	\N	f	f
+585	964	λαϊκό	el	0	2022-07-19 15:20:33.145962+00	1	λαϊκό	\N	\N	\N	\N	\N	\N	t	f
+586	965	νέο κύμα	el	0	2022-07-19 15:24:49.928581+00	1	νέο κύμα	\N	\N	\N	\N	\N	\N	t	f
+587	965	néo kýma	\N	0	2022-07-19 15:24:57.487616+00	1	néo kýma	\N	\N	\N	\N	\N	\N	f	f
+588	966	csardas	\N	0	2022-07-19 15:30:44.439505+00	2	csardas	\N	\N	\N	\N	\N	\N	f	f
+589	966	czardas	\N	0	2022-07-19 15:30:47.143972+00	2	czardas	\N	\N	\N	\N	\N	\N	f	f
+590	966	czárdás	\N	0	2022-07-19 15:31:02.346737+00	1	czárdás	\N	\N	\N	\N	\N	\N	f	f
+591	968	muğam	az	0	2022-07-19 15:39:05.989633+00	1	muğam	\N	\N	\N	\N	\N	\N	t	f
+592	232	קלעזמער	yi	0	2022-07-19 15:42:07.608486+00	1	קלעזמער	\N	\N	\N	\N	\N	\N	t	f
+593	973	piobaireachd	\N	0	2022-07-19 16:15:58.560551+00	2	piobaireachd	\N	\N	\N	\N	\N	\N	f	f
+594	973	pibroch	\N	0	2022-07-19 16:16:19.169469+00	1	pibroch	\N	\N	\N	\N	\N	\N	f	f
+595	51	brit pop	en	0	2022-07-19 16:29:43.994864+00	1	brit pop	\N	\N	\N	\N	\N	\N	f	f
+596	975	scouse house	en	0	2022-07-19 16:36:28.848053+00	1	scouse house	\N	\N	\N	\N	\N	\N	f	f
+597	979	reggae gospel	en	0	2022-07-27 10:25:35.785314+00	1	reggae gospel	\N	\N	\N	\N	\N	\N	f	f
+598	980	bigin	\N	0	2022-07-27 10:31:06.492961+00	1	bigin	\N	\N	\N	\N	\N	\N	f	f
+599	980	beguine	en	0	2022-07-27 10:31:19.605274+00	1	beguine	\N	\N	\N	\N	\N	\N	f	f
+600	981	gwoka	\N	0	2022-07-27 10:37:00.234905+00	1	gwoka	\N	\N	\N	\N	\N	\N	f	f
+601	1002	kidumbaki	\N	0	2022-07-27 12:50:14.395041+00	1	kidumbaki	\N	\N	\N	\N	\N	\N	f	f
+602	1002	kitaarab	\N	0	2022-07-27 12:50:24.344667+00	1	kitaarab	\N	\N	\N	\N	\N	\N	f	f
+603	1003	boomba music	\N	0	2022-07-27 12:54:42.074315+00	1	boomba music	\N	\N	\N	\N	\N	\N	f	f
+604	1006	congotronics	\N	0	2022-07-27 13:01:47.876678+00	1	congotronics	\N	\N	\N	\N	\N	\N	f	f
+605	1012	rumba congolaise	fr	0	2022-07-27 13:14:40.03939+00	1	rumba congolaise	\N	\N	\N	\N	\N	\N	t	f
+606	1016	ambas-i-bay	\N	0	2022-07-28 09:35:22.487666+00	1	ambas-i-bay	\N	\N	\N	\N	\N	\N	f	f
+607	1017	african jazz	en	0	2022-07-28 09:37:25.319092+00	1	african jazz	\N	\N	\N	\N	\N	\N	f	f
+608	1026	향악	ko	0	2022-07-28 10:27:59.863647+00	1	향악	\N	\N	\N	\N	\N	\N	t	f
+609	1026	hyang-ak	\N	0	2022-07-28 10:28:04.987984+00	1	hyang-ak	\N	\N	\N	\N	\N	\N	f	f
+610	1035	griot music	en	0	2022-07-28 13:24:39.970839+00	1	griot music	\N	\N	\N	\N	\N	\N	f	f
+611	1039	afrorock	en	0	2022-07-28 13:42:14.971366+00	1	afrorock	\N	\N	\N	\N	\N	\N	f	f
+612	1039	afro-rock	en	0	2022-07-28 13:42:19.399452+00	1	afro-rock	\N	\N	\N	\N	\N	\N	f	f
+613	1040	afrofunk	en	0	2022-07-28 13:45:30.278369+00	1	afrofunk	\N	\N	\N	\N	\N	\N	f	f
+614	1040	afro funk	en	0	2022-07-28 13:45:32.125044+00	1	afro funk	\N	\N	\N	\N	\N	\N	f	f
+615	1042	jaiva	\N	0	2022-07-28 13:55:27.308037+00	1	jaiva	\N	\N	\N	\N	\N	\N	f	f
+616	1052	ethio jazz	en	0	2022-07-28 14:34:56.732164+00	1	ethio jazz	\N	\N	\N	\N	\N	\N	f	f
+617	1052	ethiojazz	en	0	2022-07-28 14:35:00.830628+00	1	ethiojazz	\N	\N	\N	\N	\N	\N	f	f
+618	1054	σκυλάδικο	el	0	2022-07-29 07:04:49.005479+00	1	σκυλάδικο	\N	\N	\N	\N	\N	\N	t	f
+619	1054	skiladika	\N	0	2022-07-29 07:04:54.072075+00	1	skiladika	\N	\N	\N	\N	\N	\N	f	f
+620	1054	skyladiko	\N	0	2022-07-29 07:04:58.587888+00	1	skyladiko	\N	\N	\N	\N	\N	\N	f	f
+621	1054	skyladika	\N	0	2022-07-29 07:05:02.685401+00	1	skyladika	\N	\N	\N	\N	\N	\N	f	f
+622	1058	dimotika	\N	0	2022-07-29 07:29:50.60042+00	1	dimotika	\N	\N	\N	\N	\N	\N	f	f
+623	1058	δημοτικό	el	0	2022-07-29 07:30:30.493422+00	1	δημοτικό	\N	\N	\N	\N	\N	\N	t	f
+624	1058	δημοτικά	el	0	2022-07-29 07:30:44.942196+00	1	δημοτικά	\N	\N	\N	\N	\N	\N	f	f
+625	1059	ριζίτικα	el	0	2022-07-29 07:32:45.246074+00	1	ριζίτικα	\N	\N	\N	\N	\N	\N	t	f
+626	1075	vanerinha	pt	0	2022-07-29 13:47:43.58673+00	1	vanerinha	\N	\N	\N	\N	\N	\N	f	f
+627	1075	vanerão	pt	0	2022-07-29 13:47:47.387719+00	1	vanerão	\N	\N	\N	\N	\N	\N	f	f
+628	1078	proibidão	pt	0	2022-07-29 13:55:05.624713+00	1	proibidão	\N	\N	\N	\N	\N	\N	f	f
+629	1088	brega pop	pt	0	2022-07-29 14:23:52.610983+00	1	brega pop	\N	\N	\N	\N	\N	\N	f	f
+630	1112	zouk-love	\N	0	2022-08-04 09:38:10.577065+00	1	zouk-love	\N	\N	\N	\N	\N	\N	f	f
+631	1113	cabo-zouk	\N	0	2022-08-04 09:40:46.25816+00	1	cabo-zouk	\N	\N	\N	\N	\N	\N	f	f
+632	1113	cabo-love	\N	0	2022-08-04 09:40:57.240873+00	1	cabo-love	\N	\N	\N	\N	\N	\N	f	f
+633	1114	tumbele	\N	0	2022-08-04 09:43:48.505907+00	2	tumbele	\N	\N	\N	\N	\N	\N	f	f
+634	1117	meringue	\N	0	2022-08-04 09:54:59.031696+00	2	meringue	\N	\N	\N	\N	\N	\N	f	f
+635	1119	cadence-lypso	\N	0	2022-08-04 10:05:17.024219+00	1	cadence-lypso	\N	\N	\N	\N	\N	\N	f	f
+636	1126	cubaton	en	0	2022-08-04 10:25:13.071698+00	1	cubaton	\N	\N	\N	\N	\N	\N	f	f
+637	1132	bele	\N	0	2022-08-04 10:42:17.921947+00	2	bele	\N	\N	\N	\N	\N	\N	f	f
+638	1137	tecno-rumba	es	0	2022-08-05 08:30:36.111802+00	1	tecno-rumba	\N	\N	\N	\N	\N	\N	f	f
+639	1146	salsa romantica	\N	0	2022-08-05 08:57:39.105436+00	2	salsa romantica	\N	\N	\N	\N	\N	\N	f	f
+640	1160	tecnobanda	es	0	2022-08-05 09:43:11.945997+00	1	tecnobanda	\N	\N	\N	\N	\N	\N	f	f
+641	236	pop latino	es	0	2022-08-05 09:46:27.228403+00	1	pop latino	\N	\N	\N	\N	\N	\N	t	f
+642	1167	electrolatino	\N	0	2022-08-05 09:56:35.52734+00	1	electrolatino	\N	\N	\N	\N	\N	\N	f	f
+643	1169	yaravi	\N	0	2022-08-05 09:59:52.971208+00	2	yaravi	\N	\N	\N	\N	\N	\N	f	f
+644	1173	vals peruano	es	0	2022-08-05 10:07:17.343031+00	1	vals peruano	\N	\N	\N	\N	\N	\N	f	f
+645	1194	mexican cumbia	en	0	2022-08-05 10:41:13.597345+00	1	mexican cumbia	\N	\N	\N	\N	\N	\N	f	f
+646	1200	andean rock	en	0	2022-08-05 10:54:12.916523+00	1	andean rock	\N	\N	\N	\N	\N	\N	t	f
+647	1207	뽕짝 디스코	ko	0	2022-08-08 11:06:54.347484+00	1	뽕짝 디스코	\N	\N	\N	\N	\N	\N	t	f
+648	1208	오리엔탈 발라드	ko	0	2022-08-08 11:07:23.659009+00	1	오리엔탈 발라드	\N	\N	\N	\N	\N	\N	t	f
+649	1210	shinawi	\N	0	2022-08-08 11:16:50.364582+00	1	shinawi	\N	\N	\N	\N	\N	\N	f	f
+650	1210	시나위	ko	0	2022-08-08 11:17:32.619066+00	1	시나위	\N	\N	\N	\N	\N	\N	t	f
+651	1211	산조	ko	0	2022-08-08 11:18:37.245474+00	1	산조	\N	\N	\N	\N	\N	\N	t	f
+652	1212	판소리	ko	0	2022-08-08 11:23:31.362709+00	1	판소리	\N	\N	\N	\N	\N	\N	t	f
+653	1213	taiko	en	0	2022-08-08 11:33:53.504864+00	1	taiko	\N	\N	\N	\N	\N	\N	f	f
+654	1213	組太鼓	ja	0	2022-08-08 11:33:57.380494+00	1	組太鼓	\N	\N	\N	\N	\N	\N	t	f
+655	1214	浪曲	ja	0	2022-08-08 11:37:34.414128+00	1	浪曲	\N	\N	\N	\N	\N	\N	t	f
+656	1215	ondo	\N	0	2022-08-08 11:42:16.303703+00	2	ondo	\N	\N	\N	\N	\N	\N	f	f
+657	1215	音頭	ja	0	2022-08-08 11:42:46.044251+00	1	音頭	\N	\N	\N	\N	\N	\N	t	f
+658	1216	小唄	ja	0	2022-08-08 11:45:18.518751+00	1	小唄	\N	\N	\N	\N	\N	\N	t	f
+659	1217	神楽	ja	0	2022-08-08 11:47:50.438734+00	1	神楽	\N	\N	\N	\N	\N	\N	t	f
+660	1218	平曲	ja	0	2022-08-08 11:50:54.840419+00	1	平曲	\N	\N	\N	\N	\N	\N	t	f
+661	1219	島唄	ja	0	2022-08-08 11:53:59.193601+00	1	島唄	\N	\N	\N	\N	\N	\N	t	f
+662	1219	shimauta	\N	0	2022-08-08 11:54:14.382468+00	1	shimauta	\N	\N	\N	\N	\N	\N	f	f
+663	1220	ユーカラ	ja	0	2022-08-08 11:56:35.237515+00	1	ユーカラ	\N	\N	\N	\N	\N	\N	t	f
+664	1221	ウポポ	ja	0	2022-08-08 11:58:43.263697+00	1	ウポポ	\N	\N	\N	\N	\N	\N	t	f
+665	1222	vietnamese opera	en	0	2022-08-08 12:01:19.750014+00	1	vietnamese opera	\N	\N	\N	\N	\N	\N	f	f
+666	1224	가곡	ko	0	2022-08-08 12:08:21.715335+00	1	가곡	\N	\N	\N	\N	\N	\N	t	f
+667	1226	당악	ko	0	2022-08-08 12:18:47.46985+00	1	당악	\N	\N	\N	\N	\N	\N	t	f
+668	1228	組歌	ja	0	2022-08-08 12:24:08.990967+00	1	組歌	\N	\N	\N	\N	\N	\N	t	f
+669	1230	箏曲	ja	0	2022-08-08 12:29:56.064892+00	1	箏曲	\N	\N	\N	\N	\N	\N	t	f
+670	1230	sokyoku	\N	0	2022-08-08 12:31:54.955531+00	2	sokyoku	\N	\N	\N	\N	\N	\N	f	f
+671	1231	声明	ja	0	2022-08-08 12:35:25.743828+00	1	声明	\N	\N	\N	\N	\N	\N	t	f
+672	1231	shomyo	\N	0	2022-08-08 12:36:29.935606+00	2	shomyo	\N	\N	\N	\N	\N	\N	f	f
+673	1232	能	ja	0	2022-08-08 12:39:58.61419+00	1	能	\N	\N	\N	\N	\N	\N	t	f
+674	1233	長唄	ja	0	2022-08-08 12:42:24.437916+00	1	長唄	\N	\N	\N	\N	\N	\N	t	f
+675	1236	joruri	\N	0	2022-08-08 12:48:21.10427+00	2	joruri	\N	\N	\N	\N	\N	\N	f	f
+676	1236	浄瑠璃	ja	0	2022-08-08 12:48:25.000933+00	1	浄瑠璃	\N	\N	\N	\N	\N	\N	t	f
+677	1237	地歌	ja	0	2022-08-08 12:50:42.631155+00	1	地歌	\N	\N	\N	\N	\N	\N	t	f
+678	1238	本曲	ja	0	2022-08-08 12:53:07.145242+00	1	本曲	\N	\N	\N	\N	\N	\N	t	f
+679	1239	中国风	zh_Hans	0	2022-08-08 12:59:59.648459+00	1	中国风	\N	\N	\N	\N	\N	\N	t	f
+680	1239	中國風	zh_Hant	0	2022-08-08 13:00:08.434553+00	1	中國風	\N	\N	\N	\N	\N	\N	t	f
+681	1240	時代曲	zh	0	2022-08-08 13:03:24.574645+00	1	時代曲	\N	\N	\N	\N	\N	\N	t	f
+682	1241	minyue	\N	0	2022-08-08 13:13:29.757999+00	1	minyue	\N	\N	\N	\N	\N	\N	f	f
+683	1241	民乐	zh	0	2022-08-08 13:13:50.472106+00	1	民乐	\N	\N	\N	\N	\N	\N	f	f
+684	1241	國樂	zh	0	2022-08-08 13:14:21.794662+00	1	國樂	\N	\N	\N	\N	\N	\N	f	f
+685	1242	山歌	zh	0	2022-08-08 13:16:28.067931+00	1	山歌	\N	\N	\N	\N	\N	\N	t	f
+686	1243	江南丝竹	zh	0	2022-08-08 13:19:21.217034+00	1	江南丝竹	\N	\N	\N	\N	\N	\N	t	f
+687	1244	雅樂	zh	0	2022-08-08 13:20:59.365943+00	1	雅樂	\N	\N	\N	\N	\N	\N	t	f
+688	1245	洞经音乐	zh	0	2022-08-08 13:23:38.687672+00	1	洞经音乐	\N	\N	\N	\N	\N	\N	t	f
+689	1246	shaoxing opera	en	0	2022-08-08 13:29:17.97831+00	1	shaoxing opera	\N	\N	\N	\N	\N	\N	f	f
+690	1248	白沙细乐	zh	0	2022-08-08 13:32:05.363107+00	1	白沙细乐	\N	\N	\N	\N	\N	\N	t	f
+691	1259	colinde	ro	0	2022-08-09 11:52:16.223548+00	1	colinde	\N	\N	\N	\N	\N	\N	f	f
+692	1267	neomedieval folk	en	0	2022-08-09 12:18:20.669398+00	1	neomedieval folk	\N	\N	\N	\N	\N	\N	f	f
+693	1283	setu leelo	et	0	2022-08-09 13:10:53.448456+00	1	setu leelo	\N	\N	\N	\N	\N	\N	t	f
+694	1285	narodno zabavna glasba	sl	0	2022-08-09 13:16:33.7592+00	1	narodno zabavna glasba	\N	\N	\N	\N	\N	\N	f	f
+695	1285	oberkrainer	\N	0	2022-08-09 13:16:56.536216+00	1	oberkrainer	\N	\N	\N	\N	\N	\N	f	f
+696	1286	khoomei	\N	0	2022-08-09 13:42:46.044714+00	1	khoomei	\N	\N	\N	\N	\N	\N	f	f
+697	1286	mongolian throat singing	en	0	2022-08-09 13:49:41.522603+00	1	mongolian throat singing	\N	\N	\N	\N	\N	\N	f	f
+698	1286	tuvan throat singing	en	0	2022-08-09 13:49:52.747094+00	1	tuvan throat singing	\N	\N	\N	\N	\N	\N	f	f
+699	1287	yodel	en	0	2022-08-09 13:56:20.741086+00	1	yodel	\N	\N	\N	\N	\N	\N	f	f
+700	1302	truck-driving country	en	0	2022-08-10 09:41:07.206175+00	1	truck-driving country	\N	\N	\N	\N	\N	\N	f	f
+701	1306	country & irish	en	0	2022-08-10 09:57:55.189209+00	1	country & irish	\N	\N	\N	\N	\N	\N	f	f
+702	1321	hazzanut	\N	0	2022-08-10 10:55:08.954175+00	1	hazzanut	\N	\N	\N	\N	\N	\N	f	f
+703	1328	зохиолын дуу	mn	0	2022-08-10 12:34:07.676298+00	1	зохиолын дуу	\N	\N	\N	\N	\N	\N	f	f
+704	1329	уртын дуу	mn	0	2022-08-10 12:36:56.810848+00	1	уртын дуу	\N	\N	\N	\N	\N	\N	f	f
+705	1330	богино дуу	mn	0	2022-08-10 12:39:09.339654+00	1	богино дуу	\N	\N	\N	\N	\N	\N	f	f
+706	1339	meykhana	en	0	2022-08-10 13:08:45.674995+00	1	meykhana	\N	\N	\N	\N	\N	\N	f	f
+707	1341	ฟ้อนเล็บ	th	0	2022-08-10 13:15:20.42862+00	1	ฟ้อนเล็บ	\N	\N	\N	\N	\N	\N	t	f
+708	1343	ปี่พาทย์	th	0	2022-08-10 13:20:31.36887+00	1	ปี่พาทย์	\N	\N	\N	\N	\N	\N	t	f
+709	1346	tembang sunda	\N	0	2022-08-10 15:52:43.833532+00	1	tembang sunda	\N	\N	\N	\N	\N	\N	f	f
+710	1348	cambodian classical	en	0	2022-08-10 16:08:38.678119+00	1	cambodian classical	\N	\N	\N	\N	\N	\N	f	f
+711	1351	kecapi suling	\N	0	2022-08-10 16:19:19.879925+00	1	kecapi suling	\N	\N	\N	\N	\N	\N	f	f
+712	1365	pop sunda	\N	0	2022-08-10 16:50:44.961099+00	1	pop sunda	\N	\N	\N	\N	\N	\N	f	f
+713	1391	авторская песня	ru	0	2022-08-10 17:47:09.494117+00	1	авторская песня	\N	\N	\N	\N	\N	\N	t	f
+714	1397	stand-up comedy	en	0	2022-08-24 12:58:32.255155+00	1	stand-up comedy	\N	\N	\N	\N	\N	\N	f	f
+715	1397	standup	en	0	2022-08-24 12:58:37.904812+00	1	standup	\N	\N	\N	\N	\N	\N	f	f
+716	1397	stand up comedy	en	0	2022-08-24 12:58:44.202363+00	1	stand up comedy	\N	\N	\N	\N	\N	\N	f	f
+717	1397	stand-up	en	0	2022-08-24 12:58:47.35389+00	1	stand-up	\N	\N	\N	\N	\N	\N	f	f
+718	1397	stand up	en	0	2022-08-24 12:58:53.361729+00	1	stand up	\N	\N	\N	\N	\N	\N	f	f
+719	1399	handbag house	en	0	2022-08-24 13:13:02.520255+00	1	handbag house	\N	\N	\N	\N	\N	\N	f	f
+720	1402	曲藝	zh_Hant	0	2022-08-24 13:40:08.264887+00	1	曲藝	\N	\N	\N	\N	\N	\N	t	f
+721	1402	曲艺	zh_Hans	0	2022-08-24 13:40:11.943624+00	1	曲艺	\N	\N	\N	\N	\N	\N	t	f
+722	1411	radio drama	en	0	2022-08-24 14:29:10.03382+00	1	radio drama	\N	\N	\N	\N	\N	\N	f	f
+723	1411	audio play	en	0	2022-08-24 14:29:30.729163+00	1	audio play	\N	\N	\N	\N	\N	\N	f	f
+724	1411	radio play	en	0	2022-08-24 14:29:39.259268+00	1	radio play	\N	\N	\N	\N	\N	\N	f	f
+725	1411	audio theatre	en	0	2022-08-24 14:29:48.74524+00	1	audio theatre	\N	\N	\N	\N	\N	\N	f	f
+726	1411	radio theatre	en	0	2022-08-24 14:29:58.616639+00	1	radio theatre	\N	\N	\N	\N	\N	\N	f	f
+727	1420	fairy tales	en	0	2022-08-24 16:12:21.428498+00	1	fairy tales	\N	\N	\N	\N	\N	\N	f	f
+728	1420	fairytale	en	0	2022-08-24 16:12:31.568578+00	1	fairytale	\N	\N	\N	\N	\N	\N	f	f
+729	1420	fairytales	en	0	2022-08-24 16:12:40.120734+00	1	fairytales	\N	\N	\N	\N	\N	\N	f	f
+730	1429	new orleans rhythm and blues	en	0	2022-08-24 16:58:27.775424+00	1	new orleans rhythm and blues	\N	\N	\N	\N	\N	\N	f	f
+731	1429	new orleans r'n'b	en	0	2022-08-24 16:58:34.253326+00	1	new orleans r'n'b	\N	\N	\N	\N	\N	\N	f	f
+732	1430	hiphop soul	en	0	2022-08-24 17:03:14.863791+00	1	hiphop soul	\N	\N	\N	\N	\N	\N	f	f
+733	1430	hip-hop soul	en	0	2022-08-24 17:03:22.440361+00	1	hip-hop soul	\N	\N	\N	\N	\N	\N	f	f
+734	1436	futurecore	en	0	2022-08-25 11:43:00.942631+00	1	futurecore	\N	\N	\N	\N	\N	\N	f	f
+735	1437	old-school hip-hop	en	0	2022-08-29 07:31:42.391134+00	1	old-school hip-hop	\N	\N	\N	\N	\N	\N	f	f
+736	1437	old-school hiphop	en	0	2022-08-29 07:31:50.805807+00	1	old-school hiphop	\N	\N	\N	\N	\N	\N	f	f
+737	1437	oldschool hip-hop	\N	0	2022-08-29 07:31:58.961547+00	2	oldschool hip-hop	\N	\N	\N	\N	\N	\N	f	f
+738	1437	oldschool hiphop	\N	0	2022-08-29 07:32:04.554662+00	2	oldschool hiphop	\N	\N	\N	\N	\N	\N	f	f
+739	1437	old school hiphop	en	0	2022-08-29 07:32:31.379154+00	1	old school hiphop	\N	\N	\N	\N	\N	\N	f	f
+740	1437	old school hip-hop	en	0	2022-08-29 07:32:39.868451+00	1	old school hip-hop	\N	\N	\N	\N	\N	\N	f	f
+741	1437	disco rap	en	0	2022-08-29 07:32:53.458301+00	1	disco rap	\N	\N	\N	\N	\N	\N	f	f
+742	1437	old school rap	en	0	2022-08-29 07:33:03.265456+00	1	old school rap	\N	\N	\N	\N	\N	\N	f	f
+743	1437	old-school rap	en	0	2022-08-29 07:33:08.35196+00	1	old-school rap	\N	\N	\N	\N	\N	\N	f	f
+744	1441	ネオアコ	ja	0	2022-09-01 06:31:12.145106+00	1	ネオアコ	\N	\N	\N	\N	\N	\N	t	f
+745	1451	emo violence	en	0	2022-09-01 07:26:22.255551+00	1	emo violence	\N	\N	\N	\N	\N	\N	f	f
+746	1451	emo powerviolence	en	0	2022-09-01 07:26:28.80963+00	1	emo powerviolence	\N	\N	\N	\N	\N	\N	f	f
+747	1464	medieval folk metal	en	0	2022-09-01 08:18:06.390067+00	1	medieval folk metal	\N	\N	\N	\N	\N	\N	f	f
+748	1466	epic doom	en	0	2022-09-01 08:25:19.953157+00	1	epic doom	\N	\N	\N	\N	\N	\N	f	f
+749	1471	black'n'roll	en	0	2022-09-01 08:37:52.932903+00	1	black'n'roll	\N	\N	\N	\N	\N	\N	f	f
+750	1471	black and roll	en	0	2022-09-01 08:37:59.068477+00	1	black and roll	\N	\N	\N	\N	\N	\N	f	f
+751	1471	black & roll	en	0	2022-09-01 08:38:05.601981+00	1	black & roll	\N	\N	\N	\N	\N	\N	f	f
+752	1472	jam rock	en	0	2022-09-01 08:42:02.16517+00	1	jam rock	\N	\N	\N	\N	\N	\N	f	f
+753	1473	surf pop	en	0	2022-09-01 08:55:17.68182+00	1	surf pop	\N	\N	\N	\N	\N	\N	f	f
+754	1479	vikingarock	sv	0	2022-09-01 09:16:04.325633+00	1	vikingarock	\N	\N	\N	\N	\N	\N	t	f
+755	1481	iê-iê-iê	pt	0	2022-09-01 09:34:48.054664+00	1	iê-iê-iê	\N	\N	\N	\N	\N	\N	f	f
+756	1483	abstract rap	en	0	2022-09-01 11:37:11.976503+00	1	abstract rap	\N	\N	\N	\N	\N	\N	f	f
+757	1483	abstract hip-hop	en	0	2022-09-01 11:37:19.532053+00	1	abstract hip-hop	\N	\N	\N	\N	\N	\N	f	f
+758	1483	abstract hiphop	en	0	2022-09-01 11:37:24.748945+00	1	abstract hiphop	\N	\N	\N	\N	\N	\N	f	f
+759	1485	afrotrap	fr	0	2022-09-01 11:51:12.026859+00	1	afrotrap	\N	\N	\N	\N	\N	\N	f	f
+760	1485	afro-trap	fr	0	2022-09-01 11:51:13.195402+00	1	afro-trap	\N	\N	\N	\N	\N	\N	f	f
+761	1486	arabesque rap	en	0	2022-09-01 11:57:59.178992+00	1	arabesque rap	\N	\N	\N	\N	\N	\N	f	f
+762	1488	gospel rap	en	0	2022-09-01 12:02:03.150342+00	1	gospel rap	\N	\N	\N	\N	\N	\N	f	f
+763	1488	gospel hip hop	en	0	2022-09-01 12:02:12.418262+00	1	gospel hip hop	\N	\N	\N	\N	\N	\N	f	f
+764	1488	christian hip-hop	en	0	2022-09-01 12:02:17.21975+00	1	christian hip-hop	\N	\N	\N	\N	\N	\N	f	f
+765	1488	holy hip hop	en	0	2022-09-01 12:02:26.732487+00	1	holy hip hop	\N	\N	\N	\N	\N	\N	f	f
+766	1488	christian hiphop	en	0	2022-09-01 12:03:13.852065+00	1	christian hiphop	\N	\N	\N	\N	\N	\N	f	f
+767	1488	christian rap	en	0	2022-09-01 12:03:49.073738+00	1	christian rap	\N	\N	\N	\N	\N	\N	f	f
+768	1500	plugg&b	en	0	2022-09-01 12:57:29.948307+00	1	plugg&b	\N	\N	\N	\N	\N	\N	f	f
+769	1509	sonido donosti	es	0	2022-09-08 12:14:16.687688+00	1	sonido donosti	\N	\N	\N	\N	\N	\N	f	f
+770	1510	jazz-pop	en	0	2022-09-08 12:19:05.147598+00	1	jazz-pop	\N	\N	\N	\N	\N	\N	f	f
+771	1510	pop jazz	en	0	2022-09-08 12:19:13.815435+00	1	pop jazz	\N	\N	\N	\N	\N	\N	f	f
+772	1510	pop-jazz	en	0	2022-09-08 12:19:28.065288+00	1	pop-jazz	\N	\N	\N	\N	\N	\N	f	f
+773	1511	アキシブ系	ja	0	2022-09-08 12:21:33.884111+00	1	アキシブ系	\N	\N	\N	\N	\N	\N	t	f
+774	1515	kalabaw	my	0	2022-09-19 10:37:29.35564+00	1	kalabaw	\N	\N	\N	\N	\N	\N	f	f
+775	1526	bailanta	es	0	2022-09-22 13:58:14.419382+00	1	bailanta	\N	\N	\N	\N	\N	\N	f	f
+776	133	electrorock	en	0	2022-09-23 07:30:22.640411+00	1	electrorock	\N	\N	\N	\N	\N	\N	f	f
+883	1849	visigothic chant	en	0	2023-04-07 07:11:29.667909+00	1	visigothic chant	\N	\N	\N	\N	\N	\N	f	f
+778	255	uplifting trance	en	0	2022-09-23 10:02:25.127544+00	1	uplifting trance	\N	\N	\N	\N	\N	\N	f	f
+779	1534	signalwave	en	0	2022-09-27 15:24:42.417288+00	1	signalwave	\N	\N	\N	\N	\N	\N	f	f
+780	1431	post-disco	en	0	2022-09-27 15:44:05.076715+00	1	post-disco	\N	\N	\N	\N	\N	\N	f	f
+781	287	future jazz	en	0	2022-09-29 11:49:19.486428+00	1	future jazz	\N	\N	\N	\N	\N	\N	f	f
+782	1130	quelbe	\N	0	2022-09-29 12:50:11.132585+00	1	quelbe	\N	\N	\N	\N	\N	\N	f	f
+783	1539	lofi house	en	0	2022-09-29 13:35:06.655301+00	1	lofi house	\N	\N	\N	\N	\N	\N	f	f
+784	1546	gamelan selonding	\N	0	2022-09-30 09:18:35.550275+00	1	gamelan selonding	\N	\N	\N	\N	\N	\N	f	f
+785	1553	tartan techno	en	0	2022-10-07 12:35:29.993084+00	1	tartan techno	\N	\N	\N	\N	\N	\N	f	f
+786	1553	happy gabber	en	0	2022-10-07 12:35:36.976254+00	1	happy gabber	\N	\N	\N	\N	\N	\N	f	f
+787	193	heavy rock	en	0	2022-10-07 13:23:34.138785+00	1	heavy rock	\N	\N	\N	\N	\N	\N	f	f
+788	1560	korpsmusikk	no	0	2022-10-25 09:36:39.338325+00	1	korpsmusikk	\N	\N	\N	\N	\N	\N	t	f
+789	956	muñeira	es	0	2022-10-25 10:27:20.077701+00	1	muñeira	\N	\N	\N	\N	\N	\N	t	f
+790	192	uk hard house	en	0	2022-11-07 16:56:30.523515+00	1	uk hard house	\N	\N	\N	\N	\N	\N	f	f
+791	1620	darkside	en	0	2022-11-08 15:42:12.608793+00	1	darkside	\N	\N	\N	\N	\N	\N	f	f
+792	1622	mainstream hardcore	en	0	2022-11-08 16:04:27.196665+00	1	mainstream hardcore	\N	\N	\N	\N	\N	\N	f	f
+793	1622	mainstyle	en	0	2022-11-08 16:04:45.740162+00	1	mainstyle	\N	\N	\N	\N	\N	\N	f	f
+794	1622	newstyle hardcore	en	0	2022-11-08 16:05:09.716103+00	1	newstyle hardcore	\N	\N	\N	\N	\N	\N	f	f
+795	1636	minimal psytrance	en	0	2022-11-09 08:18:24.637229+00	1	minimal psytrance	\N	\N	\N	\N	\N	\N	f	f
+796	1636	progpsy	en	0	2022-11-09 08:18:30.691877+00	1	progpsy	\N	\N	\N	\N	\N	\N	f	f
+797	1636	psygressive	en	0	2022-11-09 08:18:39.109314+00	1	psygressive	\N	\N	\N	\N	\N	\N	f	f
+798	1636	psyprog	en	0	2022-11-09 08:18:45.912826+00	1	psyprog	\N	\N	\N	\N	\N	\N	f	f
+799	1638	full-on psytrance	en	0	2022-11-09 08:24:14.370152+00	1	full-on psytrance	\N	\N	\N	\N	\N	\N	f	f
+800	1639	hi-tech psytrance	en	0	2022-11-09 08:25:49.505154+00	1	hi-tech psytrance	\N	\N	\N	\N	\N	\N	f	f
+801	1640	ibiza trance	en	0	2022-11-09 09:13:27.49498+00	1	ibiza trance	\N	\N	\N	\N	\N	\N	f	f
+802	1645	zapateo	es	0	2022-11-09 09:23:23.941726+00	1	zapateo	\N	\N	\N	\N	\N	\N	f	f
+803	1645	aleteo	es	0	2022-11-09 09:23:27.769068+00	1	aleteo	\N	\N	\N	\N	\N	\N	f	f
+804	1648	gangsta house	en	0	2022-11-09 09:28:06.466912+00	1	gangsta house	\N	\N	\N	\N	\N	\N	f	f
+805	1649	new jersey sound	en	0	2022-11-09 09:30:42.456653+00	1	new jersey sound	\N	\N	\N	\N	\N	\N	f	f
+806	1651	lithuanian bass	en	0	2022-11-09 09:35:24.780927+00	1	lithuanian bass	\N	\N	\N	\N	\N	\N	f	f
+807	1655	vogue	en	0	2022-11-09 09:45:15.736013+00	1	vogue	\N	\N	\N	\N	\N	\N	f	f
+808	1661	dancefloor dnb	en	0	2022-11-09 09:52:45.77929+00	1	dancefloor dnb	\N	\N	\N	\N	\N	\N	f	f
+809	1661	dancefloor d&b	en	0	2022-11-09 09:52:56.094744+00	1	dancefloor d&b	\N	\N	\N	\N	\N	\N	f	f
+810	1674	praise and worship	en	0	2022-11-21 10:18:56.338076+00	1	praise and worship	\N	\N	\N	\N	\N	\N	f	f
+811	1674	contemporary worship	en	0	2022-11-21 10:19:04.208513+00	1	contemporary worship	\N	\N	\N	\N	\N	\N	f	f
+812	1685	revista	es	0	2022-11-23 10:54:10.806875+00	1	revista	\N	\N	\N	\N	\N	\N	t	f
+813	1686	opéra-comique	fr	0	2022-11-23 11:15:09.366682+00	1	opéra-comique	\N	\N	\N	\N	\N	\N	f	f
+814	1693	grand opéra	fr	0	2022-11-23 11:28:34.229508+00	1	grand opéra	\N	\N	\N	\N	\N	\N	t	f
+815	1697	jamtronica	en	0	2022-11-29 08:24:36.088111+00	1	jamtronica	\N	\N	\N	\N	\N	\N	f	f
+816	1699	etude	\N	0	2022-11-29 08:34:14.220887+00	2	etude	\N	\N	\N	\N	\N	\N	f	f
+817	1700	south asian classical	en	0	2022-11-29 08:46:24.285608+00	1	south asian classical	\N	\N	\N	\N	\N	\N	f	f
+818	1701	art music	en	0	2022-11-29 08:49:05.860381+00	1	art music	\N	\N	\N	\N	\N	\N	f	f
+819	1703	middle eastern classical	en	0	2022-11-29 08:58:10.076735+00	1	middle eastern classical	\N	\N	\N	\N	\N	\N	f	f
+820	1703	middle eastern classical music	en	0	2022-11-29 08:58:20.012018+00	1	middle eastern classical music	\N	\N	\N	\N	\N	\N	f	f
+821	1704	ottoman classical	en	0	2022-11-29 09:03:05.823482+00	1	ottoman classical	\N	\N	\N	\N	\N	\N	f	f
+822	1705	iranian classical	en	0	2022-11-29 09:08:01.798539+00	1	iranian classical	\N	\N	\N	\N	\N	\N	f	f
+823	1711	korean court music	en	0	2022-11-29 09:34:43.765994+00	1	korean court music	\N	\N	\N	\N	\N	\N	f	f
+824	1714	tone poem	en	0	2022-11-29 12:37:04.972372+00	1	tone poem	\N	\N	\N	\N	\N	\N	f	f
+825	1719	total serialism	en	0	2022-11-29 12:54:10.145702+00	1	total serialism	\N	\N	\N	\N	\N	\N	f	f
+826	1719	pointillism	en	0	2022-11-29 12:54:33.446566+00	1	pointillism	\N	\N	\N	\N	\N	\N	f	f
+827	1719	punctualism	en	0	2022-11-29 12:54:51.08364+00	1	punctualism	\N	\N	\N	\N	\N	\N	f	f
+828	1726	troubadoric poetry	en	0	2022-11-29 15:10:35.993259+00	1	troubadoric poetry	\N	\N	\N	\N	\N	\N	f	f
+829	1734	hasidic pop	en	0	2022-11-29 15:49:21.588992+00	1	hasidic pop	\N	\N	\N	\N	\N	\N	f	f
+830	1742	bhavageeth	\N	0	2022-11-29 17:44:34.08187+00	1	bhavageeth	\N	\N	\N	\N	\N	\N	f	f
+831	1742	bhaavageete	\N	0	2022-11-29 17:44:40.319015+00	1	bhaavageete	\N	\N	\N	\N	\N	\N	f	f
+832	1746	ouverture	fr	0	2022-12-09 11:18:55.661414+00	1	ouverture	\N	\N	\N	\N	\N	\N	t	f
+833	1759	beatbox	en	0	2022-12-23 10:10:24.25112+00	1	beatbox	\N	\N	\N	\N	\N	\N	f	f
+834	1763	neo-trad	\N	0	2023-01-05 12:01:19.90278+00	2	neo-trad	\N	\N	\N	\N	\N	\N	f	f
+835	1764	forest psy	en	0	2023-01-06 16:36:30.528584+00	1	forest psy	\N	\N	\N	\N	\N	\N	f	f
+836	1775	polka criolla	es	0	2023-01-10 07:47:45.512783+00	1	polka criolla	\N	\N	\N	\N	\N	\N	f	f
+837	1775	polca criolla	es	0	2023-01-10 07:47:45.512783+00	1	polca criolla	\N	\N	\N	\N	\N	\N	t	f
+838	1775	Peruvian polka	en	0	2023-01-10 07:48:00.075016+00	1	Peruvian polka	\N	\N	\N	\N	\N	\N	t	f
+839	1776	canción criolla	es	0	2023-01-10 07:59:10.884007+00	1	canción criolla	\N	\N	\N	\N	\N	\N	f	f
+840	1778	dork rock	en	0	2023-01-16 07:54:48.178158+00	1	dork rock	\N	\N	\N	\N	\N	\N	f	f
+841	1778	nerd rock	en	0	2023-01-16 07:54:53.158764+00	1	nerd rock	\N	\N	\N	\N	\N	\N	f	f
+842	1780	tramping music	en	0	2023-01-23 20:03:39.579495+00	1	tramping music	\N	\N	\N	\N	\N	\N	f	f
+843	1785	night psytrance	en	0	2023-02-01 08:04:27.734423+00	1	night psytrance	\N	\N	\N	\N	\N	\N	f	f
+844	1785	nightpsy	en	0	2023-02-01 08:04:58.329576+00	1	nightpsy	\N	\N	\N	\N	\N	\N	f	f
+876	1829	christian liturgical music	en	0	2023-02-27 13:22:42.263816+00	1	christian liturgical music	\N	\N	\N	\N	\N	\N	f	f

@@ -4,6 +4,8 @@ import logging
 import sqlite3
 
 
+# SQL Queries to create the tables. Each creation statement should be separated
+# by a line containing only two dash and a line feed char ("--\n").
 _SQL_CREATE_TABLES = """
 
 CREATE TABLE IF NOT EXISTS "artists" (
@@ -19,7 +21,6 @@ CREATE TABLE IF NOT EXISTS "artists" (
 
 CREATE TABLE IF NOT EXISTS "genres" (
     "id"            INTEGER NOT NULL UNIQUE,
-    "parentGenreId" INTEGER DEFAULT NULL,
     "name"          TEXT NOT NULL UNIQUE,
     PRIMARY KEY("id" AUTOINCREMENT)
 );
@@ -35,10 +36,19 @@ CREATE TABLE IF NOT EXISTS "genre_aliases" (
 
 --
 
+CREATE TABLE IF NOT EXISTS "l_genre_genre" (
+    "id"            INTEGER NOT NULL UNIQUE,
+    "parentGenreId" INTEGER DEFAULT NULL,
+    "childGenreId"  INTEGER DEFAULT NULL,
+    PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+--
+
 CREATE TABLE IF NOT EXISTS "albums" (
     "id"            TEXT NOT NULL UNIQUE,
     "artistId"      TEXT NOT NULL,
-    "genreId"       TEXT,
+    "genreName"     TEXT,
     "coverArtId"    TEXT,
     "name"          TEXT,
     "sortName"      TEXT,
@@ -57,7 +67,7 @@ CREATE TABLE IF NOT EXISTS "tracks" (
     "artistId"      TEXT NOT NULL,
     "albumId"       TEXT NOY NULL,
     "coverArtId"    TEXT,
-    "genreId"       TEXT,
+    "genreName"     TEXT,
     "diskNumber"    INTEGER DEFAULT 1,
     "trackNumber"   INTEGER,
     "name"          TEXT,
@@ -71,7 +81,6 @@ CREATE TABLE IF NOT EXISTS "tracks" (
     "lastPlayed"    TEXT DEFAULT NULL,
     PRIMARY KEY("id")
 );
-
 """
 
 
@@ -137,7 +146,7 @@ class Database:
         self,
         id_=None,
         artistId=None,
-        genreId=None,
+        genreName=None,
         coverArtId=None,
         name=None,
         sortName=None,

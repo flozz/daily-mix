@@ -57,7 +57,7 @@ def import_music_to_database(subsonic, db):
         db.insert_album(
             id_=album["id"],
             artistId=album["parent"],
-            genreId=None,  # XXX
+            genreName=album.get("genre", "").strip().lower(),
             coverArtId=album.get("coverArt", None),
             name=album["title"],
             sortName=album.get("sortName", album["title"]),
@@ -79,7 +79,7 @@ def import_music_to_database(subsonic, db):
             artistId=track["artistId"],
             albumId=track["albumId"],
             coverArtId=track.get("coverArt", None),
-            genreId=None,  # XXX
+            genreName=track.get("genre", "").strip().lower(),
             diskNumber=track.get("discNumber", 1),
             trackNumber=track.get("track", 1),
             name=track["title"],

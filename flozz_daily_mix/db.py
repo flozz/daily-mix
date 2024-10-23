@@ -157,7 +157,7 @@ class Database:
     ):
         params = {k.rstrip("_"): v for k, v in locals().items()}
         query = (
-            "INSERT INTO albums VALUES(:id, :artistId, :genreId, :coverArtId, "
+            "INSERT INTO albums VALUES(:id, :artistId, :genreName, :coverArtId, "
             ":name, :sortName, :year, :created, :starred, :rating)"
         )
         self._cur.execute(query, params)
@@ -169,7 +169,7 @@ class Database:
         artistId=None,
         albumId=None,
         coverArtId=None,
-        genreId=None,
+        genreName=None,
         diskNumber=None,
         trackNumber=None,
         name=None,
@@ -185,7 +185,7 @@ class Database:
         params = {k.rstrip("_"): v for k, v in locals().items()}
         query = (
             "INSERT INTO tracks VALUES(:id, :albumArtistId, :artistId, :albumId, "
-            ":coverArtId, :genreId, :diskNumber, :trackNumber, :name, :sortName, "
+            ":coverArtId, :genreName, :diskNumber, :trackNumber, :name, :sortName, "
             ":duration, :year, :created, :starred, :rating, :playCount, :lastPlayed)"
         )
         self._cur.execute(query, params)

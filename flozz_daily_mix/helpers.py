@@ -1,3 +1,4 @@
+import pathlib
 import urllib.parse
 
 
@@ -24,3 +25,17 @@ def custom_urlencode(params):
             components.append(urllib.parse.urlencode({key: value}))
 
     return "&".join(components)
+
+
+def get_data_file_path(filename):
+    """Get the path of a data file.
+
+    :param str filename: The name of the data file.
+
+    :rtype: pathlib.Path
+
+    >>> get_data_file_path("musicbrainz_db/genre")
+    PosixPath('.../flozz_daily_mix/data/musicbrainz_db/genre')
+    """
+    root = pathlib.Path(__file__).parent
+    return root / "data" / filename

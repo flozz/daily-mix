@@ -7,6 +7,12 @@ from .db import Database
 from .playlist import PlaylistGenerator
 from .cli import generate_cli
 from .config import read_config
+from .musicbrainz_db import (
+    get_genres,
+    get_genre_aliases,
+    get_l_genre_genre,
+    GENRE_LINK_TYPES,
+)
 from . import APPLICATION_NAME, VERSION
 
 
@@ -99,6 +105,33 @@ def import_music_to_database(subsonic, db):
     db.commit()
 
 
+def import_genres_to_database(db):
+    logging.info("Importing genres data from Musicbrainz locale DB")
+
+    logging.debug("  * Importing genres...")
+    for genre in get_genres():
+        db.insert_genre(id_=genre["id"], name=genre["name"])
+
+    logging.debug("  * Importing genre aliases...")
+    for alias in get_genre_aliases():
+        db.insert_genre_alias(
+            id_=alias["id"], genreId=alias["genre"], name=alias["name"]
+        )
+
+    logging.debug("  * Importing genre relations...")
+    for rel in get_l_genre_genre():
+        if rel["link"] == GENRE_LINK_TYPES.SUBGENRE_OF.value:
+            db.insert_genre_relation(
+                id_=rel["id"], parentGenreId=rel["entity0"], childGenreId=rel["entity1"]
+            )
+        if rel["link"] == GENRE_LINK_TYPES.FUSION_OF.value:
+            db.insert_genre_relation(
+                id_=rel["id"], parentGenreId=rel["entity1"], childGenreId=rel["entity0"]
+            )
+
+    db.commit()
+
+
 def create_or_update_playlsit(
     subsonic,
     fzz_id,
@@ -154,6 +187,9 @@ def dumpdata(subsonic, db_file):
     # Fetch data from the music cloud
     import_music_to_database(subsonic, db)
 
+    # Import genres from Musicbrainz locale db
+    import_genres_to_database(db)
+
 
 def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=False):
     if db_file:
@@ -164,6 +200,7 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
     # Fetch data from the music cloud if no input database provided
     if not db_file:
         import_music_to_database(subsonic, db)
+        import_genres_to_database(db)
 
     # Generate playlists from configs
     for playlist_config in playlists_configs:

@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS "genre_aliases" (
 
 --
 
-CREATE TABLE IF NOT EXISTS "l_genre_genre" (
+CREATE TABLE IF NOT EXISTS "genre_relations" (
     "id"            INTEGER NOT NULL UNIQUE,
     "parentGenreId" INTEGER DEFAULT NULL,
     "childGenreId"  INTEGER DEFAULT NULL,
@@ -188,6 +188,21 @@ class Database:
             ":coverArtId, :genreName, :diskNumber, :trackNumber, :name, :sortName, "
             ":duration, :year, :created, :starred, :rating, :playCount, :lastPlayed)"
         )
+        self._cur.execute(query, params)
+
+    def insert_genre(self, id_=None, name=None):
+        params = {k.rstrip("_"): v for k, v in locals().items()}
+        query = "INSERT INTO genres VALUES(:id, :name)"
+        self._cur.execute(query, params)
+
+    def insert_genre_alias(self, id_=None, genreId=None, name=None):
+        params = {k.rstrip("_"): v for k, v in locals().items()}
+        query = "INSERT INTO genre_aliases VALUES(:id, :genreId, :name)"
+        self._cur.execute(query, params)
+
+    def insert_genre_relation(self, id_=None, parentGenreId=None, childGenreId=None):
+        params = {k.rstrip("_"): v for k, v in locals().items()}
+        query = "INSERT INTO genre_relations VALUES(:id, :parentGenreId, :childGenreId)"
         self._cur.execute(query, params)
 
     def execute_query(self, query, params={}):

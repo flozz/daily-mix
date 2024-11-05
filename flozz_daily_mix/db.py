@@ -205,6 +205,119 @@ class Database:
         query = "INSERT INTO genre_relations VALUES(:id, :parentGenreId, :childGenreId)"
         self._cur.execute(query, params)
 
+    def get_genre_aliases(self, *, genre_name=None, genre_id=None):
+        """Returns name aliases of the given genre.
+
+        :param str genre_name: The name of the parent genre we are searching
+            the subgenre for (optional BUT one of 'genre_name' or 'genre_id'
+            param must be defined).
+        :param str genre_name: The id of the parent genre we are searching the
+            subgenre for (optional BUT one of 'genre_name' or 'genre_id' param
+            must be defined).
+
+        .. IMPORTANT::
+
+            Either ``genre_name`` or ``genre_id`` must be defined but not both!
+
+        :rtype: generator<str>
+        """
+        if (
+            genre_name is None
+            and genre_id is None
+            or genre_name is not None
+            and genre_id is not None
+        ):
+            raise ValueError("Either 'genre_name' or 'genre_id' must be defined")
+
+        if not genre_id:
+            params = {"genreName": genre_name}
+            query = "SELECT id FROM genres WHERE name = :genreName"
+            self._cur.execute(query, params)
+            response = self._cur.fetchone()
+            if response:
+                (genre_id,) = response
+
+        params = {"genreId": genre_id}
+        query = "SELECT genre_aliases.name FROM genre_aliases WHERE genre_aliases.genreId = :genreId"
+        self._cur.execute(query, params)
+
+        for (alias,) in self._cur.fetchall():
+            yield alias
+
+    def get_genre_subgenres(
+        self,
+        *,
+        genre_name=None,
+        genre_id=None,
+        with_aliases=False,
+        recursive=False,
+        include_input_genre_name=True,
+    ):
+        """Returns subgenre of the given genre.
+
+        :param str genre_name: The name of the parent genre we are searching
+            the subgenre for (optional BUT one of 'genre_name' or 'genre_id'
+            param must be defined).
+        :param str genre_name: The id of the parent genre we are searching the
+            subgenre for (optional BUT one of 'genre_name' or 'genre_id' param
+            must be defined).
+        :param bool with_aliases: Whether to includes name aliases of the given
+            genre and found subgenres or not (default: ``False``).
+        :param bool recursive: Include recursively names (and aliases if
+            ``with_aliases`` is ``True``) of subgenres (default: ``False``).
+        :param bool include_input_genre_name: Whether to include the input
+            genre name (when ``genre_name`` provided) or not (default:
+            ``True``).
+
+        .. IMPORTANT::
+
+            Either ``genre_name`` or ``genre_id`` must be defined but not both!
+
+        :rtype: generator<str>
+        """
+        if (
+            genre_name is None
+            and genre_id is None
+            or genre_name is not None
+            and genre_id is not None
+        ):
+            raise ValueError("Either 'genre_name' or 'genre_id' must be defined")
+
+        if not genre_id:
+            params = {"genreName": genre_name}
+            query = "SELECT id FROM genres WHERE name = :genreName"
+            self._cur.execute(query, params)
+            response = self._cur.fetchone()
+            if response:
+                (genre_id,) = response
+
+        if include_input_genre_name and genre_name:
+            yield genre_name
+
+        if with_aliases:
+            for alias in self.get_genre_aliases(genre_id=genre_id):
+                yield alias
+
+        params = {"parentGenreId": genre_id}
+        query = """
+        SELECT genres.id, genres.name
+        FROM genre_relations
+        LEFT JOIN genres ON genres.id = genre_relations.childGenreId
+        WHERE genre_relations.parentGenreId = :parentGenreId
+        """
+        self._cur.execute(query, params)
+
+        for subgenre_id, subgenre_name in self._cur.fetchall():
+            yield subgenre_name
+            if with_aliases:
+                for alias in self.get_genre_aliases(genre_id=subgenre_id):
+                    yield alias
+            if recursive:
+                for subsubgenre_name in self.get_genre_subgenres(
+                    genre_id=subgenre_id, recursive=True
+                ):
+                    yield subsubgenre_name
+
     def execute_query(self, query, params={}):
         return self._cur.execute(query, params)
 

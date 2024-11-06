@@ -13,6 +13,7 @@ from .musicbrainz_db import (
     get_l_genre_genre,
     GENRE_LINK_TYPES,
 )
+from .helpers import normalize_genre_name
 from . import APPLICATION_NAME, VERSION
 
 
@@ -63,7 +64,7 @@ def import_music_to_database(subsonic, db):
         db.insert_album(
             id_=album["id"],
             artistId=album["parent"],
-            genreName=album.get("genre", "").strip().lower(),
+            genreName=normalize_genre_name(album.get("genre", "")),
             coverArtId=album.get("coverArt", None),
             name=album["title"],
             sortName=album.get("sortName", album["title"]),
@@ -85,7 +86,7 @@ def import_music_to_database(subsonic, db):
             artistId=track["artistId"],
             albumId=track["albumId"],
             coverArtId=track.get("coverArt", None),
-            genreName=track.get("genre", "").strip().lower(),
+            genreName=normalize_genre_name(album.get("genre", "")),
             diskNumber=track.get("discNumber", 1),
             trackNumber=track.get("track", 1),
             name=track["title"],
@@ -110,12 +111,14 @@ def import_genres_to_database(db):
 
     logging.debug("  * Importing genres...")
     for genre in get_genres():
-        db.insert_genre(id_=genre["id"], name=genre["name"])
+        db.insert_genre(id_=genre["id"], name=normalize_genre_name(genre["name"]))
 
     logging.debug("  * Importing genre aliases...")
     for alias in get_genre_aliases():
         db.insert_genre_alias(
-            id_=alias["id"], genreId=alias["genre"], name=alias["name"]
+            id_=alias["id"],
+            genreId=alias["genre"],
+            name=normalize_genre_name(alias["name"]),
         )
 
     logging.debug("  * Importing genre relations...")

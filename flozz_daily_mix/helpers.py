@@ -1,3 +1,4 @@
+import re
 import pathlib
 import urllib.parse
 
@@ -39,3 +40,28 @@ def get_data_file_path(filename):
     """
     root = pathlib.Path(__file__).parent
     return root / "data" / filename
+
+
+def normalize_genre_name(genre):
+    """Try to normalize the given gnre by removing extra-spaces, converting it
+    to lower case,...
+
+    :param str genre: The genre name.
+
+    :rtype: str
+
+    >>> normalize_genre_name(" Rock ")
+    'rock'
+    >>> normalize_genre_name(" Celtic  Rock; Folk Rock ")
+    'celtic rock'
+    >>> normalize_genre_name("post_punk")
+    'post punk'
+    """
+    for separator in (";", ",", "|"):
+        if separator in genre:
+            genre = genre.split(separator)[0]
+    genre = genre.strip()
+    genre = genre.lower()
+    genre = re.sub(r"[\s _]+", " ", genre)
+    genre = re.sub(r"[-–—]+", "-", genre)
+    return genre

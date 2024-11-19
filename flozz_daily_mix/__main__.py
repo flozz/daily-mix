@@ -37,6 +37,7 @@ def get_tracks(subsonic):
         for track in subsonic.getAlbum(album["id"])["song"]:
             track["_albumArtistId"] = album["parent"]
             track["_albumRating"] = album["rating"] if "rating" in album else 3
+            track["_albumGenre"] = album["genre"]
             yield track
 
 
@@ -86,7 +87,9 @@ def import_music_to_database(subsonic, db):
             artistId=track["artistId"],
             albumId=track["albumId"],
             coverArtId=track.get("coverArt", None),
-            genreName=normalize_genre_name(album.get("genre", "")),
+            genreName=normalize_genre_name(
+                track.get("genre", track.get("_albumGenre", ""))
+            ),
             diskNumber=track.get("discNumber", 1),
             trackNumber=track.get("track", 1),
             name=track["title"],

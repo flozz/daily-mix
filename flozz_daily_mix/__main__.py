@@ -223,7 +223,7 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
             max_duration=playlist_config["max_track_duration"],
             track_ignore_pattern=playlist_config["ignore_tracks_matching"],
             min_rate=playlist_config["minimal_track_rating"],
-            genres=None,  # TODO
+            genres=[normalize_genre_name(genre) for genre in playlist_config["genres"]],
         )
         generator.generate()
 

@@ -72,11 +72,13 @@ class PlaylistGenerator:
         self._track_ignore_pattern = track_ignore_pattern
         self._min_rate = min_rate
         self._genres = genres
+        self._genres_expanded = set()
         self._tracks_interest = {}
         self._tracks_freshness = {}
         self._tracks_backcatalog = {}
         self._tracks_regular = {}
         self._playlist = []
+        self._expand_genres()
 
     def print(self):
         ROLES = {
@@ -189,6 +191,19 @@ class PlaylistGenerator:
     def get_tracks_ids(self):
         return [track["trackId"] for track in self._playlist]
 
+    def _expand_genres(self):
+        for genre in self._genres:
+            if genre == "all" or not genre:
+                continue
+            self._genres_expanded.update(
+                self._db.get_genre_subgenres(
+                    genre_name=genre,
+                    with_aliases=True,
+                    recursive=True,
+                    include_input_genre_name=True,
+                )
+            )
+
     def _generate_sql_query(
         self,
         where=[],
@@ -238,9 +253,27 @@ class PlaylistGenerator:
             "track_ignore_pattern": self._track_ignore_pattern,
         }
 
+        additional_where_clauses = []
+
+        # Handle genres
+        # XXX Not very pretty to build SQL statement this way, but there is no
+        # XXX good choice to parametrize a tuple/list/set...
+        if len(self._genres_expanded) == 1:
+            additional_where_clauses.append(
+                "tracks.genreName = '%s'"
+                % self._genres_expanded.copy().pop().replace("'", "''")
+            )
+        elif len(self._genres_expanded) > 1:
+            additional_where_clauses.append(
+                "tracks.genreName IN (%s)"
+                % ", ".join(
+                    ["'%s'" % i.replace("'", "''") for i in self._genres_expanded]
+                )
+            )
+
         # Interest
         query = self._generate_sql_query(
-            where=self._SQL_WHERE_CLAUSES,
+            where=self._SQL_WHERE_CLAUSES + additional_where_clauses,
             order_by=["fzzInterestScore DESC", "rand DESC"],
             limit=self._length // 2,
         )
@@ -251,7 +284,7 @@ class PlaylistGenerator:
 
         # Freshness
         query = self._generate_sql_query(
-            where=self._SQL_WHERE_CLAUSES,
+            where=self._SQL_WHERE_CLAUSES + additional_where_clauses,
             order_by=["fzzFreshnessScore DESC", "rand DESC"],
             limit=self._length // 2,
         )
@@ -262,7 +295,9 @@ class PlaylistGenerator:
 
         # Back Catalog
         query = self._generate_sql_query(
-            where=self._SQL_WHERE_CLAUSES + ["tracks.lastPlayed NOT NULL"],
+            where=self._SQL_WHERE_CLAUSES
+            + ["tracks.lastPlayed NOT NULL"]
+            + additional_where_clauses,
             order_by=["tracks.lastPlayed", "rand DESC"],
             limit=self._length // 4,
         )
@@ -273,7 +308,7 @@ class PlaylistGenerator:
 
         # Regular
         query = self._generate_sql_query(
-            where=self._SQL_WHERE_CLAUSES,
+            where=self._SQL_WHERE_CLAUSES + additional_where_clauses,
             order_by=["rand * tracks.rating DESC"],
             limit=self._length * 2,
         )

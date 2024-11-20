@@ -141,6 +141,16 @@ class PlaylistGenerator:
             retry_count = 3
             track = None
 
+            # Stop if one of the music list goes empty
+            if (
+                not self._tracks_regular
+                or not self._tracks_interest
+                or not self._tracks_freshness
+                or not self._tracks_backcatalog
+            ):
+                self._playlist = self._playlist[:i]
+                break
+
             # Pick a track
             while retry_count:
                 if self._playlist[i]["role"] == TrackRole.REGULAR:
@@ -174,16 +184,6 @@ class PlaylistGenerator:
                 del self._tracks_freshness[track["trackId"]]
             if track["trackId"] in self._tracks_backcatalog:
                 del self._tracks_backcatalog[track["trackId"]]
-
-            # Stop if one of the music list goes empty
-            if (
-                not self._tracks_regular
-                or not self._tracks_interest
-                or not self._tracks_freshness
-                or not self._tracks_backcatalog
-            ):
-                self._playlist = self._playlist[: i + 1]
-                break
 
     def get_playlist(self):
         return list(self._playlist)

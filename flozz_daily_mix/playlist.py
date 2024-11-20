@@ -61,7 +61,7 @@ class PlaylistGenerator:
         length=50,
         min_duration=60,
         max_duration=600,
-        genres=None,
+        genres=["all"],
         track_ignore_pattern=None,
         min_rate=2,
     ):

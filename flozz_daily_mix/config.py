@@ -20,8 +20,7 @@ _DEFAULT_PLAYLIST_CONFIG = {
     "max_track_duration": 600,
     "ignore_tracks_matching": "",
     "minimal_track_rating": 2,
-    # TODO future options to add:
-    # "genres": ["all"],
+    "genres": ["all"],
 }
 
 
@@ -57,9 +56,14 @@ def read_config(config_files):
                             % (parser[section][key], section, key, str(error))
                         )
                         sys.exit(1)
-                playlist[key] = type(_DEFAULT_PLAYLIST_CONFIG[key])(
-                    parser[section][key]
-                )
+                if type(_DEFAULT_PLAYLIST_CONFIG[key]) in (list, tuple):
+                    playlist[key] = [
+                        item.strip() for item in parser[section][key].split(",")
+                    ]
+                else:
+                    playlist[key] = type(_DEFAULT_PLAYLIST_CONFIG[key])(
+                        parser[section][key]
+                    )
             config["playlists"].append(playlist)
         elif section == "DEFAULT":
             pass  # Ignore the default section we not use...

@@ -95,6 +95,14 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
     ; Minimal rating for a track to be included in the playlist (from 1 to 5, default: 2)
     minimal_tracks_rating = 2
+    ; Comma-separated list of music genres to include in the playlist
+    ; (empty or "all" to include all genres, default: "all").
+    ; NOTE¹: Subgenres are also included, so if you add "folk rock", it will also
+    ;        include its subgenres ("british folk rock", "celtic rock", "medieval
+    ;        rock", "phleng phuea chiwit" and "rock rural")
+    ; NOTE²: FLOZz Daily Mix support all genres known to MusicBrainz database.
+    ;        List available at https://musicbrainz.org/genres
+    genres = all
 
     ; An other playlist
     [playlist:mix2]
@@ -105,6 +113,7 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     max_track_duration = 600
     ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
     minimal_tracks_rating = 2
+    genres = Pop, Rock, Metal
 
 
 Usage

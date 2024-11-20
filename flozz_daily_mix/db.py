@@ -316,6 +316,14 @@ class Database:
 
         if include_input_genre_name and genre_name:
             yield genre_name
+            if not genre_id:
+                return
+        elif include_input_genre_name and genre_alias:
+            yield genre_alias
+            if not genre_id:
+                return
+        elif not genre_id:
+            return []
 
         if with_aliases:
             for alias in self.get_genre_aliases(genre_id=genre_id):

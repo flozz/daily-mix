@@ -283,6 +283,9 @@ class Database:
         ):
             raise ValueError("Either 'genre_name' or 'genre_id' must be defined")
 
+        genre_alias = None
+
+        # Find genre id
         if not genre_id:
             params = {"genreName": genre_name}
             query = "SELECT id FROM genres WHERE name = :genreName"
@@ -290,6 +293,26 @@ class Database:
             response = self._cur.fetchone()
             if response:
                 (genre_id,) = response
+            else:
+                # Handle the genre name as an alias
+                genre_alias = genre_name
+                genre_name = None
+
+        # Handle aliases as input
+        if genre_alias:
+            params = {"aliasName": genre_alias}
+            query = "SELECT genreId FROM genre_aliases WHERE name = :aliasName"
+            self._cur.execute(query, params)
+            response = self._cur.fetchone()
+            if response:
+                (genre_id,) = response
+                # Get real genre name
+                params = {"genreId": genre_id}
+                query = "SELECT name FROM genres WHERE id = :genreId"
+                self._cur.execute(query, params)
+                response = self._cur.fetchone()
+                if response:
+                    (genre_name,) = response
 
         if include_input_genre_name and genre_name:
             yield genre_name

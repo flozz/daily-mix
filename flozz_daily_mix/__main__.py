@@ -203,7 +203,7 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
     else:
         db = Database(":memory:")
 
-    # Fetch data from the music cloud if no input database provided
+    # Fetch data from the music cloud and import genres if no input database provided
     if not db_file:
         import_music_to_database(subsonic, db)
         import_genres_to_database(db)
@@ -243,6 +243,31 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
                 "Playlist '%s' not saved to the Subsonic API (dry-run)"
                 % playlist_config["name"]
             )
+
+
+def list_genres(db_file=None):
+    if db_file:
+        db = Database(db_file, skip_table_creation=True)
+    else:
+        db = Database(":memory:")
+
+    # Import genres if no input database provided
+    if not db_file:
+        import_genres_to_database(db)
+
+    def _print_genre_tree(genres, level=0, prefix=""):
+        for genre in genres:
+            bullet = "├"
+            next_prefix = "│ "
+            if genres.index(genre) == len(genres) - 1:
+                bullet = "└"
+                next_prefix = "  "
+            elif level == 0 and genres.index(genre) == 0:
+                bullet = "┌"
+            print("\x1B[2;90m%s%s╴\x1B[0m%s" % (prefix, bullet, genre["name"].title()))
+            _print_genre_tree(genre["children"], level + 1, prefix=prefix + next_prefix)
+
+    _print_genre_tree(db.get_genre_tree())
 
 
 def setup_logging(level):
@@ -393,6 +418,8 @@ def main(args=sys.argv[1:]):
         )
     elif parsed_args.subcommand == "dumpdata":
         dumpdata(subsonic, parsed_args.db_file)
+    elif parsed_args.subcommand == "genres":
+        list_genres(db_file=parsed_args.source_db)
 
 
 if __name__ == "__main__":

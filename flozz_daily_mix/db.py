@@ -349,6 +349,42 @@ class Database:
                 ):
                     yield subsubgenre_name
 
+    def get_genre_tree(self):
+        genre_tree = []
+
+        # Find root genres
+        params = {}
+        query = """
+        SELECT genres.id AS genreId,
+               genres.name as genreName,
+               genre_relations.parentGenreId as parentGenreId
+        FROM genres
+        LEFT JOIN genre_relations ON genres.id = genre_relations.childGenreId
+        WHERE parentGenreId IS NULL
+        ORDER BY genreName ASC
+        """
+        self._cur.execute(query, params)
+
+        for genreId, genreName, parentGenreId in self._cur.fetchall():
+            genre_tree.append({"name": genreName, "children": []})
+
+        def _recursive_subgenre_list(root_genres):
+            for genre in root_genres:
+                genre["children"] = [
+                    {"name": sg, "children": []}
+                    for sg in self.get_genre_subgenres(
+                        genre_name=genre["name"],
+                        with_aliases=False,
+                        recursive=False,
+                        include_input_genre_name=False,
+                    )
+                ]
+                _recursive_subgenre_list(genre["children"])
+
+        _recursive_subgenre_list(genre_tree)
+
+        return genre_tree
+
     def execute_query(self, query, params={}):
         return self._cur.execute(query, params)
 

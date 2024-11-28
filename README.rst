@@ -119,9 +119,13 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
 Usage
 -----
 
-Once you have installed FLOZz Daily Mix and created a configuration file, you can start generating playlists.
-
 **NOTE:** in this section I will use commands like ``flozz-daily-mix --help`` for readability, but if you installed FLOZz Daily Mix in a virtualenv as explained above, the command you should use will be something like ``/path/to/your/daily-mix.venv/bin/flozz-daily-mix --help``.
+
+
+Generating Playlists
+~~~~~~~~~~~~~~~~~~~~
+
+Once you have installed FLOZz Daily Mix and created a configuration file, you can start generating playlists.
 
 If your API credentials are configured in the file, you can generate your playlists with the following command::
 
@@ -142,10 +146,39 @@ You can also just generate and display playlists without writing them to the clo
 
     flozz-daily-mix generate --dry-run --print-playlist flozz-daily-mix.conf
 
+
+Listing Known Genres
+~~~~~~~~~~~~~~~~~~~~
+
+To list genres known to FLOZz Daily Mix, use the follwoing command::
+
+    flozz-daily-mix genres
+
+This will list the known genre as a tree::
+
+    ...
+    ├╴Rock
+    │ ├╴Art Rock
+    │ ├╴Anatolian Rock
+    │ ├╴Arena Rock
+    │ ├╴Aor
+    │ ├╴Alternative Rock
+    │ │ ├╴Alternative Dance
+    │ │ │ ├╴Madchester
+    │ │ │ └╴New Rave
+    │ │ ├╴Britpop
+    │ │ ├╴Dream Pop
+    ...
+
+
+Getting Help
+~~~~~~~~~~~~
+
 To get all available options, you can use the following commands::
 
     flozz-daily-mix --help
     flozz-daily-mix generate --help
+    flozz-daily-mix genres --help
     flozz-daily-mix dumpdata --help  # debug feature
 
 
@@ -194,6 +227,10 @@ Then you can use the data with the ``generate`` command::
     flozz-daily-mix generate --source-db=music.db --dry-run --print-playlist flozz-daily-mix.conf
 
 **NOTE:** the command above does not require the API credential as it is both a dry-run (no write to the API) and we provide the data (no read from the API).
+
+You can also list genres reading them from the dumped database::
+
+    flozz-daily-mix genres --source-db=music.db
 
 
 Run the tests

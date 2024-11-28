@@ -366,12 +366,22 @@ class Database:
         self._cur.execute(query, params)
 
         for genreId, genreName, parentGenreId in self._cur.fetchall():
-            genre_tree.append({"name": genreName, "children": []})
+            genre_tree.append(
+                {
+                    "name": genreName,
+                    "children": [],
+                    "aliases": list(self.get_genre_aliases(genre_name=genreName)),
+                }
+            )
 
         def _recursive_subgenre_list(root_genres):
             for genre in root_genres:
                 genre["children"] = [
-                    {"name": sg, "children": []}
+                    {
+                        "name": sg,
+                        "children": [],
+                        "aliases": list(self.get_genre_aliases(genre_name=sg)),
+                    }
                     for sg in self.get_genre_subgenres(
                         genre_name=genre["name"],
                         with_aliases=False,

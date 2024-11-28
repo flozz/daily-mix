@@ -264,7 +264,22 @@ def list_genres(db_file=None):
                 next_prefix = "  "
             elif level == 0 and genres.index(genre) == 0:
                 bullet = "┌"
-            print("\x1B[2;90m%s%s╴\x1B[0m%s" % (prefix, bullet, genre["name"].title()))
+            print(
+                "\x1B[2;90m%s%s╴\x1B[0m%s \x1B[2m%s\x1B[0m"
+                % (
+                    prefix,
+                    bullet,
+                    genre["name"].title(),
+                    (
+                        "(%s)"
+                        % ", ".join(
+                            genre["aliases"],
+                        )
+                        if genre["aliases"]
+                        else ""
+                    ),
+                )
+            )
             _print_genre_tree(genre["children"], level + 1, prefix=prefix + next_prefix)
 
     _print_genre_tree(db.get_genre_tree())

@@ -157,18 +157,20 @@ To list genres known to FLOZz Daily Mix, use the follwoing command::
 This will list the known genre as a tree::
 
     ...
-    ├╴Rock
-    │ ├╴Art Rock
-    │ ├╴Anatolian Rock
+    ├╴Rock (rock music)
+    │ ├╴Art Rock (art-rock)
+    │ ├╴Anatolian Rock (anadolu rock)
     │ ├╴Arena Rock
-    │ ├╴Aor
-    │ ├╴Alternative Rock
+    │ ├╴Aor (adult oriented rock, adult-oriented rock)
+    │ ├╴Alternative Rock (alt-rock, alt rock)
     │ │ ├╴Alternative Dance
-    │ │ │ ├╴Madchester
+    │ │ │ ├╴Madchester (baggy)
     │ │ │ └╴New Rave
-    │ │ ├╴Britpop
-    │ │ ├╴Dream Pop
+    │ │ ├╴Britpop (brit pop)
+    │ │ ├╴Dream Pop (dreampop)
     ...
+
+Known aliases for the genre name are listed in parenthesis.
 
 
 Getting Help

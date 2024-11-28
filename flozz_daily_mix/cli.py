@@ -56,12 +56,6 @@ def generate_genres_subcli(parser):
         default=None,
     )
 
-    parser.add_argument(
-        "config_file",
-        help="one or more files containing configurations of playlists to generate",
-        nargs="+",
-    )
-
 
 def generate_cli():
     parser = argparse.ArgumentParser(

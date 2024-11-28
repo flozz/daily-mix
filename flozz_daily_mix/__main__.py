@@ -316,13 +316,15 @@ def main(args=sys.argv[1:]):
         and parsed_args.dry_run
     ):
         skip_subsonic = True
+    elif parsed_args.subcommand == "genres":
+        skip_subsonic = True
 
     # Parse config
-    config_files = parsed_args.config_file
-    if not config_files:
-        config_files = []
-    elif type(config_files) is str:
-        config_files = [config_files]
+    config_files = []
+    if hasattr(parsed_args, "config_file") and parsed_args.config_file:
+        config_files = parsed_args.config_file
+        if type(config_files) is str:
+            config_files = [config_files]
     config = read_config(config_files)
 
     # Update credentials from config
@@ -348,7 +350,10 @@ def main(args=sys.argv[1:]):
     logging.debug("Subsonic API:")
     logging.debug("  * URL: %s" % subsonic_api_url)
     logging.debug("  * Username: %s" % subsonic_api_username)
-    logging.debug("  * Password: %s" % ("*" * len(subsonic_api_password)))
+    logging.debug(
+        "  * Password: %s"
+        % ("*" * len(subsonic_api_password) if subsonic_api_password else "-none-")
+    )
     logging.debug(
         "  * Use legacy authentication: %s"
         % ("True" if subsonic_api_legacy_authentication else "False")

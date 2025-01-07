@@ -235,6 +235,34 @@ You can also list genres reading them from the dumped database::
     flozz-daily-mix genres --source-db=music.db
 
 
+Nextcloud test Docker container
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A Nextcloud test container with some fake data is available for testing purpose.
+
+To build and start the container (Docker must be installed)::
+
+    nox --session start_nextcloud_docker
+
+To stop the container (Docker must be installed)::
+
+    nox --session stop_nextcloud_docker
+
+The Nextcloud instance is available on localhost:
+
+* Nextcloud URL: http://localhost:8090/
+* Nextcloud Login: ``admin``
+* Nextcloud Password: ``password``
+* Subsonic API URL: http://localhost:8090/apps/music/subsonic
+* Subsonic API Login & Password: same as the Nextcloud ones
+
+You can try generating a playlist with the following command::
+
+    python3 -m flozz_daily_mix -V -s http://localhost:8090/apps/music/subsonic -u admin -p password -l generate -n -P YOUR_CONF_FILE.conf
+
+WARNING: All the tracks are fake and only contains a 1 second blank sound. You must set ``min_track_duration`` to ``0`` in your config to allow them to be included in a playlist!
+
+
 Run the tests
 ~~~~~~~~~~~~~
 

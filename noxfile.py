@@ -1,7 +1,24 @@
+import os
 import time
 import urllib.request
 
 import nox
+
+
+NEXTCLOUD_MUSIC_SUBSONIC = {
+    "FZZDM_TEST_SUBSONIC_API_URL": os.environ.get(
+        "FZZDM_TEST_SUBSONIC_API_URL",
+        "http://localhost:8090/apps/music/subsonic",
+    ),
+    "FZZDM_TEST_SUBSONIC_API_USER": os.environ.get(
+        "FZZDM_TEST_SUBSONIC_API_USER", "admin"
+    ),
+    "FZZDM_TEST_SUBSONIC_API_PASSWORD": os.environ.get(
+        "FZZDM_TEST_SUBSONIC_API_PASSWORD", "password"
+    ),
+}
+
+PYTHON_VERSIONS = ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
 PYTHON_FILES = [
     "flozz_daily_mix",
@@ -84,11 +101,26 @@ def stop_nextcloud_docker(session):
     session.run("docker", "stop", "fzzdm-test-nexcloud", external=True)
 
 
-@nox.session(python=["3.9", "3.10", "3.11", "3.12", "3.13"], reuse_venv=True)
+@nox.session(python=PYTHON_VERSIONS, reuse_venv=True)
 def test(session):
     session.install("pytest")
+    session.install("-e", ".")
+    # fmt:off
+
+    print("\n\n:: Run all tests excepted the Subsonic API\n\n")
     session.run(
         "pytest",
-        "--doctest-modules",
-        "flozz_daily_mix",
+        "-m", "not subsonic",
+        "--doctest-modules", "flozz_daily_mix",
+        "tests/"
     )
+
+    print("\n\n:: Run Subsonic API tests against Nextcloud Music\n\n")
+    session.run(
+        "pytest",
+        "-m", "subsonic",
+        "tests/",
+        env=NEXTCLOUD_MUSIC_SUBSONIC,
+    )
+
+    # fmt:on

@@ -31,6 +31,15 @@ jobs:
         run: |
           python3 -m nox --session lint
 
+      - name: "Start Nextcloud Music test container"
+        run: |
+          python3 -m nox --session start_nextcloud_docker
+
       - name: "Test with pytest"
         run: |
           python3 -m nox --session test-${{ matrix.python-version }}
+
+      - name: "Stop Nextcloud Music test container"
+        run: |
+          python3 -m nox --session stop_nextcloud_docker
+

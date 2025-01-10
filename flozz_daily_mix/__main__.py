@@ -26,7 +26,7 @@ def get_artists(subsonic):
 def get_albums(subsonic):
     size = 100
     offset = 0
-    while albums := subsonic.getAlbumList(offset=offset, size=size):
+    while albums := list(subsonic.getAlbumList(offset=offset, size=size)):
         for album in albums:
             yield album
         offset += size
@@ -36,7 +36,7 @@ def get_tracks(subsonic):
     for album in get_albums(subsonic):
         for track in subsonic.getAlbum(album["id"])["song"]:
             track["_albumArtistId"] = album["parent"]
-            track["_albumRating"] = album["rating"] if "rating" in album else 3
+            track["_albumRating"] = album["rating"] if album["rating"] else 3
             track["_albumGenre"] = album["genre"]
             yield track
 
@@ -51,9 +51,9 @@ def import_music_to_database(subsonic, db):
         db.insert_artist(
             id_=artist["id"],
             name=artist["name"],
-            sortName=artist.get("sortName", artist["name"]),
-            starred=True if "starred" in artist and artist["starred"] else False,
-            rating=artist.get("rating", 3),
+            sortName=artist["sortName"] if artist["sortName"] else artist["name"],
+            starred=bool(artist["starred"]),
+            rating=artist["rating"] if artist["rating"] else 3,
         )
     logging.debug("    Imported %i artist(s)." % count)
 
@@ -65,14 +65,14 @@ def import_music_to_database(subsonic, db):
         db.insert_album(
             id_=album["id"],
             artistId=album["parent"],
-            genreName=normalize_genre_name(album.get("genre", "")),
-            coverArtId=album.get("coverArt", None),
+            genreName=normalize_genre_name(album["genre"]),
+            coverArtId=album["coverArt"],
             name=album["title"],
-            sortName=album.get("sortName", album["title"]),
-            year=album.get("year", 0),
+            sortName=album["sortName"] if album["sortName"] else album["title"],
+            year=album["year"],
             created=album["created"],
-            starred=True if "starred" in album and album["starred"] else False,
-            rating=album.get("rating", 3),  # FIXME check key name
+            starred=bool(album["starred"]),
+            rating=album["rating"] if album["rating"] else 3,
         )
     logging.debug("    Imported %i album(s)." % count)
 
@@ -86,23 +86,23 @@ def import_music_to_database(subsonic, db):
             albumArtistId=track["_albumArtistId"],
             artistId=track["artistId"],
             albumId=track["albumId"],
-            coverArtId=track.get("coverArt", None),
+            coverArtId=track["coverArt"],
             genreName=normalize_genre_name(
-                track.get("genre", track.get("_albumGenre", ""))
+                track["genre"] if track["genre"] else track.get("_albumGenre", "")
             ),
-            diskNumber=track.get("discNumber", 1),
-            trackNumber=track.get("track", 1),
+            diskNumber=track["discNumber"],
+            trackNumber=track["track"],
             name=track["title"],
-            sortName=track.get("sortName", track["title"]),
+            sortName=track["sortName"] if track["sortName"] else track["title"],
             duration=track["duration"],
-            year=track.get("year", 0),
+            year=track["year"],
             created=track["created"],
-            starred=True if "starred" in track and track["starred"] else False,
-            rating=track.get("userRating", track["_albumRating"]),
-            playCount=track.get("playCount", 0),
-            lastPlayed=(
-                track["played"] if "played" in track and track["played"] else None
+            starred=bool(track["starred"]),
+            rating=(
+                track["userRating"] if track["userRating"] else track["_albumRating"]
             ),
+            playCount=track["playCount"],
+            lastPlayed=track["played"] if track["played"] else None,
         )
     logging.debug("    Imported %i track(s)." % count)
 

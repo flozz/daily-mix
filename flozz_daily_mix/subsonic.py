@@ -63,13 +63,42 @@ class SubsonicClient:
         query = kwargs
         url = self._build_url("getArtists", **query)
         response = self._get_json(url)
-        return response["artists"]["index"]
+        artists = response["artists"]["index"]
+        for index in artists:
+            if "name" not in index:
+                index["name"] = "#"
+            if "artist" not in index:
+                index["artist"] = []
+            for i in range(len(index["artist"])):
+                index["artist"][i] = {
+                    "id": None,
+                    "name": "Unknown artist",
+                    "sortName": None,
+                    "albumCount": 0,
+                    "rating": None,
+                    "starred": None,
+                } | index["artist"][i]
+        return artists
 
     def getAlbumList(self, type_="alphabeticalByName", offset=0, size=100, **kwargs):
         query = {"type": type_, "offset": offset, "size": size, **kwargs}
         url = self._build_url("getAlbumList", **query)
         response = self._get_json(url)
-        return response["albumList"]["album"]
+        for album in response["albumList"]["album"]:
+            yield {
+                "id": None,
+                "parent": None,
+                "artist": "Unknown artist",
+                "coverArt": None,
+                "title": "Unknown album",
+                "sortName": None,
+                "genre": "(Unknown genre)",
+                "year": 0,
+                "created": "1970-01-01T00:00:00.000Z",
+                "rating": None,
+                "starred": None,
+                "isDir": True,
+            } | album
 
     def getAlbum(self, id_=None, **kwargs):
         if not id_:
@@ -77,7 +106,53 @@ class SubsonicClient:
         query = {"id": id_, **kwargs}
         url = self._build_url("getAlbum", **query)
         response = self._get_json(url)
-        return response["album"]
+        album = {
+            "id": None,
+            "artistId": None,
+            "artist": "Unknown artist",
+            "coverArt": None,
+            "title": "Unknown album",
+            "sortName": None,
+            "genre": "(Unknown genre)",
+            "year": 0,
+            "created": "1970-01-01T00:00:00.000Z",
+            "rating": None,
+            "starred": None,
+            "songCount": 0,
+            "duration": 0,
+            "song": [],
+        } | response["album"]
+        for i in range(len(album["song"])):
+            album["song"][i] = {
+                "id": None,
+                "album": "Unknown album",
+                "albumId": None,
+                "artist": "Unknown artist",
+                "artistId": None,
+                "bitRate": 0,
+                "contentType": "audio/x-unknown",
+                "coverArt": None,
+                "created": "1970-01-01T00:00:00.000Z",
+                "discNumber": 1,
+                "duration": 0,
+                "genre": "(Unknown genre)",
+                "isVideo": False,
+                "parent": None,
+                "playCount": 0,
+                "played": "",
+                "track": 0,
+                "title": "Unknown song",
+                "sortName": None,
+                "path": None,
+                "suffix": "",
+                "type": "music",
+                "size": 0,
+                "year": 0,
+                "userRating": None,
+                "starred": None,
+                "isDir": False,
+            } | album["song"][i]
+        return album
 
     def getPlaylists(self, **kwargs):
         query = kwargs

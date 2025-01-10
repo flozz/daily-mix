@@ -48,7 +48,15 @@ class SubsonicClient:
         if "subsonic-response" not in parsed_json:
             raise Exception("Invalid response from the Subsonic API")  # XXX
         if parsed_json["subsonic-response"]["status"] != "ok":
-            raise Exception()  # XXX
+            error = ""
+            if "error" in parsed_json["subsonic-response"]:
+                if "message" in parsed_json["subsonic-response"]["error"]:
+                    error += str(parsed_json["subsonic-response"]["error"]["message"])
+                if "code" in parsed_json["subsonic-response"]["error"]:
+                    error += " (code: %s)" % str(
+                        parsed_json["subsonic-response"]["error"]["code"]
+                    )
+            raise Exception(error)  # XXX
         return parsed_json["subsonic-response"]
 
     def getArtists(self, **kwargs):

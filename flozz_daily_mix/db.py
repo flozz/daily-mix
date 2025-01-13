@@ -3,6 +3,8 @@ import math
 import logging
 import sqlite3
 
+from .helpers import normalize_genre_name
+
 
 # SQL Queries to create the tables. Each creation statement should be separated
 # by a line containing only two dash and a line feed char ("--\n").
@@ -204,6 +206,38 @@ class Database:
         params = {k.rstrip("_"): v for k, v in locals().items()}
         query = "INSERT INTO genre_relations VALUES(:id, :parentGenreId, :childGenreId)"
         self._cur.execute(query, params)
+
+    def is_genre(self, genre_name):
+        """Check if the given genre name is an existing genre.
+
+        .. NOTE::
+
+           The given genre name will be normalized.
+
+        :param str genre_name: The genre name.
+
+        rtype: bool
+        """
+        params = {"genre_name": normalize_genre_name(genre_name)}
+        query = "SELECT COUNT() AS count FROM genres WHERE genres.name = :genre_name;"
+        self._cur.execute(query, params)
+        return bool(self._cur.fetchone()[0])
+
+    def is_genre_alias(self, genre_name):
+        """Check if the given genre name is an existing genre alias.
+
+        .. NOTE::
+
+           The given genre name will be normalized.
+
+        :param str genre_name: The genre name.
+
+        rtype: bool
+        """
+        params = {"genre_name": normalize_genre_name(genre_name)}
+        query = "SELECT COUNT() AS count FROM genre_aliases WHERE genre_aliases.name = :genre_name;"
+        self._cur.execute(query, params)
+        return bool(self._cur.fetchone()[0])
 
     def get_genre_aliases(self, *, genre_name=None, genre_id=None):
         """Returns name aliases of the given genre.

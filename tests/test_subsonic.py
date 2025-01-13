@@ -185,3 +185,53 @@ class TestSubsonic:
                 assert "isDir" in song and not song["isDir"]
 
             assert album["songCount"] == len(album["song"])
+
+    def test_createPlaylists(self, subsonic):
+        album_id = list(subsonic.getAlbumList(offset=0, limit=1))[0]["id"]
+        tracks = [track["id"] for track in subsonic.getAlbum(id_=album_id)["song"]]
+        playlist = subsonic.createPlaylist(name="test_playlist_1", songId=tracks)
+
+        assert "id" in playlist
+        assert "name" in playlist
+        assert "owner" in playlist
+        assert "public" in playlist
+        assert "changed" in playlist
+        assert "comment" in playlist
+        assert "coverArt" in playlist
+        assert "created" in playlist
+        assert "duration" in playlist
+        assert "entry" in playlist
+        assert type(playlist["entry"]) is list
+
+        # TODO check track fields if we ever use them
+
+        playlists = subsonic.getPlaylists()
+        playlist_found = False
+        for pl in playlists:
+            if pl["id"] == playlist["id"]:
+                playlist_found = True
+                break
+        assert playlist_found
+
+        subsonic.deletePlaylist(id_=playlist["id"])
+
+    def test_getPlaylists(self, subsonic):
+        album_id = list(subsonic.getAlbumList(offset=0, limit=1))[0]["id"]
+        tracks = [track["id"] for track in subsonic.getAlbum(id_=album_id)["song"]]
+        playlist = subsonic.createPlaylist(name="test_playlist_2", songId=tracks)
+
+        playlists = subsonic.getPlaylists()
+
+        for pl in playlists:
+            assert "id" in pl
+            assert "changed" in pl
+            assert "comment" in pl
+            assert "coverArt" in pl
+            assert "created" in pl
+            assert "duration" in pl
+            assert "name" in pl
+            assert "owner" in pl
+            assert "public" in pl
+            assert "songCount" in pl
+
+        subsonic.deletePlaylist(id_=playlist["id"])

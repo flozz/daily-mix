@@ -158,7 +158,19 @@ class SubsonicClient:
         query = kwargs
         url = self._build_url("getPlaylists", **query)
         response = self._get_json(url)
-        return response["playlists"]["playlist"]
+        for playlist in response["playlists"]["playlist"]:
+            yield {
+                "id": None,
+                "changed": "1970-01-01T00:00:00.000Z",
+                "comment": "",
+                "coverArt": None,
+                "created": "1970-01-01T00:00:00.000Z",
+                "duration": 0,
+                "name": "Unamed Playlist",
+                "owner": None,
+                "public": False,
+                "songCount": 0,
+            } | playlist
 
     def createPlaylist(self, name=None, songId=[], **kwargs):
         if not name:
@@ -166,7 +178,19 @@ class SubsonicClient:
         query = {"name": name, "songId": songId, **kwargs}
         url = self._build_url("createPlaylist", **query)
         response = self._get_json(url)
-        return response["playlist"]
+        playlist = response["playlist"]
+        return {
+            "id": None,
+            "name": "Unamed Playlist",
+            "owner": None,
+            "public": False,
+            "changed": "1970-01-01T00:00:00.000Z",
+            "comment": "",
+            "coverArt": None,
+            "created": "1970-01-01T00:00:00.000Z",
+            "duration": 0,
+            "entry": [],  # TODO enforce track fileds if we ever use them
+        } | playlist
 
     def deletePlaylist(self, id_=None, **kwargs):
         if not id_:

@@ -330,6 +330,20 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
+  * Nothing yet ;)
+
+* **v0.4.0:**
+
+  * feat(generate): Added genre support (@flozz)
+
+    * Added builtin genre list and aliases from MusicBrainz (+ script to update them)
+    * Added an option to filter genres in playlists
+    * Tracks and album genre are now imported when building the DB
+    * Added a command to list known genre as a tree (``flozz_daily_mix genres``)
+
+  * tests: Added unit tests using Pytest (@flozz)
+  * tests: Added a Nextcloud Docker image with Nextcloud Music app and test data (@flozz)
+  * fix(subsonic): Fixed crashes on missing attribute on artist/album/tracks (@flozz)
   * misc: Added Python 3.13 support (@flozz)
   * misc!: Removed Python 3.8 support (@flozz)
 

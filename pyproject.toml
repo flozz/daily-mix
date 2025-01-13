@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+markers = [
+    "subsonic: marks tests requiring a Subsonic API",
+]

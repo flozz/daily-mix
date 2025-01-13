@@ -216,6 +216,11 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
         for k, v in playlist_config.items():
             logging.debug("  * %s: %s" % (k, str(playlist_config[k])))
 
+        # Check genres exists and warn the user if they don't
+        for genre in playlist_config["genres"]:
+            if not db.is_genre(genre) and not db.is_genre_alias(genre):
+                logging.warning("The genre '%s' is unknown" % genre)
+
         generator = PlaylistGenerator(
             db,
             length=playlist_config["max_tracks"],

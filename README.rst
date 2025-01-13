@@ -288,7 +288,7 @@ You can use following commands to run the tests only on a certain Python version
 
 You can also fix coding style errors automatically with::
 
-    nox -s black_fix
+    nox --session black_fix
 
 
 Update genres from MusicBrainz
@@ -299,6 +299,20 @@ To update genre files (``flozz_daily_mix/data/musicbrainz_db/*``), run::
     ./scripts/update-genres.py
 
 WARNING: It will take tens of minutes to download the archive and to exract the files.
+
+
+Update test DB
+~~~~~~~~~~~~~~
+
+This DB is used to run some of the tests.
+
+To update the ``./tests/fixtures/music.db`` file, first start the Nexctloud Docker container::
+
+    nox --session start_nextcloud_docker
+
+Then run the following script from the project's root dir::
+
+    ./scripts/update-test-db.sh
 
 
 Support this project

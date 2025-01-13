@@ -52,6 +52,17 @@ To run the software, just call its executable with a command like this::
     ./daily-mix.venv/bin/flozz-daily-mix --help
 
 
+Update
+------
+
+Linux: from PyPI with venv
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To update a FLOZz Daily Mix installed in a ven on Linux, run the following command::
+
+    ./daily-mix.venv/bin/pip install --upgrade flozz-daily-mix
+
+
 Configuration files
 -------------------
 

@@ -168,6 +168,13 @@ class SubsonicClient:
         response = self._get_json(url)
         return response["playlist"]
 
+    def deletePlaylist(self, id_=None, **kwargs):
+        if not id_:
+            raise ValueError()  # XXX
+        query = {"id": id_, **kwargs}
+        url = self._build_url("deletePlaylist", **query)
+        self._get_json(url)
+
     def updatePlaylist(
         self,
         playlistId=None,

@@ -321,7 +321,7 @@ class PlaylistGenerator:
         # Regular
         query = self._generate_sql_query(
             where=self._SQL_WHERE_CLAUSES + additional_where_clauses,
-            order_by=["rand * tracks.rating DESC"],
+            order_by=["rand * (1 + LOG(POWER(tracks.rating, 2))) DESC"],
             limit=self._length * 2,
         )
         tracks = self._execute_sql_query(query, params)

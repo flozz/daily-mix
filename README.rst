@@ -341,7 +341,7 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
-  * Nothing yet ;)
+  * feat(playlist): Fallback to regular music set when interesting, fresh or backcataog sets are empty instead of stopping the playlist generation (@flozz)
 
 * **v0.4.0:**
 

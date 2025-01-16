@@ -141,15 +141,27 @@ class PlaylistGenerator:
             retry_count = 3
             track = None
 
-            # Stop if one of the music list goes empty
-            if (
-                not self._tracks_regular
-                or not self._tracks_interest
-                or not self._tracks_freshness
-                or not self._tracks_backcatalog
-            ):
+            # Stop if the regular music list goes empty
+            if not self._tracks_regular:
                 self._playlist = self._playlist[:i]
                 break
+
+            # Change the track role if the corresponding list is empty
+            if (
+                (
+                    self._playlist[i]["role"] == TrackRole.INTEREST
+                    and not self._tracks_interest
+                )
+                or (
+                    self._playlist[i]["role"] == TrackRole.FRESHNESS
+                    and not self._tracks_freshness
+                )
+                or (
+                    self._playlist[i]["role"] == TrackRole.BACKCATALOG
+                    and not self._tracks_backcatalog
+                )
+            ):
+                self._playlist[i]["role"] = TrackRole.REGULAR
 
             # Pick a track
             while retry_count:

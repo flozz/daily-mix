@@ -40,8 +40,8 @@ class PlaylistGenerator:
 
     _SQL_WHERE_CLAUSES = [
         "tracks.rating >= :min_rate",
-        "tracks.duration > :min_duration",
-        "tracks.duration < :max_duration",
+        "tracks.duration >= :min_duration",
+        "tracks.duration <= :max_duration",
         "NOT REGEXP_MATCH(:track_ignore_pattern, tracks.name)",
     ]
 

@@ -344,6 +344,7 @@ Changelog
   * feat(playlist): Fallback to regular music set when interesting, fresh or backcataog sets are empty instead of stopping the playlist generation (@flozz)
   * feat(playlist): Changed to a non-linear impact of the rating when selecting regular tracks (@flozz)
   * feat(playlist): Improved rotation on regular and interesting tracks (@flozz)
+  * fix(playlsit): Fixed min/max duration filters (``>=``, ``<=`` insted of ``<``, ``>``) (@flozz)
 
 * **v0.4.0:**
 

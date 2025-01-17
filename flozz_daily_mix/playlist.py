@@ -28,6 +28,7 @@ class PlaylistGenerator:
         ("lastPlayed", "tracks.lastPlayed"),
         ("fzzInterestScore", "%s AS fzzInterestScore"),
         ("fzzFreshnessScore", "%s AS fzzFreshnessScore"),
+        ("fzzRegularScore", "%s AS fzzRegularScore"),
         ("rand", "ABS(RANDOM()) AS RAND"),
     ]
 
@@ -51,8 +52,14 @@ class PlaylistGenerator:
            )"""
 
     _SQL_INTEREST_SCORE = """(
-            (LOG(tracks.rating)*(1+1.2*tracks.starred))  -- rating score
+            (LOG(tracks.rating)*(1+1.2*tracks.starred))  -- rating score A
             + 1+LOG(11)-LOG(1+MIN(tracks.playCount,10))  -- low play count score
+            + (LOG(1+MIN(JULIANDAY('now') - JULIANDAY(IFNULL(tracks.lastPlayed, JULIANDAY('1970-01-01'))), 30))) / LOG(30) / 50  -- rotation score
+           )"""
+
+    _SQL_REGULAR_SCORE = """(
+            (1 + LOG(POWER(tracks.rating, 2)))  -- rating score B
+            + (LOG(1+MIN(JULIANDAY('now') - JULIANDAY(IFNULL(tracks.lastPlayed, JULIANDAY('1970-01-01'))), 30))) / LOG(30) / 4  -- rotation score
            )"""
 
     def __init__(
@@ -91,12 +98,13 @@ class PlaylistGenerator:
         }
         total_duration = 0
         print(
-            "%s %s %-5s %s %6s %6s %-20s %-35s \x1B[0m"
+            "%s %s %-5s %s %s %6s %6s %-20s %-35s \x1B[0m"
             % (
                 "\x1B[1;7m",
                 "R",
                 "Rate",
                 "S",
+                "Regul.",
                 "Inter.",
                 "Fresh.",
                 "Artist Name (Album)",
@@ -106,12 +114,13 @@ class PlaylistGenerator:
         for track in self._playlist:
             total_duration += track["duration"]
             print(
-                "%s %s %5s %s %01.4f %01.4f %-20s %-35s \x1B[0m"
+                "%s %s %5s %s %01.4f %01.4f %01.4f %-20s %-35s \x1B[0m"
                 % (
                     ROLES[track["role"]]["color"],
                     ROLES[track["role"]]["symbol"],
                     ("★" * track["rating"]) + (" " * (5 - track["rating"])),
                     "♥" if track["starred"] else "♡",
+                    track["fzzRegularScore"],
                     track["fzzInterestScore"],
                     track["fzzFreshnessScore"],
                     track["albumArtistName"][:20],
@@ -231,6 +240,7 @@ class PlaylistGenerator:
         sql = sql % (
             self._SQL_INTEREST_SCORE,
             self._SQL_FRESHNESS_SCORE,
+            self._SQL_REGULAR_SCORE,
         )
 
         if where:
@@ -321,7 +331,7 @@ class PlaylistGenerator:
         # Regular
         query = self._generate_sql_query(
             where=self._SQL_WHERE_CLAUSES + additional_where_clauses,
-            order_by=["rand * (1 + LOG(POWER(tracks.rating, 2))) DESC"],
+            order_by=["rand * fzzRegularScore DESC"],
             limit=self._length * 2,
         )
         tracks = self._execute_sql_query(query, params)

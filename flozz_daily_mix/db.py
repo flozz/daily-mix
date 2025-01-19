@@ -121,8 +121,11 @@ class Database:
         # Add missing math functions (if SQLite was not compiled with
         # 'SQLITE_ENABLE_MATH_FUNCTIONS')
         if not sqlite_function_exists(self._cur, "log"):
-            logging.debug("Adding missing math functions to SQLite...")
+            logging.debug("Adding missing 'LOG()' math function to SQLite...")
             self._con.create_function("log", 1, math.log10)
+        if not sqlite_function_exists(self._cur, "power"):
+            logging.debug("Adding missing 'POWER()' math function to SQLite...")
+            self._con.create_function("power", 2, math.pow)
         # Add regexp filtering function
         self._con.create_function(
             "regexp_match", 2, lambda r, v: bool(re.match(r, v, re.I))

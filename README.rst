@@ -345,6 +345,7 @@ Changelog
   * feat(playlist): Changed to a non-linear impact of the rating when selecting regular tracks (@flozz)
   * feat(playlist): Improved rotation on regular and interesting tracks (@flozz)
   * fix(playlsit): Fixed min/max duration filters (``>=``, ``<=`` insted of ``<``, ``>``) (@flozz)
+  * fix(sqlite): Added missing 'POWER()' math function (when SQLite not compiled with 'SQLITE_ENABLE_MATH_FUNCTIONS') (@flozz)
 
 * **v0.4.0:**
 

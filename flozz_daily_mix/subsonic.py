@@ -63,7 +63,10 @@ class SubsonicClient:
         query = kwargs
         url = self._build_url("getArtists", **query)
         response = self._get_json(url)
-        artists = response["artists"]["index"]
+        if "artists" in response and "index" in response["artists"]:
+            artists = response["artists"]["index"]
+        else:
+            artists = []
         for index in artists:
             if "name" not in index:
                 index["name"] = "#"
@@ -84,7 +87,11 @@ class SubsonicClient:
         query = {"type": type_, "offset": offset, "size": size, **kwargs}
         url = self._build_url("getAlbumList", **query)
         response = self._get_json(url)
-        for album in response["albumList"]["album"]:
+        if "albumList" in response and "album" in response["albumList"]:
+            albums = response["albumList"]["album"]
+        else:
+            albums = []
+        for album in albums:
             yield {
                 "id": None,
                 "parent": None,
@@ -121,7 +128,7 @@ class SubsonicClient:
             "songCount": 0,
             "duration": 0,
             "song": [],
-        } | response["album"]
+        } | (response["album"] if "album" in response else {})
         for i in range(len(album["song"])):
             album["song"][i] = {
                 "id": None,
@@ -158,7 +165,11 @@ class SubsonicClient:
         query = kwargs
         url = self._build_url("getPlaylists", **query)
         response = self._get_json(url)
-        for playlist in response["playlists"]["playlist"]:
+        if "playlists" in response and "playlist" in response["playlists"]:
+            playlists = response["playlists"]["playlist"]
+        else:
+            playlists = []
+        for playlist in playlists:
             yield {
                 "id": None,
                 "changed": "1970-01-01T00:00:00.000Z",
@@ -178,7 +189,7 @@ class SubsonicClient:
         query = {"name": name, "songId": songId, **kwargs}
         url = self._build_url("createPlaylist", **query)
         response = self._get_json(url)
-        playlist = response["playlist"]
+        playlist = response["playlist"] if "playlist" in response else {}
         return {
             "id": None,
             "name": "Unamed Playlist",

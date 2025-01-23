@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS "tracks" (
     "id"            TEXT NOT NULL UNIQUE,
     "albumArtistId" TEXT NOT NULL,
     "artistId"      TEXT NOT NULL,
-    "albumId"       TEXT NOY NULL,
+    "albumId"       TEXT NOT NULL,
     "coverArtId"    TEXT,
     "genreName"     TEXT,
     "diskNumber"    INTEGER DEFAULT 1,
@@ -112,6 +112,27 @@ def sqlite_function_exists(cursor, name):
 
 class Database:
 
+    _DEFAULT_ARTIST = {
+        "id_": "default-artist-0",
+        "name": "Unknown Artist",
+        "sortName": "Unknown Artist",
+        "starred": False,
+        "rating": 3,
+    }
+
+    _DEFAULT_ALBUM = {
+        "id_": "default-album-0",
+        "artistId": "default-artist-0",
+        "genreName": "(Unknown genre)",
+        "coverArtId": None,
+        "name": "Unknown album",
+        "sortName": "Unknown album",
+        "year": 0,
+        "created": "1970-01-01T00:00:00.000Z",
+        "starred": False,
+        "rating": 3,
+    }
+
     def __init__(self, db_path=":memory:", skip_table_creation=False):
         self._db_path = db_path
         self._con = sqlite3.connect(self._db_path)
@@ -132,8 +153,12 @@ class Database:
         )
 
     def _create_tables(self):
+        # Create tables
         for statement in _SQL_CREATE_TABLES.split("--"):
             self._cur.execute(statement)
+        # Insert default artist and album to attach orphan albums and tracks
+        self.insert_artist(**self._DEFAULT_ARTIST)
+        self.insert_album(**self._DEFAULT_ALBUM)
 
     def insert_artist(
         self,
@@ -161,6 +186,10 @@ class Database:
         rating=None,
     ):
         params = {k.rstrip("_"): v for k, v in locals().items()}
+
+        if not params["artistId"]:
+            params["artistId"] = self._DEFAULT_ARTIST["id_"]
+
         query = (
             "INSERT INTO albums VALUES(:id, :artistId, :genreName, :coverArtId, "
             ":name, :sortName, :year, :created, :starred, :rating)"
@@ -188,6 +217,18 @@ class Database:
         lastPlayed=None,
     ):
         params = {k.rstrip("_"): v for k, v in locals().items()}
+
+        if params["albumArtistId"] and not params["artistId"]:
+            params["artistId"] = params["albumArtistId"]
+        elif not params["albumArtistId"] and params["artistId"]:
+            params["albumArtistId"] = params["artistId"]
+        elif not params["albumArtistId"] and not params["artistId"]:
+            params["albumArtistId"] = self._DEFAULT_ARTIST["id_"]
+            params["artistId"] = self._DEFAULT_ARTIST["id_"]
+
+        if not params["albumId"]:
+            params["albumId"] = self._DEFAULT_ALBUM["id_"]
+
         query = (
             "INSERT INTO tracks VALUES(:id, :albumArtistId, :artistId, :albumId, "
             ":coverArtId, :genreName, :diskNumber, :trackNumber, :name, :sortName, "

@@ -21,8 +21,9 @@ NEXTCLOUD_MUSIC_SUBSONIC = {
 PYTHON_VERSIONS = ["3.9", "3.10", "3.11", "3.12", "3.13"]
 
 PYTHON_FILES = [
-    "flozz_daily_mix",
-    "scripts",
+    "flozz_daily_mix/",
+    "tests/",
+    "scripts/",
     "noxfile.py",
     "setup.py",
 ]

@@ -53,7 +53,7 @@ class PlaylistGenerator:
 
     _SQL_INTEREST_SCORE = """(
             (LOG(tracks.rating)*(1+1.2*tracks.starred))  -- rating score A
-            + 1+LOG(11)-LOG(1+MIN(tracks.playCount,10))  -- low play count score
+            + 1+LOG(11)-LOG(1+MIN(tracks.playCount,10)) / 10  -- low play count score
             + (LOG(1+MIN(JULIANDAY('now') - JULIANDAY(IFNULL(tracks.lastPlayed, JULIANDAY('1970-01-01'))), 30))) / LOG(30) / 50  -- rotation score
            )"""
 

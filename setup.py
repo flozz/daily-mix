@@ -29,6 +29,7 @@ setup(
     long_description=long_description,
     author="Fabien LOISON",
     keywords="playlist subsonic owncloud nextcloud music",
+    include_package_data=True,
     packages=find_packages(),
     install_requires=[],
     extras_require={

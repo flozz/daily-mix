@@ -341,13 +341,14 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
-  * feat(playlist): Fallback to regular music set when interesting, fresh or backcataog sets are empty instead of stopping the playlist generation (@flozz)
+  * feat(playlist): Fallback to regular music set when interesting, fresh or backcatalog sets are empty instead of stopping the playlist generation (@flozz)
   * feat(playlist): Changed to a non-linear impact of the rating when selecting regular tracks (@flozz)
   * feat(playlist): Improved rotation on regular and interesting tracks (@flozz)
   * fix(playlsit): Fixed min/max duration filters (``>=``, ``<=`` insted of ``<``, ``>``) (@flozz)
   * fix(sqlite): Added missing 'POWER()' math function (when SQLite not compiled with 'SQLITE_ENABLE_MATH_FUNCTIONS') (@flozz)
   * fix(database): Fixed a crash when inserting album or track with missing parent artist or album (@flozz)
   * fix(subsonic): Fixed (again) a crash on incomplete response from APIs (@flozz)
+  * fix(package): Fixed missing MusicBrainz data files from the wheel packages (@flozz, #2)
 
 * **v0.4.0:**
 

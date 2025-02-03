@@ -98,9 +98,9 @@ class PlaylistGenerator:
         }
         total_duration = 0
         print(
-            "%s %s %-5s %s %s %6s %6s %-20s %-35s \x1B[0m"
+            "%s %s %-5s %s %s %6s %6s %-20s %-35s \x1b[0m"
             % (
-                "\x1B[1;7m",
+                "\x1b[1;7m",
                 "R",
                 "Rate",
                 "S",
@@ -114,7 +114,7 @@ class PlaylistGenerator:
         for track in self._playlist:
             total_duration += track["duration"]
             print(
-                "%s %s %5s %s %01.4f %01.4f %01.4f %-20s %-35s \x1B[0m"
+                "%s %s %5s %s %01.4f %01.4f %01.4f %-20s %-35s \x1b[0m"
                 % (
                     ROLES[track["role"]]["color"],
                     ROLES[track["role"]]["symbol"],
@@ -128,7 +128,7 @@ class PlaylistGenerator:
                 )
             )
         print(
-            "\x1B[1;7m Total duration:\x1B[0;7m %i hr %i min %s sec \x1B[0m"
+            "\x1b[1;7m Total duration:\x1b[0;7m %i hr %i min %s sec \x1b[0m"
             % (
                 total_duration // 3600,
                 total_duration % 3600 // 60,

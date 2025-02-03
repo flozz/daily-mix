@@ -270,7 +270,7 @@ def list_genres(db_file=None):
             elif level == 0 and genres.index(genre) == 0:
                 bullet = "┌"
             print(
-                "\x1B[2;90m%s%s╴\x1B[0m%s \x1B[2m%s\x1B[0m"
+                "\x1b[2;90m%s%s╴\x1b[0m%s \x1b[2m%s\x1b[0m"
                 % (
                     prefix,
                     bullet,

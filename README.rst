@@ -341,6 +341,10 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
+  * Nothing yet :)
+
+* **v0.5.0:**
+
   * feat(playlist): Fallback to regular music set when interesting, fresh or backcatalog sets are empty instead of stopping the playlist generation (@flozz)
   * feat(playlist): Changed to a non-linear impact of the rating when selecting regular tracks (@flozz)
   * feat(playlist): Improved rotation on regular and interesting tracks (@flozz)

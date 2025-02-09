@@ -105,7 +105,7 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     ; Default: empty string (disables the filter)
     ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
     ; Minimal rating for a track to be included in the playlist (from 1 to 5, default: 2)
-    minimal_tracks_rating = 2
+    minimal_track_rating = 2
     ; Comma-separated list of music genres to include in the playlist
     ; (empty or "all" to include all genres, default: "all").
     ; NOTE¹: Subgenres are also included, so if you add "folk rock", it will also
@@ -123,7 +123,7 @@ Here is a commented example of a valid ``flozz-daily-mix.conf`` file:
     min_track_duration = 60
     max_track_duration = 600
     ignore_tracks_matching = ^.*(intro(duction)?|instrumental|acoustic).*$
-    minimal_tracks_rating = 2
+    minimal_track_rating = 2
     genres = Pop, Rock, Metal
 
 

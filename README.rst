@@ -341,7 +341,7 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
-  * Nothing yet :)
+  * fix(checks): Fixed the warning about the non-existing genre "all" (@flozz, #5)
 
 * **v0.5.0:**
 

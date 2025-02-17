@@ -87,7 +87,7 @@ def start_nextcloud_docker(session):
         "--publish",
         "8090:80",
         "--name",
-        "fzzdm-test-nexcloud",
+        "fzzdm-test-nextcloud",
         "fzzdm-nextcloud",
         external=True,
     )
@@ -99,7 +99,7 @@ def start_nextcloud_docker(session):
 
 @nox.session()
 def stop_nextcloud_docker(session):
-    session.run("docker", "stop", "fzzdm-test-nexcloud", external=True)
+    session.run("docker", "stop", "fzzdm-test-nextcloud", external=True)
 
 
 @nox.session(python=PYTHON_VERSIONS, reuse_venv=True)

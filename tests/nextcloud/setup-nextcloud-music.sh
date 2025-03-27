@@ -20,7 +20,7 @@ sqlite3 /var/www/html/data/nextcloud.db "\
 cp -r /var/sample-musics /var/www/html/data/admin/files/musics
 chown -R www-data:www-data /var/www/html/data/admin/files/musics
 
-# Trigger file scan (allow Nextcloud to find the new file)
+# Trigger file scan (allow Nextcloud to find the new files)
 php /var/www/html/occ files:scan --verbose --path /admin/files/musics
 
 # Trigger music scan (allow Nextcloud Music to index new musics)

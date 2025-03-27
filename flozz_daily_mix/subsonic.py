@@ -41,7 +41,13 @@ class SubsonicClient:
         )
 
     def _get_json(self, url):
-        http_response = urllib.request.urlopen(url)
+        request = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": self._client_name,
+            },
+        )
+        http_response = urllib.request.urlopen(request)
         # TODO handle errors
         json_string = http_response.read()
         parsed_json = json.loads(json_string)

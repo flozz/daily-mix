@@ -341,6 +341,7 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
+  * feat(subsonic): Query the API with a custom user agent (@flozz, #6)
   * fix(checks): Fixed the warning about the non-existing genre "all" (@flozz, #5)
 
 * **v0.5.0:**

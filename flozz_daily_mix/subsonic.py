@@ -224,7 +224,7 @@ class SubsonicClient:
         public=None,
         songIdToAdd=[],
         songIndexToRemove=[],
-        **kwargs
+        **kwargs,
     ):
         if not playlistId:
             raise ValueError()  # XXX

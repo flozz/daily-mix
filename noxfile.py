@@ -25,7 +25,6 @@ PYTHON_FILES = [
     "tests/",
     "scripts/",
     "noxfile.py",
-    "setup.py",
 ]
 
 
@@ -58,14 +57,15 @@ def _wait_for_http_backend(url, max_retry=120, verbose=True):
 
 @nox.session(reuse_venv=True)
 def lint(session):
-    session.install("flake8", "black")
-    session.run("black", "--check", "--diff", "--color", *PYTHON_FILES)
+    session.install("-e", ".[dev]")
     session.run("flake8", *PYTHON_FILES)
+    session.run("black", "--check", "--diff", "--color", *PYTHON_FILES)
+    session.run("validate-pyproject", "pyproject.toml")
 
 
 @nox.session(reuse_venv=True)
 def black_fix(session):
-    session.install("black")
+    session.install("-e", ".[dev]")
     session.run("black", *PYTHON_FILES)
 
 

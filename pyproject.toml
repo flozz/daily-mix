@@ -1,4 +1,43 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "flozz-daily-mix"
+version = "0.5.0"
+authors = [
+    {name = "Fabien LOISON"},
+]
+description = "Generates thematic playlists like Spotify's Daily Mix from a Subsonic API"
+readme = "README.rst"
+keywords = ["playlist", "subsonic", "owncloud", "nextcloud", "music"]
+license = "AGPL-3.0-or-later"
+license-files = ["COPYING"]
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = [
+    "nox",
+    "flit",
+    "black",
+    "flake8",
+    "flake8-pyproject",
+    "validate-pyproject",
+    "pytest",
+]
+
+[project.scripts]
+flozz-daily-mix = "flozz_daily_mix.__main__:main"
+
 [tool.pytest.ini_options]
 markers = [
     "subsonic: marks tests requiring a Subsonic API",
+]
+
+[tool.flake8]
+ignore = [
+    "E241",  # multiple spaces after ‘,’
+    # ↓↓ Black handles that its way... :)
+    "W503",  # line break before binary operator
+    "E501",  # line too long (> 79 characters)
 ]

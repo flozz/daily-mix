@@ -29,6 +29,14 @@ dev = [
 [project.scripts]
 flozz-daily-mix = "flozz_daily_mix.__main__:main"
 
+[project.urls]
+source = "https://github.com/flozz/daily-mix"
+documentation = "https://github.com/flozz/daily-mix/blob/master/README.rst"
+changelog = "https://github.com/flozz/daily-mix?tab=readme-ov-file#changelog"
+issues = "https://github.com/flozz/daily-mix/issues"
+Chat = "https://discord.gg/P77sWhuSs4"
+donate = "https://github.com/flozz/daily-mix?tab=readme-ov-file#support-this-project"
+
 [tool.pytest.ini_options]
 markers = [
     "subsonic: marks tests requiring a Subsonic API",

@@ -170,7 +170,13 @@ class Database:
     ):
         params = {k.rstrip("_"): v for k, v in locals().items()}
         query = "INSERT INTO artists VALUES(:id, :name, :sortName, :starred, :rating)"
-        self._cur.execute(query, params)
+        try:
+            self._cur.execute(query, params)
+        except sqlite3.DatabaseError as error:
+            logging.error(
+                "DB: An error occured when inserting artist: %s" % str(params)
+            )
+            raise error
 
     def insert_album(
         self,
@@ -194,7 +200,11 @@ class Database:
             "INSERT INTO albums VALUES(:id, :artistId, :genreName, :coverArtId, "
             ":name, :sortName, :year, :created, :starred, :rating)"
         )
-        self._cur.execute(query, params)
+        try:
+            self._cur.execute(query, params)
+        except sqlite3.DatabaseError as error:
+            logging.error("DB: An error occured when inserting album: %s" % str(params))
+            raise error
 
     def insert_track(
         self,
@@ -234,7 +244,11 @@ class Database:
             ":coverArtId, :genreName, :diskNumber, :trackNumber, :name, :sortName, "
             ":duration, :year, :created, :starred, :rating, :playCount, :lastPlayed)"
         )
-        self._cur.execute(query, params)
+        try:
+            self._cur.execute(query, params)
+        except sqlite3.DatabaseError as error:
+            logging.error("DB: An error occured when inserting track: %s" % str(params))
+            raise error
 
     def insert_genre(self, id_=None, name=None):
         params = {k.rstrip("_"): v for k, v in locals().items()}

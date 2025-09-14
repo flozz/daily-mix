@@ -344,6 +344,7 @@ Changelog
   * feat(db): When an insert fails, logs an error message with the data that caused the failure (@flozz, #7)
   * feat(subsonic): Query the API with a custom user agent (@flozz, #6)
   * fix(checks): Fixed the warning about the non-existing genre "all" (@flozz, #5)
+  * misc(packaging): Modernized packaging: replaced setup.py+setuptools by pyproject.toml+flit (@flozz)
 
 * **v0.5.0:**
 

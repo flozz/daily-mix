@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "flozz-daily-mix"
-version = "0.5.0"
+version = "0.5.1"
 authors = [
     {name = "Fabien LOISON"},
 ]

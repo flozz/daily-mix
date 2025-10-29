@@ -291,11 +291,11 @@ and run the tests::
 
 You can use following commands to run the tests only on a certain Python version (the corresponding Python interpreter must be installed on your machine)::
 
-    nox --session test-3.9
     nox --session test-3.10
     nox --session test-3.11
     nox --session test-3.12
     nox --session test-3.13
+    nox --session test-3.14
 
 You can also fix coding style errors automatically with::
 
@@ -341,7 +341,8 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
-  * Nothing yet ;)
+  * misc: Added Python 3.14 support (@flozz)
+  * misc!: Removed Python 3.9 support (@flozz)
 
 * **v0.5.1:**
 

@@ -13,7 +13,7 @@ readme = "README.rst"
 keywords = ["playlist", "subsonic", "owncloud", "nextcloud", "music"]
 license = "AGPL-3.0-or-later"
 license-files = ["COPYING"]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 
 [project.optional-dependencies]
 dev = [

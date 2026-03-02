@@ -3,7 +3,6 @@ from enum import IntEnum
 
 from .helpers import get_data_file_path
 
-
 # Original table name: genre
 # Schema: https://wiki.musicbrainz.org/images/a/ac/genre_entity_details.svg
 COLUMNS_GENRE = {

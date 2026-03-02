@@ -5,7 +5,6 @@ import sqlite3
 
 from .helpers import normalize_genre_name
 
-
 # SQL Queries to create the tables. Each creation statement should be separated
 # by a line containing only two dash and a line feed char ("--\n").
 _SQL_CREATE_TABLES = """

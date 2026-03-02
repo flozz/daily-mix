@@ -4,7 +4,6 @@ import urllib.request
 
 import nox
 
-
 NEXTCLOUD_MUSIC_SUBSONIC = {
     "FZZDM_TEST_SUBSONIC_API_URL": os.environ.get(
         "FZZDM_TEST_SUBSONIC_API_URL",

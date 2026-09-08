@@ -138,7 +138,7 @@ def import_genres_to_database(db):
     db.commit()
 
 
-def create_or_update_playlsit(
+def create_or_update_playlist(
     subsonic,
     fzz_id,
     name="Unnamed Mix",
@@ -240,7 +240,7 @@ def generate(subsonic, playlists_configs, db_file=None, dry_run=False, print_pl=
             generator.print()
 
         if not dry_run:
-            create_or_update_playlsit(
+            create_or_update_playlist(
                 subsonic,
                 playlist_config["_id"],
                 name=playlist_config["name"],

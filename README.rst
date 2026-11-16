@@ -341,6 +341,7 @@ Changelog
 
 * **[NEXT]** (changes on ``master`` that have not been released yet):
 
+  * misc(musicbrainz_db): Updated genre database from MusicBrainz (@flozz)
   * misc: Added Python 3.14, 3.15 support (@flozz)
   * misc!: Removed Python 3.9, 3.10 support (@flozz)
 
